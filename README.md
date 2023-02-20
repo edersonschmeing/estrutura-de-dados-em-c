@@ -1,4 +1,4 @@
-## Estrutura de Dados em C - 1
+## Estrutura de Dados em linguagem C - 1
 
 Este material apresenta os códigos fonte da disciplina Estrutura de Dados. 
 
