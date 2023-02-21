@@ -26,8 +26,6 @@ int main() {
      
     printf("&p = %p | p = %p\n", &p, p);
     printf("&q = %p | q = %d\n\n", &q, q);
-
-   
-  
+    
     return 0;
 }
