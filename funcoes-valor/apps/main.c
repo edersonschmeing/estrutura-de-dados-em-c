@@ -25,7 +25,7 @@ int main() {
 
     r = soma(a, b);
 
-    puts("### DEPOIS DE CHAMAR A FUNCAO \n");
+    printf("### DEPOIS DE CHAMAR A FUNCAO \n");
     printf("&a = %p, a = %d\n", &a, a);
     printf("&b = %p, b = %d\n", &b, b);
     printf("&r = %p, c = %d\n\n", &r, r);
