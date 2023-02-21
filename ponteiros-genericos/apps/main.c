@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Exemplo de ponteiros genéricos
 
 int main() {
     
