@@ -1,10 +1,7 @@
 #include <stdio.h>
 
-//Exemplo de funções com passagem de parâmetros por valor e por referência
+//Exemplo de funções com passagem de parâmetros por referência
 
-//void troca();
-
-//void troca();
 
 void troca(int *x, int *y) {
      int w;
