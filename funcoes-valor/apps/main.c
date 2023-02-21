@@ -6,9 +6,9 @@ int soma(int x, int y) {
     int s = x + y;
      
     printf("### DENTRO DA FUNÇÃO ### \n");
-    printf("&x = %p, x = %d\n", &x, x);
-    printf("&y = %p, y = %d\n", &y, y);
-    printf("&s = %p, z = %d\n\n", &s, s); 
+    printf("&x = %p | x = %d\n", &x, x);
+    printf("&y = %p | y = %d\n", &y, y);
+    printf("&s = %p | z = %d\n\n", &s, s); 
 
     return s;
 }
@@ -19,16 +19,16 @@ int main() {
     int r;
     
     printf("### ANTES DE CHAMAR A FUNÇÃO ### \n");
-    printf("&a = %p, a = %d\n", &a, a);
-    printf("&b = %p, b = %d\n", &b, b);
-    printf("&r = %p, r = %d\n\n", &r, r);
+    printf("&a = %p | a = %d\n", &a, a);
+    printf("&b = %p | b = %d\n", &b, b);
+    printf("&r = %p | r = %d\n\n", &r, r);
 
     r = soma(a, b);
 
     printf("### DEPOIS DE CHAMAR A FUNÇÃO \n");
-    printf("&a = %p, a = %d\n", &a, a);
-    printf("&b = %p, b = %d\n", &b, b);
-    printf("&r = %p, c = %d\n\n", &r, r);
+    printf("&a = %p | a = %d\n", &a, a);
+    printf("&b = %p | b = %d\n", &b, b);
+    printf("&r = %p | c = %d\n\n", &r, r);
     
     return 0;
 }
