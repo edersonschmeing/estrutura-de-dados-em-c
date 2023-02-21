@@ -9,6 +9,7 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
   - [3 - Ponteiros de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-de-ponteiros)
   - [4 - Ponteiros Genéricos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-genericos)
+  - [5 - Funções](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes)
   
 
 <!-- - **Funções**
