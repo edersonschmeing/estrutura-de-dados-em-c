@@ -15,9 +15,11 @@ int main() {
 
     printf("\n"); 
     
+    int *p = vec;
+
     printf("Aritmética de Ponteiros\n");    
     for (int i = 0;i < 5;i++){       
-        printf("&vec+%d  = %p | vec+%d  = %d \n", i, vec+i, i, *(vec + i));
+        printf("&p+%d  = %p | p+%d  = %d \n", i, p+i, i, *(p + i));
     }
     
     return 0;
