@@ -6,10 +6,13 @@ int main() {
 
     int mat[3][3] = {{5, 10, 30}, {20, 25, 40}, {12, 6, 22}};;
 
-    //o nome de um vetor é um ponteiro para o primeiro índice. 
-    printf("mat        = %p \n", mat);
+    printf("mat        = %p \n", *mat);
     printf("&mat[0][0] = %p \n\n", &mat[0][0]);
-   
+
+    if (*mat == &mat[0][0]) 
+        printf("sim\n");
+
+
     printf("Índice\n");
     for (int i = 0;i < 3;i++){
       for (int j = 0;j < 3;j++){   
@@ -32,7 +35,7 @@ int main() {
     printf("\n");
 
     printf("Aritmética de ponteiros com dois laços\n");
-    printf("*mat = %p \n", *mat); // conteúdo do ponteiro que é um ponteiro para int, a primeira posição da matriz.
+    printf("*mat = %p \n", *mat);
      
     for (int i = 0;i < 3;i++){
       for (int j = 0;j < 3;j++){  
