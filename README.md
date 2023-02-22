@@ -16,9 +16,9 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
   - [9 - Operadores Relacionais com Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/operadores-relacionais)
   - [10 - Aritmética de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/aritmetica-de-ponteiros)
   - [12 - Ponteiros e Vetores](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-vetores)
-  - [13 - Ponteiros e Matrizes]()
+  - [13 - Ponteiros e Matrizes](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-matrizes)
   - [14 - Ponteiros e Structs]()
    
-- **Tipos de Alocação de Memória**
+- **Alocação Dinâmica de Memória**
 
 - **TAD - Tipos Abstratos de Dados** 
