@@ -1,14 +1,19 @@
 #include <stdio.h>
 
 int main() {
+    
     int a;
 
-    //tamanho da váriavel do tipo int
+    //tamanho de variáveis
     printf("sizeof(a)      = %ld bytes\n", sizeof(a));
+    
+    unsigned long tamanho_a = sizeof(a);
+    printf("tamanho_a      = %ld bytes\n\n", tamanho_a);
 
     //tamanho dos tipos de dados
     printf("sizeof(char)   = %ld bytes\n", sizeof(char));
     printf("sizeof(int)    = %ld bytes\n", sizeof(int));
+
     printf("sizeof(short)  = %ld bytes\n", sizeof(short));
     printf("sizeof(float)  = %ld bytes\n", sizeof(float));
     printf("sizeof(double) = %ld bytes\n", sizeof(double));
