@@ -17,7 +17,7 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
   - [10 - Aritmética de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/aritmetica-de-ponteiros)
   - [12 - Ponteiros e Vetores](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-vetores)
   - [13 - Ponteiros e Matrizes](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-matrizes)
-  - [14 - Ponteiros e Structs]()
+  - [14 - Structs]()
    
 - **Alocação Dinâmica de Memória**
 
