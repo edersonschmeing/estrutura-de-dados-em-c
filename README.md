@@ -5,7 +5,7 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
 **Professor:** Ederson Schmeing
 
 - **Conceitos Básicos e Ponteiros**
-  - [1 - Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/variaveis)
+  - [1 - Endereços de Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/enderecos-variaveis)
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
   - [3 - Ponteiros de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-de-ponteiros)
   - [4 - Ponteiros Genéricos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-genericos)
