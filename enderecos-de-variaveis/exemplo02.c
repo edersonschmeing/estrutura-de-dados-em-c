@@ -4,15 +4,11 @@ int main() {
     
     char a = '0';
     short b = 1;
-
     int c = 3;
-    printf("&a = %p \n", &c);
-//  &c = 0x7ffdfd0b0131 
-
     long d = 4 ; 
     long e = 5;
 
-     // & obtem o endereço de memória da váriavel.
+     // & obtem o endereço de memória das váriaveis.
     printf("&a = %p \n", &a);
     printf("&a = %p | &a = %ld | a = %c\n", &a, &a, a);
     printf("&b = %p | &b = %ld | b = %d\n", &b, &b, b);
