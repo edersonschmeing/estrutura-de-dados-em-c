@@ -15,7 +15,7 @@ int main() {
     printf("&c = %p | &c = %ld | c = %d\n", &c, &c, c);
     printf("&d = %p | &d = %ld | d = %d\n", &d, &d, d);
     printf("&e = %p | &d = %ld | e = %d\n\n", &e, &e, e);
-    
+  
 
     return 0;
 }
