@@ -4,8 +4,8 @@
 
 int main() {
     
-    int a = 20; 
-    int b = 1;
+    int a = 10; 
+    int b = 20;
     int c = 30;
     int *p = &a;  
     
@@ -17,13 +17,14 @@ int main() {
     //endereço de memória da variável a
     printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
     
-    p++; // avança 4 bytes por que é um ponteiro para int
-    printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
-
-    p--; // retorna 4 bytes por que é um ponteiro para int
-    printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
-
     p = p + 2; // avança 8 bytes por que é um ponteiro para int
+    printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
+
+    p--; // retorna 4 bytes por que é um ponteiro para int. 
+    // %ld formata em decimal 
+    printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
+
+    p++; // avança 4 bytes por que é um ponteiro para int
     printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
 
     return 0;
