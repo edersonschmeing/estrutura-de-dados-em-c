@@ -7,21 +7,12 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
 - **Conceitos Básicos e Ponteiros**
   - [1 - Endereços de Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/enderecos-variaveis)
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
-<!--  
-  - [4 - Ponteiros de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-de-ponteiros)
-  - [5 - Ponteiros Genéricos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-genericos)
-  - [6 - Funções](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes)
-  - [7 - Funções Passagem de Parâmetros por valor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-valor)
-  - [8 - Funções Passagem de Parâmetros por referêcia](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-referencia)
-  - [9 - Funções recursivas]
-  - [10 - Operadores Relacionais com Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/operadores-relacionais)
-  - [11 - Aritmética de Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/aritmetica-de-ponteiros)
-  
+  - [3 - Ponteiros e Funções](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-funcoes)
+  - [4 - Ponteiros e Arrays ](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-arrays)
+  - [5 - Ponteiros e Strucs ](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-strucs)
+
   <!-- - 
-  - [12 - Ponteiros e Structs]()
-  - [12 - Ponteiros e Vetores](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-vetores)
-  - [13 - Ponteiros e Matrizes](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-matrizes)
-  
+
 - **Tipo de Alocação de Memória**
    
   - [12 - vetores]
