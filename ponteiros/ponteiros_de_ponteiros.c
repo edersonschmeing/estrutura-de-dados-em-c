@@ -4,8 +4,6 @@
 
 int main() {
 
-    int *p;
-
     int a = 20;
     int *p1 = &a;
     int* *p2 = &p1;
