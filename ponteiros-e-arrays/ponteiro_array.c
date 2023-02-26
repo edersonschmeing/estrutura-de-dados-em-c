@@ -6,7 +6,6 @@ int main() {
 
     int *p = vec;
 
-
     //o nome de um vetor é um ponteiro para o primeiro índice. 
     printf("vec    = %p \n", vec);
     printf("vec[0] = %p \n", &vec[0]);
