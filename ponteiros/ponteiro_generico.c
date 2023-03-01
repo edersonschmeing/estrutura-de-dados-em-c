@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Exemplo de ponteiros genéricos
+/*
+Um ponteiro genérico é um ponteiro que pode apontar para qualquer tipo de dado.
+
+Para acessar o conteúdo de um ponteiro genérico é preciso antes convertê-lo 
+para o tipo de ponteiro com o qual se deseja trabalhar.
+
+*/
 
 int main() {
     
