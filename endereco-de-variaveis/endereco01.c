@@ -26,7 +26,7 @@ int main() {
     printf("O tamanho da váriavel ( a ) é %ld bytes\n\n", tamanho_a);
 
     printf("&a = hexa: %p | dec: %ld \n", &a, &a);
-    printf("&a = hexa: %p | dec: %ld \n\n", &b, &b);
+    printf("&b = hexa: %p | dec: %ld \n\n", &b, &b);
    
     return 0;
 }
