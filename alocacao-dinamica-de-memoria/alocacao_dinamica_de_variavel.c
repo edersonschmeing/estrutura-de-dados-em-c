@@ -5,16 +5,16 @@
 int main() {
 
     /*
-    A alocação estática de memória,   
-   
+    Alocação estática de memória.    
     Toda varável e alocada na memória Stack. 
     O espaço para as variáveis é alocado no início da execução e cada variável recebe um endereço de memória que 
     se mantém até o final da execução quando o sistema operacional desaloca automaticamente. 
   
-    A alocação dinâmica de memória é o processo que aloca memória em tempo de execução.
+    Alocação dinâmica de memória
+    E feita na memória Heap. 
+    Alocação dinâmica de memória é o processo que aloca memória em tempo de execução.
     É utilizada quando não se sabe previamente o quanto de memória será necessário para armazenar os dados. 
-    Conseguimos determinar o tamanho de memória a ser usado conforme a necessidade, evitando uso desnecessário de memória.       
-    
+    Conseguimos determinar o tamanho de memória a ser usado conforme a necessidade, evitando uso desnecessário de memória.           
    */ 
     
     //alocação estática na (memória Stack). 
@@ -30,9 +30,8 @@ int main() {
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);
     free(b); //desaloca/libera endereço da memória Heap. A função free() informa o SO que nosso programa não vai mais usar aquele endereço. 
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);  
-    b = NULL;
+    b = NULL; // boa prática de programação. 
     printf("&b = %p | b = %p \n\n", &b, b); // Se tentar acessar o conteúdo ( *b ) retorna erro, por que o ponteiro b não guarda mais nenhum endereço. 
-
 
 
      //alocação dinâmica na (memória Heap) com função calloc
