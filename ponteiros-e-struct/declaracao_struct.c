@@ -2,7 +2,12 @@
 #include <string.h>
 
 int main() {
-   
+
+   /*
+   Um struct é uma variável especial que contém diversas outras variáveis normalmente de tipos diferentes denominadas membros.
+   Um struct é alocado em uma sequência ordenada na memória. 
+   */ 
+
    struct endereco {
         char rua[30];
         int numero;  
@@ -31,7 +36,7 @@ int main() {
    printf("Rua Endereço 1: %s \n", p.endereco1.rua);
    printf("Número Endereço 1: %d \n", p.endereco1.numero);
    printf("Rua Endereço 2: %s \n", p.endereco2.rua);
-   printf("Número Endereço 2: %d \n", p.endereco2.numero);
+   printf("Número Endereço 2: %d \n\n", p.endereco2.numero);
    
    
    return 0;
