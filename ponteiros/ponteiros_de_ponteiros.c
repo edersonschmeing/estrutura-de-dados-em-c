@@ -3,14 +3,11 @@
 
 
 /* 
-
 Um ponteiro para um ponteiro consiste em uma variável que guarda o endereço de outra, 
 essa outra por sua vez guarda o endereço da variável que tem um tipo de dado comum.
 
 Assim, um ponteiro poderá apontar para outro ponteiro, que, por sua vez, 
 aponta para outro ponteiro, que aponta para um terceiro ponteiro e assim por diante.
-
-
 */
 
 
