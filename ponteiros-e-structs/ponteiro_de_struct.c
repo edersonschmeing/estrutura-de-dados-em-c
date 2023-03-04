@@ -2,29 +2,35 @@
 
 int main() {
 
-    typedef struct  data {
+    typedef struct data {
         int dia;
         int mes;
         int ano;    
-    } t_data;
+    } Data;
     
-    t_data data_atual; 
-
-    t_data *p = NULL; 
+    Data data_atual; 
     
-    p = &data_atual;
-
-    p->dia = 28;
-    p->mes = 2; 
-    p->ano = 2023;
+    data_atual.dia = 6;
+    data_atual.mes = 3;
+    data_atual.ano = 2023; 
 
     printf("A data atual é %d/%d/%d \n\n", data_atual.dia, data_atual.mes, data_atual.ano);
 
-    (*p).dia = 1; 
-    (*p).mes = 3;
-    (*p).ano = 2023;
+    Data *p = NULL; 
+    
+    p = &data_atual;
 
-    printf("A data atual é %d/%d/%d \n", data_atual.dia, data_atual.mes, data_atual.ano);
-  
+    p->dia = 10;
+    p->mes = 04; 
+    p->ano = 2024;
+
+    printf("A data atual é %d/%d/%d \n\n", p->dia, p->mes, p->ano);
+
+    (*p).dia = 20; 
+    (*p).mes = 05;
+    (*p).ano = 2025;
+
+    printf("A data atual é %d/%d/%d \n\n", (*p).dia, (*p).mes, (*p).ano);
+
 
 }
