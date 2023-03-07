@@ -28,9 +28,9 @@ int main() {
     int *b = malloc(1 * sizeof(int)); // malloc não incializa o espaço alocado. Todos os elementos possuem lixo de memória.
     *b = 20; 
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);
-    free(b); //desaloca/libera endereço da memória Heap. A função free() informa o SO que nosso programa não vai mais usar aquele endereço. 
+    free(b); //desaloca/libera endereço da memória Heap. A função free() informa o sistema operacional que nosso programa não vai mais usar aquele endereço. 
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);  
-    b = NULL; // boa prática de programação. 
+    b = NULL; // boa prática de programação
     printf("&b = %p | b = %p \n\n", &b, b); // Se tentar acessar o conteúdo ( *b ) retorna erro, por que o ponteiro b não guarda mais nenhum endereço. 
 
 
