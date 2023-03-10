@@ -28,15 +28,22 @@ int main() {
   
    //ALOCA UM VETOR DE PONTEIROS DE STRUCT NA HEAP
    Pessoa **vetor = (Pessoa**) malloc(10 * sizeof(Pessoa*));     
-   
+
    vetor[0] = pessoa_dinamica;
    vetor[1] = pessoa_dinamica1;
    *(vetor + 2) = pessoa_dinamica2;
    //vetor[2] = pessoa_dinamica2;
-  
+
+
+   for (int i = 0; i < 10; i++ ) {
+      printf("&vetor = %p | end struct = %ld | end struct = %p \n", &vetor, &vetor[i], vetor[i]);  
+   }
+
    Pessoa *pessoa_0 = vetor[0];
    Pessoa *pessoa_1 = vetor[1];
    Pessoa *pessoa_2 = vetor[2];
+
+
 
 
  //dessa forma o vetor ta na stack e a struct na heap.
