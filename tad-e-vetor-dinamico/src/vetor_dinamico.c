@@ -52,20 +52,20 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
 
 void adicionar_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
 
-// TODO:
+   // TODO:
 
 }
 
 void adicionar_ordenado_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
 
-// TODO:    
+   // TODO:    
 
 }
 
 int busca_sequencial_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
 
-    // TODO:
-    return 0;
+   // TODO:
+   return 0;
 
 }
 
