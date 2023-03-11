@@ -3,7 +3,7 @@
 ###GitHub:https://github.com/PerduGames
 ########################################
 #Arquivo Makefile  
-#Arquivo para compilar executavel em c++, 
+#Arquivo para compilar executavel em c e c++, 
 #buscando as dependencias em suas respectivas pastas
 #O que acontece quando digito "make"?
 #Busca dentro do diretorio atribuido na variavel "SRC" todos os arquivos .cpp
@@ -29,7 +29,8 @@
 #esse arquivo, seria seu arquivo com a funcao "int main()". 
 
 #Compilador
-COMPILADOR=g++
+COMPILADOR=gcc
+#COMPILADOR=g++
 #Diretorio dos arquivos .c e .cpp dos progrmas principais
 APPS=./apps
 #Diretorio dos arquivos binarios
