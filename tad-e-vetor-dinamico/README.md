@@ -4,7 +4,13 @@ Um tipo Abstrato de dados, ou TAD, é um conjunto de dados estruturados e as ope
 
 ## Estrutura de Dados
 
-Estrutura de Dados é a forma de armazenar e organizar os dados em um computador de modo que possam ser usados de forma eficiente. 
+Estrutura de Dados é a forma de armazenar e organizar os dados em um computador de modo que possam ser usados de forma eficiente. Elas são dividaas em 
+homogêneas e heterogêneas.
+
+As homogêneas são conjuntos formados por dados do mesmo tipos: Vetores, Matrizes e Strings.
+
+As heterogêneas são conjuntos formados por tipos de dados diferentes: Registros (Structs)
+
 
 ---
 
