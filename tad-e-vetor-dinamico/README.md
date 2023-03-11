@@ -32,16 +32,9 @@ Modularização:
 - Por convenção os TADs são construídos em arquivos separados. Utilizam-se arquivos de cabeçalho (.h) e de código fonte (.c) para modularizar; 
 - O arquivo de cabeçalho e de código fonte devem ter o mesmo nome, alterando apenas a extensão. vetor_dinamico.h e vetor_dinamico.c;
 - Possibilidade de “esconder” a implementação de quem usa o TAD;
-- Quem utiliza o TAD precisa apenas conhecer as funcionalidades que ele implementa. 
-
-Arquivo .h: 
-- definiçao dos novos tipos de dados;
-- protótipos das funções;
-- variáveis globais.
-
-Arquivo .c: 
-- declaração dos novos tipos de dados.
-- implementação das funções.
+- Quem utiliza o TAD precisa apenas conhecer as funcionalidades que ele implementa; 
+- Arquivo .h: definiçao dos novos tipos de dados, protótipos das funções e variáveis globais;
+- Arquivo .c: declaração dos novos tipos de dados e implementação das funções.
 
 
 <!-- ### Padrões Criacionais
