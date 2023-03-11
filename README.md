@@ -17,3 +17,9 @@ Este material apresenta os códigos fonte da disciplina Estrutura de Dados.
   <!-- - 
 https://github.com/WoMakersCode/git-e-github
 -->
+
+### Referências 
+
+BACKES, A. Estrutura de dados descomplicada em linguagem C. Rio de Janeiro: Elsevier, 2016.
+
+CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
