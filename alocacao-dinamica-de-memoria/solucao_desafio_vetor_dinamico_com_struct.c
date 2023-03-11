@@ -56,7 +56,7 @@ int main() {
 
     int tamanho_vetor;
 
-    printf("\n --- VETOR DE PONTEIROS PARA DE STRUCT --- \n");
+    printf("\n --- VETOR DE PONTEIROS PARA STRUCT --- \n");
 
     printf("Informe a quantidade de elementos: ");
     scanf("%d", &tamanho_vetor);
