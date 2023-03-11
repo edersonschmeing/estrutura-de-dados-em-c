@@ -65,7 +65,7 @@ all: compilar app
 compilar: $(OBJETOS)
 
 #Executaveis do projeto, se tiver executaveis separar com \$(BIN)/outroaquivocommain 
-app: $(BIN)/main
+app: $(BIN)/main.out # no windows é .exe
 	echo $(OBJETOS)
 
 #Compilar e criar os arquivos-objetos
@@ -78,7 +78,7 @@ $(BIN)/%: $(APPS)/%.c
 
 #Executar programa
 run:
-	$(BIN)/main
+	$(BIN)/main.out
 
 #Limpar arquivos .o
 cleanObjetos:
@@ -86,7 +86,7 @@ cleanObjetos:
 
 #Limpar executaveis
 clean:
-	rm -f $(BIN)/main
+	rm -f $(BIN)/main.out
 
 #Empacotar projeto
 tar:
