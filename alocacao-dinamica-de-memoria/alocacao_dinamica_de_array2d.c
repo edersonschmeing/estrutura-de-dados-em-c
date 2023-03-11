@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>  // contém o NULL, calloc, malloc, free
+#include <stdlib.h>
 
 void matriz2d(int a, int b) {
 
