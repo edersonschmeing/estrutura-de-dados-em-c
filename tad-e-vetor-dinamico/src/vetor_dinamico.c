@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>  
 
-// interfaces não disponivel para nossos clientes, no caso quem vai usar nosso TAD.
+// interfaces não disponivel para nossos clientes(quem usa nossa estrutura), no caso quem vai usar nosso TAD.
 
 struct vetor_dinamico {
     bool ordenado;  // true indica que quer manter o vetor ordenado. 
@@ -50,60 +50,60 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
 
 }
 
-void adicionar_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
+void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
    // TODO:
 
 }
 
-void adicionar_ordenado_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
+void adicionar_ordenado_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
    // TODO:    
 
 }
 
-int busca_sequencial_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {
+int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
    // TODO:
    return 0;
 
 }
 
-int busca_binaria_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) {  //para vetores ordenados
+int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {  //para vetores ordenados
 
    // TODO:
    return 0;
 
 }
 
-int acessar_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico, int index) {
+int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 
     // TODO:
     return 0;
 
 } 
 
-int acessar_verificado_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico, int index) { // verifica se tem elemento
+int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) { // verifica se tem elemento
 
     // TODO:
     return 0;
 
 }
 
-void remover_vetor_dinamico(Vetor_Dinamico* vetor_dinamico, int valor) { // precisa ajustar os elementos do vetor.
+void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { // precisa ajustar os elementos do vetor.
 
     // TODO:
 
 }
 
-int tamanho_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
+int tamanho_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
     
     // TODO:
     return 0;
 
 }
 
-int quantidade_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
+int quantidade_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
  
     // TODO:
     return 0;
