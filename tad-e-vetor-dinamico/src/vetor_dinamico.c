@@ -36,11 +36,11 @@ Vetor_Dinamico* criar_vetor_dinamico(int tamanho_vetor, bool ordenado) {
 
 void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco) {
 
-    //Vetor_Dinamico *vetor_dinamico = *vetor_dinamico_endereco;
-   // printf("dest");
-    //free(vetor_dinamico->dados);
-    //free(vetor_dinamico);
-    //*vetor_dinamico_endereco = NULL;
+    Vetor_Dinamico *vetor_dinamico = *vetor_dinamico_endereco;
+    printf("dest");
+    free(vetor_dinamico->dados);
+    free(vetor_dinamico);
+    *vetor_dinamico_endereco = NULL;
 
 }
 
