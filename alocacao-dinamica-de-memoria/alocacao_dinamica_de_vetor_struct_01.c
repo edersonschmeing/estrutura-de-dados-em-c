@@ -8,7 +8,7 @@ int main() {
         char nome[30];
         int idade;
    } Pessoa;  
-   
+ 
 
    printf(" --- ALOCAÇÃO DINÂMICA DE PONTEIRO DE PONTEIRO DE STRUCT--- \n");
     
