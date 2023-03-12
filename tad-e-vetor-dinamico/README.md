@@ -23,10 +23,10 @@ Vantagens:
 
 Operações mais comuns utilizadas são:
 - Criação da estrutura;
-- Destrição da estrutura;
 - Inclusão de um elemento;
 - Busca de um elemento;
 - Remoção de um elemento.
+- Destruição da estrutura;
 
 Modularização: 
 - Por convenção os TADs são construídos em arquivos separados. Utilizam-se arquivos de cabeçalho (.h) e de código fonte (.c) para modularizar; 
