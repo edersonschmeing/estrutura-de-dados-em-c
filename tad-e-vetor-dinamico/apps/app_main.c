@@ -40,6 +40,7 @@ int main() {
     //menu_vetor_dinamico();
 
     int tamanho = 10;
+
     bool ordenado = false; 
 
     Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
