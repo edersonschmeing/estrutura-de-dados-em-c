@@ -65,6 +65,9 @@ void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
 }
 
+//int busca_binaria();
+
+//int busca_sequencial();
 
 int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
 
@@ -87,11 +90,11 @@ int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int 
     return 0;
 
 }
-
+//Em uma segunda versão vamos tentar diminuir o tamanho do vetor conforme remover elementos.
 void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
 
     // precisa ajustar os elementos do vetor, mover o ultimo elemento (quantidade -1) para o lugar do elemento 
-    // que foi removido e decrementar a quantidade. 
+    // que foi removido e decrementar a quantidade, no caso de vetor não ordenado
 
     // TODO:
 

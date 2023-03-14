@@ -48,6 +48,9 @@ int main() {
 
     Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
 
+    //vetor_dinamico->tamanho = 10; //não tem acesso direto aos dados.
+    //vetor_dinamico->dados[0] = 50; //não tem acesso direto aos dados.
+    
     imprimir_vetor_dinamico(vetor_dinamico);
 
     adicionar_vetor_dinamico(vetor_dinamico, 30);
