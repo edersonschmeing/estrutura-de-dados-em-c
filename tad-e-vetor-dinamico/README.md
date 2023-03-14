@@ -23,7 +23,7 @@ Vantagens:
 
 Operações mais comuns utilizadas são:
 - Criação da estrutura;
-- Inclusão de um elemento;
+- Inclusão/Atualização de um elemento;
 - Busca de um elemento;
 - Remoção de um elemento.
 - Destruição da estrutura;
@@ -36,6 +36,8 @@ Modularização:
 - Arquivo .h: definiçao dos novos tipos de dados, protótipos das funções e variáveis globais;
 - Arquivo .c: declaração dos novos tipos de dados e implementação das funções.
 
+
+![TAD](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/blob/main/tad-e-vetor-dinamico/tad.png)
 
 <!-- ### Padrões Criacionais
 
