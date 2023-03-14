@@ -38,7 +38,7 @@ void preencher_vetor(Pessoa **vetor, int tamanho_vetor ) {
 }
 
 Pessoa** criar_vetor_dinamico(int tamanho_vetor) {
-  Pessoa **vetor = (Pessoa**) malloc(10 * sizeof(Pessoa*));
+  Pessoa **vetor = (Pessoa**) malloc(tamanho_vetor * sizeof(Pessoa*));
   return vetor;
 }
 
