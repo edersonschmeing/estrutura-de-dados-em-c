@@ -43,9 +43,9 @@ void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco) {
 
 }
 
-void imprimir_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
+void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
 
-    printf("{ ");       
+    printf("vetor = { ");       
     for (int i = 0; i < vetor_dinamico->quantidade; i++) {
         printf("%i = %d", i, vetor_dinamico->dados[i]);
         if (!(i == vetor_dinamico->quantidade-1))
@@ -66,19 +66,13 @@ void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 }
 
 
-int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
+int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
 
    // TODO:
    return 0;
 
 }
 
-int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {  //para vetores ordenados
-
-   // TODO:
-   return 0;
-
-}
 
 int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 

@@ -45,7 +45,8 @@ SRC=./src
 LIB=./lib
 
 #Para otimizar e mostrar mais avisos, versão -std=c++11 
-FLAGS= -O3 -Wall -std=c++11 
+#FLAGS= -O3 -Wall -std=c++11 #para c++ 
+FLAGS= -O3 -Wall -Werror
 #Para encontrar as bibliotecas utilizadas(em "-lm", apenas um exemplo, caso seu compilador nao faca isso por voce)
 LIBS= -lm -L $(LIB)
 

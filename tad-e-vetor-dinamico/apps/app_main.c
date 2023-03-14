@@ -17,7 +17,10 @@ void menu_vetor_dinamico() {
       printf("10 - Sair\n");
       
       printf("Escolha uma operação:  ");
-      scanf("%d", &operacao);
+      int numero_parametros = (scanf("%d", &operacao)); // retornam o número de conversões realizada com sucesso. 
+      if (numero_parametros != 1) {
+         printf("Problemas na entrada de dados");
+      }   
             
       switch (operacao)       {
       case 1:
@@ -52,9 +55,6 @@ int main() {
     adicionar_vetor_dinamico(vetor_dinamico, 20);
 
     imprimir_vetor_dinamico(vetor_dinamico);
-
-
-    printf("--- CHAMAR OPERAÇÕES DO NOSSO TAD ---\n\n");
   
     destruir_vetor_dinamico(&vetor_dinamico);
 

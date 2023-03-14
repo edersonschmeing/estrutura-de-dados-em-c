@@ -14,13 +14,12 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico  *vetor_dinamico);
 
 void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); // se ordenado=true utilizar esse metodo
 
-int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor);
-int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); //para vetores ordenados
+int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); //para vetores ordenados, fazer busca binária
 
 int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index);
 int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index); // verifica se tem elemento no index passado.
 
-void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); // precisa ajustar os elementos do vetor.
+void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index); // precisa ajustar os elementos do vetor.
 
 int tamanho_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico);
 int quantidade_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico);
