@@ -16,10 +16,10 @@ Um Tipo Abstrato de Dados, ou TAD, é um conjunto de dados estruturados e as ope
 Os dados armazenados podem ser manipulados apenas pelas operações/métodos. 
 
 Vantagens: 
-- Ocultamento dos detalhes de representação e implementação, apenas funcionalidade é conhecida;
-- Encapsulamento dos dados e do comportamento;
-- Acesso somente às operações, e não diretamente aos dados;
-- Reutilização e flexibilidade do TAD em diferentes aplicações.
+- Ocultamento dos detalhes de representação e implementação, apenas funcionalidades são conhecidas;
+- Encapsulamento: Implementação é ocultada, fornece somente interface/operações possíveis do TAD;
+- Seguraça: Acesso somente às interface/operações, e não diretamente aos dados;
+- Reutilização e flexibilidade: TAD pode ser usado em diferentes aplicações.
 
 Operações mais comuns utilizadas são:
 - Criação da estrutura;
