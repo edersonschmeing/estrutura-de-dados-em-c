@@ -37,12 +37,21 @@ int main() {
     
     printf("--- VAMOS UTILIZAR NOSSO TAD ---\n\n");
 
-    menu_vetor_dinamico();
+    //menu_vetor_dinamico();
 
     int tamanho = 10;
     bool ordenado = false; 
 
     Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
+
+    imprimir_vetor_dinamico(vetor_dinamico);
+
+    adicionar_vetor_dinamico(vetor_dinamico, 30);
+    adicionar_vetor_dinamico(vetor_dinamico, 10);
+    adicionar_vetor_dinamico(vetor_dinamico, 20);
+
+    imprimir_vetor_dinamico(vetor_dinamico);
+
 
     printf("--- CHAMAR OPERAÇÕES DO NOSSO TAD ---\n\n");
   

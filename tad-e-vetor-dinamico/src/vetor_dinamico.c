@@ -37,7 +37,6 @@ Vetor_Dinamico* criar_vetor_dinamico(int tamanho_vetor, bool ordenado) {
 void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco) {
 
     Vetor_Dinamico *vetor_dinamico = *vetor_dinamico_endereco;
-    printf("dest");
     free(vetor_dinamico->dados);
     free(vetor_dinamico);
     *vetor_dinamico_endereco = NULL;
@@ -46,21 +45,26 @@ void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco) {
 
 void imprimir_vetor_dinamico(const Vetor_Dinamico* vetor_dinamico) {
 
-   // TODO:
+    printf("{ ");       
+    for (int i = 0; i < vetor_dinamico->quantidade; i++) {
+        printf("%i = %d", i, vetor_dinamico->dados[i]);
+        if (!(i == vetor_dinamico->quantidade-1))
+            printf(", ");
+    }
+    printf(" } \n\n");
 
 }
+  
 
+// Em uma segunda versão vamos tentar aumentar o tamanho do vetor e 
+// também tentar adicionar de forma ordenada
 void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
-   // TODO:
+    vetor_dinamico->dados[vetor_dinamico->quantidade] = valor;
+    vetor_dinamico->quantidade++;
 
 }
 
-void adicionar_ordenado_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
-
-   // TODO:    
-
-}
 
 int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 

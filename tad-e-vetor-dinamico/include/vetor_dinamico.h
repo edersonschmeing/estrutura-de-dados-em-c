@@ -12,8 +12,7 @@ void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco);
 
 void imprimir_vetor_dinamico(const Vetor_Dinamico  *vetor_dinamico);
 
-void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); 
-void adicionar_ordenado_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); // se ordenado=true utilizar esse metodo
+void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); // se ordenado=true utilizar esse metodo
 
 int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor);
 int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor); //para vetores ordenados
