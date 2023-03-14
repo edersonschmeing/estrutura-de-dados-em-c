@@ -1,0 +1,5 @@
+gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
+
+gcc -I include -Wall -Werror -c src/vetor_dinamico.c -o obj/vetor_dinamico.o
+
+gcc obj/app_main.o obj/vetor_dinamico.o -o bin/app_main.out

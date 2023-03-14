@@ -94,7 +94,10 @@ int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int 
 
 }
 
-void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { // precisa ajustar os elementos do vetor.
+void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
+
+    // precisa ajustar os elementos do vetor, mover o ultimo elemento (quantidade -1) para o lugar do elemento 
+    // que foi removido e decrementar a quantidade. 
 
     // TODO:
 
