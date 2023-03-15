@@ -19,6 +19,24 @@ bool esta_cheio_vetor_dinamico(Vetor_Dinamico* vetor_dinamico) {
 
 }
 
+int busca_binaria_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
+    
+    // TODO:
+    //return = -1; caso não encontre o valor;
+    //return = index caso encontre o valor;
+    return -1;
+}
+
+int busca_sequencial_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
+    
+    // TODO:
+    //return = -1; caso não encontre o valor;
+    //return = index caso encontre o valor;
+    return -1;
+}
+
+
+
 // interfaces disponivel para nossos clientes, no caso quem vai usar nosso TAD. 
 // Estão definidas no nosso vetor_dinamico.h
 
@@ -65,17 +83,20 @@ void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
 }
 
-//int busca_binaria();
-
-//int busca_sequencial();
 
 int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
-
-   // TODO:
-   return 0;
+    
+    int index = -1;
+    if (vetor_dinamico->ordenado) {
+       index = busca_binaria_dinamico(vetor_dinamico, valor); 
+    }else {
+       index = busca_sequencial_dinamico(vetor_dinamico, valor); 
+    }
+    //return = -1; caso não encontre o valor;
+    //return = index caso encontre o valor;
+    return index;
 
 }
-
 
 int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 
