@@ -14,10 +14,50 @@ struct vetor_dinamico {
 
 bool esta_cheio_vetor_dinamico(Vetor_Dinamico* vetor_dinamico) {
    
-    // TODO:
-    return true;
+    return (vetor_dinamico->tamanho == vetor_dinamico->quantidade);
 
 }
+
+//se vetor estiver cheio, aumentamos 2 vezes o seu tamanho.
+void aumentar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
+    
+    printf("executou função para aumentar o tamanho do vetor \n");
+
+    int *temp = vetor_dinamico->dados; 
+    //vetor_dinamico->tamanho *= 2;
+    vetor_dinamico->tamanho = vetor_dinamico->tamanho * 2;
+
+    vetor_dinamico->dados = (int*)calloc(vetor_dinamico->tamanho, sizeof(int)); 
+
+    for (int i = 0; i < vetor_dinamico->tamanho; i++ ) { 
+            vetor_dinamico->dados[i] = temp[i];
+    }
+    free(temp);
+
+}
+
+
+//diminuir o tamanho do vetor pela metade quando tiver 1/4 ou 25% cheio   
+void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
+
+    if ((vetor_dinamico->quantidade < vetor_dinamico->tamanho / 4) && 
+        (vetor_dinamico->tamanho >= 4)) { 
+
+        printf("executou função para diminuir o tamanho do vetor \n");    
+
+        int *temp = vetor_dinamico->dados; 
+        vetor_dinamico->tamanho /= 2;
+        //vetor_dinamico->tamanho = vetor_dinamico->tamanho / 2;
+
+        vetor_dinamico->dados = (int*)calloc(vetor_dinamico->tamanho, sizeof(int)); 
+
+        for (int j = 0; j < vetor_dinamico->tamanho; j++ ) { 
+            vetor_dinamico->dados[j] = temp[j];
+        }
+        free(temp);
+    }
+}
+
 
 int busca_binaria_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
     
@@ -34,8 +74,6 @@ int busca_sequencial_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
     //return = index caso encontre o valor;
     return -1;
 }
-
-
 
 // interfaces disponivel para nossos clientes, no caso quem vai usar nosso TAD. 
 // Estão definidas no nosso vetor_dinamico.h
@@ -78,11 +116,21 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
 // também tentar adicionar de forma ordenada
 void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
-    vetor_dinamico->dados[vetor_dinamico->quantidade] = valor;
-    vetor_dinamico->quantidade++;
+    if (esta_cheio_vetor_dinamico(vetor_dinamico)) {
+               
+        aumentar_vetor_dinamico(vetor_dinamico);
+    
+    }
+    if (vetor_dinamico->ordenado) {
+       
+       //adicionar no vetor ordenado
+
+    }else{ 
+        vetor_dinamico->dados[vetor_dinamico->quantidade] = valor;
+        vetor_dinamico->quantidade++;
+    }
 
 }
-
 
 int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
     
@@ -98,6 +146,25 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vet
 
 }
 
+
+//Em uma segunda versão vamos tentar diminuir o tamanho do vetor conforme remover elementos.
+void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
+   
+    if (vetor_dinamico->ordenado) { // se usar vetor ordenado 
+        for (int i = index; i < vetor_dinamico->quantidade - 1; i++) {
+            vetor_dinamico->dados[i] = vetor_dinamico->dados[i+1]; //move uma posião todos os elementos maiores que o elemento que foi removido
+        }      
+    } else {
+       
+        vetor_dinamico->dados[index] = vetor_dinamico->dados[vetor_dinamico->quantidade - 1]; //move o ultimo elemento (quantidade -1) para o lugar do elemento que foi removido
+        vetor_dinamico->quantidade--; //decrementar a quantidade, no caso de vetor não ordenado     
+    }
+ 
+    diminuir_vetor_dinamico(vetor_dinamico);
+
+}
+
+
 int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 
     // TODO:
@@ -111,20 +178,10 @@ int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int 
     return 0;
 
 }
-//Em uma segunda versão vamos tentar diminuir o tamanho do vetor conforme remover elementos.
-void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
-
-    // precisa ajustar os elementos do vetor, mover o ultimo elemento (quantidade -1) para o lugar do elemento 
-    // que foi removido e decrementar a quantidade, no caso de vetor não ordenado
-
-    // TODO:
-
-}
 
 int tamanho_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
     
-    // TODO:
-    return 0;
+    return vetor_dinamico->tamanho;
 
 }
 
