@@ -59,7 +59,7 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
 }
 
 
-int busca_binaria_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
+int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
     
     // TODO:
     //return = -1; caso não encontre o valor;
@@ -67,7 +67,7 @@ int busca_binaria_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
     return -1;
 }
 
-int busca_sequencial_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
+int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
     
     // TODO:
     //return = -1; caso não encontre o valor;
