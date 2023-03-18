@@ -36,7 +36,6 @@ void aumentar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
 
 }
 
-
 //diminuir o tamanho do vetor pela metade quando tiver 1/4 ou 25% cheio   
 void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
 
@@ -86,6 +85,7 @@ int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
     return -1; //caso não encontre o elemente, retorna -1 com index.
 }
 
+
 // interfaces disponivel para nossos clientes, no caso quem vai usar nosso TAD. 
 // Estão definidas no nosso vetor_dinamico.h
 
@@ -132,8 +132,6 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
 }
   
 
-// Em uma segunda versão vamos tentar aumentar o tamanho do vetor e 
-// também tentar adicionar de forma ordenada
 void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
     if (esta_cheio_vetor_dinamico(vetor_dinamico)) {
@@ -174,8 +172,6 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vet
 
 }
 
-
-//Em uma segunda versão vamos tentar diminuir o tamanho do vetor conforme remover elementos.
 void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
    
     if (index >= 0) { //validar se existe acessar verificado
