@@ -60,8 +60,17 @@ void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
    printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
    printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
 
+   printf("removendo o valor 20\n");  
+
+   int index = busca_vetor_dinamico(vetor_dinamico, 20); 
+   remover_vetor_dinamico(vetor_dinamico, index);
    imprimir_vetor_dinamico(vetor_dinamico);
 
+
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+  
    printf("removendo 13 elementos\n");
    for (int index = 3; index < 16; index++)
      remover_vetor_dinamico(vetor_dinamico, index);
@@ -74,10 +83,9 @@ void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
 }
 
 void teste_vetor_ordenado(Vetor_Dinamico *vetor_dinamico) {
-   
+
+     //TODO  
  
-
-
 }
 
 
