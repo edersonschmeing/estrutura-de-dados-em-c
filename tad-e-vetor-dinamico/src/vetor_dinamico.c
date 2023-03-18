@@ -57,7 +57,6 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     }
 }
 
-
 int busca_binaria_interativa_vetor_dinamico(int *dados, int quantidade, int valor) {
     
     int inicio = 0, fim = quantidade - 1, index_meio;
@@ -76,8 +75,6 @@ int busca_binaria_interativa_vetor_dinamico(int *dados, int quantidade, int valo
     } 
     return -1;
 }    
-
-
 
 int busca_binaria_recursiva_vetor_dinamico(int *dados, int limite_esquerda, int limite_direita, int valor) {    
     
@@ -224,8 +221,10 @@ int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 
 int acessar_verificado_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) { // verifica se tem elemento
 
-    // TODO:
-    return 0;
+    if (index >= 0 && index < vetor_dinamico->quantidade)
+       return vetor_dinamico->dados[index];
+    
+    return -1;
 
 }
 
