@@ -61,6 +61,8 @@ int busca_binaria_vetor_dinamico(int *dados, int limite_esquerda, int limite_dir
     
     int index_meio = (limite_esquerda + limite_direita) / 2;
 
+    printf("%d\n", index_meio);
+
     if (limite_esquerda > limite_direita) 
        return -1;
     
@@ -71,7 +73,7 @@ int busca_binaria_vetor_dinamico(int *dados, int limite_esquerda, int limite_dir
        return busca_binaria_vetor_dinamico(dados, index_meio + 1, limite_direita, valor);
 
     else 
-       return busca_binaria_vetor_dinamico(dados, limite_esquerda, index_meio - 1,valor);
+       return busca_binaria_vetor_dinamico(dados, limite_esquerda, index_meio - 1, valor);
 
     return -1;
 }
@@ -128,7 +130,6 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
             printf("| ");
     }
     printf(" } \n\n");
-
 }
   
 
@@ -156,7 +157,7 @@ void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
     }
 }
 
-int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
+int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { 
     
     int index = -1; //-1 caso não encontre o valor;
     if (vetor_dinamico->ordenado) {
@@ -169,28 +170,26 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vet
 
     }
     return index;
-
 }
 
 void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
    
-    if (index >= 0) { //validar se existe acessar verificado
+    if (index >= 0 && index < vetor_dinamico->quantidade) { 
       
-        if (vetor_dinamico->ordenado) { // se usar vetor ordenado 
+        if (vetor_dinamico->ordenado) { 
             for (int i = index ; i < vetor_dinamico->quantidade - 1; i++) {
                 vetor_dinamico->dados[i] = vetor_dinamico->dados[i + 1]; //move uma posião todos os elementos maiores que o elemento que foi removido
             }
-            vetor_dinamico->quantidade--;      
+            vetor_dinamico->quantidade--; //decrementa a quantidade      
       
         } else {
         
             vetor_dinamico->dados[index] = vetor_dinamico->dados[vetor_dinamico->quantidade - 1]; //move o ultimo elemento (quantidade -1) para o lugar do elemento que foi removido
-            vetor_dinamico->quantidade--; //decrementar a quantidade, no caso de vetor não ordenado     
+            vetor_dinamico->quantidade--; //decrementa a quantidade     
         }
     
         diminuir_vetor_dinamico(vetor_dinamico);
     }
-
 }
 
 
