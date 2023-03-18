@@ -58,21 +58,21 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     }
 }
 
-int busca_binaria_vetor_dinamico(int *dados, int esquerda, int direita, int valor) {    
+int busca_binaria_vetor_dinamico(int *dados, int limite_esquerda, int limite_direita, int valor) {    
     
-    int index_meio = (esquerda + direita) / 2;
+    int index_meio = (limite_esquerda + limite_direita) / 2;
 
-    if (esquerda > direita) 
+    if (limite_esquerda > limite_direita) 
        return -1;
     
     if (dados[index_meio] == valor)
        return index_meio; 
 
     else if (dados[index_meio] < valor)   
-       return busca_binaria_vetor_dinamico(dados, index_meio + 1, direita, valor);
+       return busca_binaria_vetor_dinamico(dados, index_meio + 1, limite_direita, valor);
 
     else 
-       return busca_binaria_vetor_dinamico(dados, esquerda, index_meio - 1,valor);
+       return busca_binaria_vetor_dinamico(dados, limite_esquerda, index_meio - 1,valor);
 
     return -1;
 }
