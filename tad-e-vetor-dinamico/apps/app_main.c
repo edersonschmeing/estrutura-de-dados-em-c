@@ -45,8 +45,12 @@ void menu_vetor_dinamico() {
    } 
 }
 
-void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
+void teste_vetor_nao_ordenado() {
+
+   printf("\n--- INÍCIO TESTE VETOR NÃO ORDENADO ---\n\n");
    
+   Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(4, false);
+
    imprimir_vetor_dinamico(vetor_dinamico);
    printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
    printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
@@ -66,10 +70,8 @@ void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
    remover_vetor_dinamico(vetor_dinamico, index);
    imprimir_vetor_dinamico(vetor_dinamico);
 
-
    printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
    printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
-
   
    printf("removendo 13 elementos\n");
    for (int index = 3; index < 16; index++)
@@ -80,34 +82,91 @@ void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
    printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));  
    printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
 
+   destruir_vetor_dinamico(&vetor_dinamico);
+
+   printf("--- FIM TESTE VETOR NÃO ORDENADO ---\n\n");
+
 }
 
-void teste_vetor_ordenado(Vetor_Dinamico *vetor_dinamico) {
+void teste_vetor_ordenado() {
 
-     //TODO  
+   printf("\n--- INÍCIO VETOR ORDENADO ---\n\n");
+
+   Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(4, true);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   adicionar_vetor_dinamico(vetor_dinamico, 13);  
+   adicionar_vetor_dinamico(vetor_dinamico, 9);
+   
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   adicionar_vetor_dinamico(vetor_dinamico, 4);
+   adicionar_vetor_dinamico(vetor_dinamico, 2);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   adicionar_vetor_dinamico(vetor_dinamico, 1);
+   adicionar_vetor_dinamico(vetor_dinamico, 10);
+   adicionar_vetor_dinamico(vetor_dinamico, 44);
+   adicionar_vetor_dinamico(vetor_dinamico, 33);
+      
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   int index = busca_vetor_dinamico(vetor_dinamico, 9); 
+   printf("index: %d\n", index);
+   remover_vetor_dinamico(vetor_dinamico, index);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+
+   index = busca_vetor_dinamico(vetor_dinamico, 13); 
+   printf("index: %d\n", index);
+   remover_vetor_dinamico(vetor_dinamico, index);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+
+   index = busca_vetor_dinamico(vetor_dinamico, 9); 
+   printf("index: %d\n", index);
+   remover_vetor_dinamico(vetor_dinamico, index);
+  
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+ 
+   destruir_vetor_dinamico(&vetor_dinamico);
+
+   printf("--- FIM TESTE VETOR ORDENADO ---\n\n");
  
 }
 
 
 int main() { 
     
-   printf("--- TESTANDO O TAD - TIPO ABSTRATO DE DADOS ---\n\n");
+   printf("\n--- TESTANDO O TAD - TIPO ABSTRATO DE DADOS ---\n\n");
     
-   int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
+   //int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
 
-   bool ordenado = false; 
-   //bool ordenado = true; 
-
-   Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
+   //bool ordenado = false; 
+  
+   //Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
 
    //menu_vetor_dinamico();
 
    //vetor_dinamico->tamanho = 10; //não tem acesso direto aos dados.
    //vetor_dinamico->dados[0] = 50; //não tem acesso direto aos dados.
 
-   teste_vetor(vetor_dinamico);
+   teste_vetor_nao_ordenado();
 
-   destruir_vetor_dinamico(&vetor_dinamico);
-
+   teste_vetor_ordenado();
+   
+   
    return 0;
 }

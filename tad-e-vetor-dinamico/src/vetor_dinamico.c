@@ -58,11 +58,22 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     }
 }
 
-int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
+int busca_binaria_vetor_dinamico(int *dados, int esquerda, int direita, int valor) {    
     
-    // TODO:
-    //return = -1; caso não encontre o valor;
-    //return = index caso encontre o valor;
+    int index_meio = (esquerda + direita) / 2;
+
+    if (esquerda > direita) 
+       return -1;
+    
+    if (dados[index_meio] == valor)
+       return index_meio; 
+
+    else if (dados[index_meio] < valor)   
+       return busca_binaria_vetor_dinamico(dados, index_meio + 1, direita, valor);
+
+    else 
+       return busca_binaria_vetor_dinamico(dados, esquerda, index_meio - 1,valor);
+
     return -1;
 }
 
@@ -109,7 +120,7 @@ void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
     }    
     printf("\n"); */
 
-    printf("vetor = { ");       
+    printf("vetor(index = valor) = { ");       
     for (int i = 0; i < vetor_dinamico->quantidade; i++) {
         printf("%i = %d ", i, vetor_dinamico->dados[i]);
         //printf("%d  ", vetor_dinamico->dados[i]); 
@@ -152,7 +163,7 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vet
     int index = -1; //-1 caso não encontre o valor;
     if (vetor_dinamico->ordenado) {
 
-       index = busca_binaria_vetor_dinamico(vetor_dinamico, valor); // retorna o index do elemento
+       index = busca_binaria_vetor_dinamico(vetor_dinamico->dados, 0, vetor_dinamico->quantidade-1, valor); // retorna o index do elemento
 
     } else {
 
@@ -167,18 +178,22 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vet
 //Em uma segunda versão vamos tentar diminuir o tamanho do vetor conforme remover elementos.
 void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) { 
    
-    if (vetor_dinamico->ordenado) { // se usar vetor ordenado 
-        for (int i = index; i < vetor_dinamico->quantidade - 1; i++) {
-            vetor_dinamico->dados[i] = vetor_dinamico->dados[i+1]; //move uma posião todos os elementos maiores que o elemento que foi removido
-            vetor_dinamico->quantidade--;
-        }      
-    } else {
-       
-        vetor_dinamico->dados[index] = vetor_dinamico->dados[vetor_dinamico->quantidade - 1]; //move o ultimo elemento (quantidade -1) para o lugar do elemento que foi removido
-        vetor_dinamico->quantidade--; //decrementar a quantidade, no caso de vetor não ordenado     
+    if (index >= 0) { //validar se existe acessar verificado
+      
+        if (vetor_dinamico->ordenado) { // se usar vetor ordenado 
+            for (int i = index ; i < vetor_dinamico->quantidade - 1; i++) {
+                vetor_dinamico->dados[i] = vetor_dinamico->dados[i + 1]; //move uma posião todos os elementos maiores que o elemento que foi removido
+            }
+            vetor_dinamico->quantidade--;      
+      
+        } else {
+        
+            vetor_dinamico->dados[index] = vetor_dinamico->dados[vetor_dinamico->quantidade - 1]; //move o ultimo elemento (quantidade -1) para o lugar do elemento que foi removido
+            vetor_dinamico->quantidade--; //decrementar a quantidade, no caso de vetor não ordenado     
+        }
+    
+        diminuir_vetor_dinamico(vetor_dinamico);
     }
- 
-    diminuir_vetor_dinamico(vetor_dinamico);
 
 }
 
