@@ -57,23 +57,45 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     }
 }
 
-int busca_binaria_vetor_dinamico(int *dados, int limite_esquerda, int limite_direita, int valor) {    
+
+int busca_binaria_interativa_vetor_dinamico(int *dados, int quantidade, int valor) {
+    
+    int inicio = 0, fim = quantidade - 1, index_meio;
+
+    while (inicio <= fim) { // enquanto o vetor tiver pelo menos 1 elemento.
+
+        index_meio = (inicio + fim) / 2;
+        if (dados[index_meio] == valor) 
+           return index_meio;
+        
+        else if (dados[index_meio] > valor)
+            fim = index_meio - 1;
+        
+        else 
+            inicio = index_meio + 1;
+    } 
+    return -1;
+}    
+
+
+
+int busca_binaria_recursiva_vetor_dinamico(int *dados, int limite_esquerda, int limite_direita, int valor) {    
     
     int index_meio = (limite_esquerda + limite_direita) / 2;
 
     printf("%d\n", index_meio);
 
-    if (limite_esquerda > limite_direita) 
+    if (limite_esquerda > limite_direita) //caso base 1
        return -1;
     
-    if (dados[index_meio] == valor)
+    if (dados[index_meio] == valor) //caso base 2
        return index_meio; 
 
     else if (dados[index_meio] < valor)   
-       return busca_binaria_vetor_dinamico(dados, index_meio + 1, limite_direita, valor);
+       return busca_binaria_recursiva_vetor_dinamico(dados, index_meio + 1, limite_direita, valor);
 
     else 
-       return busca_binaria_vetor_dinamico(dados, limite_esquerda, index_meio - 1, valor);
+       return busca_binaria_recursiva_vetor_dinamico(dados, limite_esquerda, index_meio - 1, valor);
 
     return -1;
 }
@@ -162,7 +184,8 @@ int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
     int index = -1; //-1 caso não encontre o valor;
     if (vetor_dinamico->ordenado) {
 
-       index = busca_binaria_vetor_dinamico(vetor_dinamico->dados, 0, vetor_dinamico->quantidade-1, valor); // retorna o index do elemento
+       //index = busca_binaria_recursiva_vetor_dinamico(vetor_dinamico->dados, 0, vetor_dinamico->quantidade-1, valor); // retorna o index do elemento
+       index = busca_binaria_interativa_vetor_dinamico(vetor_dinamico->dados, vetor_dinamico->quantidade, valor);
 
     } else {
 
