@@ -21,7 +21,7 @@ bool esta_cheio_vetor_dinamico(Vetor_Dinamico* vetor_dinamico) {
 //se vetor estiver cheio, aumentamos 2 vezes o seu tamanho.
 void aumentar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     
-    printf("executou função para aumentar o tamanho do vetor \n");
+    printf("Aumentando 2 vezes o tamanho atual do vetor( 2 * %d )\n", vetor_dinamico->tamanho);
 
     int *temp = vetor_dinamico->dados; 
     //vetor_dinamico->tamanho *= 2;
@@ -42,9 +42,9 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
 
     if ((vetor_dinamico->quantidade < vetor_dinamico->tamanho / 4) && 
         (vetor_dinamico->tamanho >= 4)) { 
-
-        printf("executou função para diminuir o tamanho do vetor \n");    
-
+       
+        printf("Diminuindo o tamanho atual do vetor pela metade ( %d / 2 )\n", vetor_dinamico->tamanho); 
+ 
         int *temp = vetor_dinamico->dados; 
         vetor_dinamico->tamanho /= 2;
         //vetor_dinamico->tamanho = vetor_dinamico->tamanho / 2;
@@ -58,7 +58,6 @@ void diminuir_vetor_dinamico(Vetor_Dinamico *vetor_dinamico) {
     }
 }
 
-
 int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
     
     // TODO:
@@ -69,10 +68,11 @@ int busca_binaria_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
 
 int busca_sequencial_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {    
     
-    // TODO:
-    //return = -1; caso não encontre o valor;
-    //return = index caso encontre o valor;
-    return -1;
+    for (int i = 0; i < vetor_dinamico->quantidade; i++) {
+        if (vetor_dinamico->dados[i] == valor) 
+            return i; //retorna o index do elemento.
+    }    
+    return -1; //caso não encontre o elemente, retorna -1 com index.
 }
 
 // interfaces disponivel para nossos clientes, no caso quem vai usar nosso TAD. 
@@ -101,11 +101,20 @@ void destruir_vetor_dinamico(Vetor_Dinamico **vetor_dinamico_endereco) {
 
 void imprimir_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
 
+    /*printf("index = { ");       
+    for (int i = 0; i < vetor_dinamico->quantidade; i++) {
+        printf("%i  ", i);
+        if (!(i == vetor_dinamico->quantidade-1))
+            printf(",");
+    }    
+    printf("\n"); */
+
     printf("vetor = { ");       
     for (int i = 0; i < vetor_dinamico->quantidade; i++) {
-        printf("%i = %d", i, vetor_dinamico->dados[i]);
+        printf("%i = %d ", i, vetor_dinamico->dados[i]);
+        //printf("%d  ", vetor_dinamico->dados[i]); 
         if (!(i == vetor_dinamico->quantidade-1))
-            printf(", ");
+            printf("| ");
     }
     printf(" } \n\n");
 
@@ -121,27 +130,35 @@ void adicionar_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) {
         aumentar_vetor_dinamico(vetor_dinamico);
     
     }
-    if (vetor_dinamico->ordenado) {
-       
-       //adicionar no vetor ordenado
+    if (vetor_dinamico->ordenado) { //encontrar a posição para inserção, deslocar os elementos para direita e inserir na posição. 
 
-    }else{ 
+        int i;
+        for (i = vetor_dinamico->quantidade -1; i >= 0 && vetor_dinamico->dados[i] > valor; i--)
+            vetor_dinamico->dados[i+1] = vetor_dinamico->dados[i];
+        
+        vetor_dinamico->dados[i+1] = valor;
+        vetor_dinamico->quantidade++;
+
+    } else { //insere na ultima posição não ocupada
+      
         vetor_dinamico->dados[vetor_dinamico->quantidade] = valor;
         vetor_dinamico->quantidade++;
-    }
 
+    }
 }
 
 int busca_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int valor) { //para vetores ordenados, fazer busca binária
     
-    int index = -1;
+    int index = -1; //-1 caso não encontre o valor;
     if (vetor_dinamico->ordenado) {
-       index = busca_binaria_dinamico(vetor_dinamico, valor); 
-    }else {
-       index = busca_sequencial_dinamico(vetor_dinamico, valor); 
+
+       index = busca_binaria_vetor_dinamico(vetor_dinamico, valor); // retorna o index do elemento
+
+    } else {
+
+       index = busca_sequencial_vetor_dinamico(vetor_dinamico, valor); // retorna o index do elemento 
+
     }
-    //return = -1; caso não encontre o valor;
-    //return = index caso encontre o valor;
     return index;
 
 }
@@ -153,6 +170,7 @@ void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) {
     if (vetor_dinamico->ordenado) { // se usar vetor ordenado 
         for (int i = index; i < vetor_dinamico->quantidade - 1; i++) {
             vetor_dinamico->dados[i] = vetor_dinamico->dados[i+1]; //move uma posião todos os elementos maiores que o elemento que foi removido
+            vetor_dinamico->quantidade--;
         }      
     } else {
        
@@ -167,8 +185,7 @@ void remover_vetor_dinamico(Vetor_Dinamico *vetor_dinamico, int index) {
 
 int acessar_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico, int index) {
 
-    // TODO:
-    return 0;
+    return vetor_dinamico->dados[index];
 
 } 
 
@@ -187,7 +204,6 @@ int tamanho_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
 
 int quantidade_vetor_dinamico(const Vetor_Dinamico *vetor_dinamico) {
  
-    // TODO:
-    return 0;
+    return vetor_dinamico->quantidade;
 
 }

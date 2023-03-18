@@ -45,6 +45,42 @@ void menu_vetor_dinamico() {
    } 
 }
 
+void teste_vetor(Vetor_Dinamico *vetor_dinamico) {
+   
+   imprimir_vetor_dinamico(vetor_dinamico);
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   printf("adicionado 16 elementos\n");
+   for (int i = 0; i < 16; i++)
+      adicionar_vetor_dinamico(vetor_dinamico, i*2);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+
+   printf("removendo 13 elementos\n");
+   for (int index = 3; index < 16; index++)
+     remover_vetor_dinamico(vetor_dinamico, index);
+
+   imprimir_vetor_dinamico(vetor_dinamico);
+   
+   printf("tamanho do vetor: %d\n", tamanho_vetor_dinamico(vetor_dinamico));  
+   printf("quantidade: %d \n\n", quantidade_vetor_dinamico(vetor_dinamico));
+
+}
+
+void teste_vetor_ordenado(Vetor_Dinamico *vetor_dinamico) {
+   
+ 
+
+
+}
+
+
 int main() { 
     
    printf("--- TESTANDO O TAD - TIPO ABSTRATO DE DADOS ---\n\n");
@@ -52,6 +88,7 @@ int main() {
    int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
 
    bool ordenado = false; 
+   //bool ordenado = true; 
 
    Vetor_Dinamico *vetor_dinamico = criar_vetor_dinamico(tamanho, ordenado);
 
@@ -59,28 +96,10 @@ int main() {
 
    //vetor_dinamico->tamanho = 10; //não tem acesso direto aos dados.
    //vetor_dinamico->dados[0] = 50; //não tem acesso direto aos dados.
-   imprimir_vetor_dinamico(vetor_dinamico);
-   printf("tamanho: %d\n\n", tamanho_vetor_dinamico(vetor_dinamico));    
- 
-   for (int i = 0; i < 16; i++)
-      adicionar_vetor_dinamico(vetor_dinamico, i*2);
 
-   imprimir_vetor_dinamico(vetor_dinamico);
-
-   printf("tamanho do vetor: %d\n\n", tamanho_vetor_dinamico(vetor_dinamico));
-
-   imprimir_vetor_dinamico(vetor_dinamico);
-
-   printf("tamanho: %d\n\n", tamanho_vetor_dinamico(vetor_dinamico));
-
-   for (int index = 3; index < 16; index++)
-     remover_vetor_dinamico(vetor_dinamico, index);
-
-   imprimir_vetor_dinamico(vetor_dinamico);
-   
-   printf("tamanho do vetor: %d\n\n ", tamanho_vetor_dinamico(vetor_dinamico));
+   teste_vetor(vetor_dinamico);
 
    destruir_vetor_dinamico(&vetor_dinamico);
 
-    return 0;
+   return 0;
 }
