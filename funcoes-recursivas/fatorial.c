@@ -14,13 +14,14 @@ int fatorial(int valor){
 
 int main() {
     
-    int valor;
+    int valor = 5;
 
-    printf("Informe um valor: ");
-    scanf("%d", &valor);
+    //printf("Informe um valor: ");
+    //scanf("%d", &valor);
     
     int result = fatorial(valor);
     printf("1 => ");
     printf("%d! é : %d\n", valor, result);
     return 0;
+    
 }
