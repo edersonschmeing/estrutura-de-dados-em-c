@@ -1,6 +1,6 @@
 ## Estrutura de Dados em linguagem C - 1
 
-Este material apresenta os códigos fonte da disciplina Estrutura de Dados. 
+Este material apresenta os códigos fontes da disciplina Estrutura de Dados. 
 
 **Professor:** Ederson Schmeing
 
