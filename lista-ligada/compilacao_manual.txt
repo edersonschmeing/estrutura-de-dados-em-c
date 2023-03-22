@@ -1,0 +1,8 @@
+#gera o arquivo compilado app_main.o na pasta obj
+gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
+
+#gera o arquivo compilado vetor_dinamico.o na pasta obj
+gcc -I include -Wall -Werror -c src/vetor_dinamico.c -o obj/vetor_dinamico.o
+
+#Faz a linkagem gerando o arquivo executável 
+gcc obj/app_main.o obj/vetor_dinamico.o -o bin/app_main.out
