@@ -15,10 +15,13 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
   - [9 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada)
   - [10 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
-  - [11 - Lista Ligada Cirbular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
+  - [11 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [12 - Lista Duplamente Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-duplamente-ligada)
-  
-   
+  - [13 - Pilha como Vetor]()
+  - [14 - Pilha como Lista Ligada]()
+  - [15 - Fila como Vetor]()
+  - [14 - Fila como Lista Ligada]()
+
 
 ### Referências 
 
