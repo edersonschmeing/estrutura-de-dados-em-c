@@ -11,7 +11,7 @@ struct no {
 };
 
 struct lista {
-    int quantidade; 
+    int tamanho; 
     No *cabeca; 
     No *cauda; 
 };
