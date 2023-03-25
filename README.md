@@ -4,7 +4,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
 
 **Professor:** Ederson Schmeing
 
-- **Conceitos Básicos**
+  <!-- -- **Conceitos Básicos** -->
   - [1 - Endereços de Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/endereco-de-variaveis)
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
   - [3 - Ponteiros e Funções](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-funcoes)
@@ -14,9 +14,9 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [7 - Funções Recursivas](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-recursivas)
   - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
   - [9 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada)
-  - [10 - Lista Ligada com Cabeça]()
-  - [11 - Lista Duplamente Ligada]()
-  
+  - [10 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
+  - [11 - Lista Ligada Cirbular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
+  - [12 - Lista Duplamente Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-duplamente-ligada)
   
    
 
