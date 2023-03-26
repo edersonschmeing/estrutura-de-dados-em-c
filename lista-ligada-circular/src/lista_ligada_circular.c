@@ -9,10 +9,5 @@ struct no {
 };
 
 
-struct lista {
-    int tamanho; 
-    No *cabeca;  
-};
-
 
 
