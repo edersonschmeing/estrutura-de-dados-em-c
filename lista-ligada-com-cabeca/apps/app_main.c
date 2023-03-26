@@ -9,6 +9,8 @@ int main() {
 
    Lista *lista = criar_lista();
 
+   imprimir_lista(lista);
+
    adicionar_inicio_lista(lista, 10);
    adicionar_inicio_lista(lista, 33);
    adicionar_inicio_lista(lista, 99);
