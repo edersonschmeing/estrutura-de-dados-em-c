@@ -7,15 +7,19 @@ int main() {
     
    printf("\n--- Lista Ligada ---\n\n");
    
-   No *lista_ligada = criar_lista();
+   No *lista = criar_lista();
 
-   imprimir_lista(lista_ligada);
+   imprimir_lista(lista);
 
-   adicionar_inicio_lista(&lista_ligada, 10);
-   adicionar_inicio_lista(&lista_ligada, 33);
-   adicionar_inicio_lista(&lista_ligada, 99);
+   adicionar_inicio_lista(&lista, 10);
+   adicionar_inicio_lista(&lista, 33);
+   adicionar_inicio_lista(&lista, 99);
 
-   imprimir_lista(lista_ligada);
+   imprimir_lista(lista);
+
+   remover_valor_lista(&lista, 99);
+
+   imprimir_lista(lista);
    
    
    return 0;

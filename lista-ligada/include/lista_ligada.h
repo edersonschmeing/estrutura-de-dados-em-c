@@ -6,19 +6,19 @@
 typedef struct no No;
 
 No* criar_lista();
-void destruir_lista(No **p);
+void destruir_lista(No **ptr_ptr_no);
 
-int tamanho_lista(const No *p);
+int tamanho_lista(const No *ptr_no);
 
-void imprimir_lista(No *p);
+void imprimir_lista(No *ptr_no);
 
-void adicionar_inicio_lista(No **p, int valor); 
+void adicionar_inicio_lista(No **ptr_ptr_no, int valor); 
 void adicionar_fim_lista(No **p, int valor); 
-void adicionar_ordenado_lista(No **p, int valor); 
+void adicionar_ordenado_lista(No **ptr_ptr_no, int valor); 
 
-void remover_inicio_lista(No **p); 
-void remover_fim_lista(No **p); 
-void remover_lista(No **p, int valor); 
+int remover_inicio_lista(No **ptr_ptr_no); // 0 não removeu e 1 removeu
+int remover_fim_lista(No **ptr_ptr_no); 
+int remover_valor_lista(No **ptr_ptr_no, int valor); 
 
-int buscar_valor_lista(No *p, int valor);
-int buscar_posicao_lista(No *p, int posicao);
+int buscar_valor_lista(No *ptr_no, int valor);
+int buscar_posicao_lista(No *ptr_no, int posicao);
