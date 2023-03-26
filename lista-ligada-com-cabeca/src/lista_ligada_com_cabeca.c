@@ -73,11 +73,11 @@ void imprimir_lista(Lista *lista) {
 void adicionar_inicio_lista(Lista *lista, int valor) {
 
     No *p = (No*) malloc(sizeof(No));
-    
     if (p == NULL) {
        perror("malloc");
        exit(EXIT_FAILURE);
     }
+
     p->dados = valor;
     p->proximo = lista->cabeca;
     lista->cabeca = p;   
