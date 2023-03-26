@@ -5,21 +5,20 @@
 
 typedef struct no No;
 
-No* criar_lista_ligada();
-void destruir_lista_ligada(No **p);
+No* criar_lista();
+void destruir_lista(No **p);
 
-int tamanho_lista_ligada(const No *p);
-bool esta_cheio_lista_ligada(const No *p);
+int tamanho_lista(const No *p);
 
-void imprimir_lista_ligada(No *p);
+void imprimir_lista(No *p);
 
-void adicionar_inicio_lista_ligada(No **p, int valor); 
-void adicionar_fim_lista_ligada(No **p, int valor); 
-void adicionar_ordenado_lista_ligada(No **p, int valor); 
+void adicionar_inicio_lista(No **p, int valor); 
+void adicionar_fim_lista(No **p, int valor); 
+void adicionar_ordenado_lista(No **p, int valor); 
 
-void remover_inicio_lista_ligada(No *p); 
-void remover_fim_lista_ligada(No *p); 
-void remover_lista_ligada(No *p, int valor); 
+void remover_inicio_lista(No **p); 
+void remover_fim_lista(No **p); 
+void remover_lista(No **p, int valor); 
 
-int buscar_lista_ligada(No *p, int valor);
-int buscar_posicao_lista_ligada(No *p, int posicao);
+int buscar_valor_lista(No *p, int valor);
+int buscar_posicao_lista(No *p, int posicao);
