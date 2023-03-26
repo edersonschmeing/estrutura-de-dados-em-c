@@ -58,12 +58,16 @@ void imprimir_interativo_lista(No *ptr_no) {
     printf("NULL\n\n"); 
     */
 
-    printf("Lista { ");
+    //printf("Lista inicío \n");
     while (ptr_no != NULL) {
-       printf("%d -> ", ptr_no->dados);
-       ptr_no = ptr_no->proximo;        
+       printf("%d -> ", ptr_no->dados );
+       //printf("atual: %p valor: %d próximo: %p \n", ptr_no, ptr_no->dados, ptr_no->proximo );
+
+       ptr_no = ptr_no->proximo;
+
     }
-    printf("NULL }\n\n");
+    printf("NULL \n\n");    
+    //printf("fim \n\n");
     
 }   
 
