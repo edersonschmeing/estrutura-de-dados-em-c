@@ -21,6 +21,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [14 - Pilha como Lista Ligada]()
   - [15 - Fila como Vetor]()
   - [14 - Fila como Lista Ligada]()
+  - [16 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
+  - [17 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
 
 
 ### Referências 
