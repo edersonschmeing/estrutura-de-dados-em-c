@@ -100,8 +100,8 @@ void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
     *ptr_ptr_no = ptr_novo_no;
 } 
 
-void adicionar_fim_lista(No **pptr_ptr_no, int valor) { 
-
+void adicionar_fim_lista(No **ptr_ptr_no, int valor) { 
+     
     //TODO
 
 } 
@@ -123,7 +123,7 @@ int remover_inicio_lista(No **ptr_ptr_no) {
 int remover_fim_lista(No **ptr_ptr_no) {
 
    //TODO
-   return 1;
+    return 1;
 
 } 
 
