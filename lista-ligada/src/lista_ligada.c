@@ -88,12 +88,13 @@ int tamanho_lista(const No *ptr_no) {
 
 void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
 
-    No *ptr_novo_no = ptr_novo_no = (No*) malloc(sizeof(No));
+    No *ptr_novo_no = (No*) malloc(sizeof(No));
 
     if (ptr_novo_no == NULL) {
        perror("malloc");
        exit(EXIT_FAILURE);
     }
+
     ptr_novo_no->dados = valor;
     ptr_novo_no->proximo = *ptr_ptr_no;
     *ptr_ptr_no = ptr_novo_no;
@@ -105,6 +106,7 @@ void adicionar_fim_lista(No **pptr_ptr_no, int valor) {
 
 } 
 
+//pode deixar para implementar por último 
 void adicionar_ordenado_lista(No **ptr_ptr_no, int valor) {
 
     //TODO
@@ -128,6 +130,7 @@ int remover_fim_lista(No **ptr_ptr_no) {
 int remover_valor_lista(No **ptr_ptr_no, int valor) { 
 
     No *ptr_no_atual = *ptr_ptr_no;
+   
     if (ptr_no_atual == NULL) 
        return 0;
 
@@ -137,6 +140,7 @@ int remover_valor_lista(No **ptr_ptr_no, int valor) {
        ptr_no_anterior = ptr_no_atual;
        ptr_no_atual = ptr_no_atual->proximo;     
     }
+
     if (ptr_no_atual == NULL) 
         return 0;
 
