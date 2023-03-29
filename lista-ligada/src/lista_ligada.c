@@ -130,14 +130,14 @@ void adicionar_ordenado_lista(No **ptr_ptr_no, int valor) {
 
 } 
 
-bool remover_inicio_lista(No **ptr_ptr_no) {
+int remover_inicio_lista(No **ptr_ptr_no) {
  
      //TODO
      return 1;
 
 } 
 
-bool remover_fim_lista(No **ptr_ptr_no) {
+int remover_fim_lista(No **ptr_ptr_no) {
 
     No *prt_atual = *ptr_ptr_no;
     No *ptr_no_anterior = NULL;
@@ -149,9 +149,10 @@ bool remover_fim_lista(No **ptr_ptr_no) {
     ptr_no_anterior->proximo = NULL;
 
    //TODO
-   return true;
+   return 1;
 
 } 
+
 
 bool remover_valor_lista(No **ptr_ptr_no, int valor) { 
 
