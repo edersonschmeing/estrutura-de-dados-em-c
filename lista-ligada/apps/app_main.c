@@ -26,11 +26,11 @@ int main() {
    remover_valor_lista(&lista, 99);
    imprimir_lista(lista);
    
-   //adicionar_fim_lista(&lista, 44);
-   //imprimir_lista(lista);
+   adicionar_fim_lista(&lista, 44);
+   imprimir_lista(lista);
 
-   //remover_fim_lista(&lista);
-   //imprimir_lista(lista);
+   remover_fim_lista(&lista);
+   imprimir_lista(lista);
 
 
    return 0;

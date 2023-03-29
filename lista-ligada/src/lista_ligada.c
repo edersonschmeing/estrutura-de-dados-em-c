@@ -101,8 +101,25 @@ void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
 } 
 
 void adicionar_fim_lista(No **ptr_ptr_no, int valor) { 
-     
-    //TODO
+
+    No *ptr_novo_no = (No*) malloc(sizeof(No));
+
+    if (ptr_novo_no == NULL) {
+       perror("malloc");
+       exit(EXIT_FAILURE);
+    }
+    
+    ptr_novo_no->dados = valor;
+    ptr_novo_no->proximo = NULL;
+    
+    No *prt_atual = *ptr_ptr_no;
+    
+    while (prt_atual->proximo != NULL) {
+         
+         prt_atual = prt_atual->proximo;
+
+    }
+    prt_atual->proximo = ptr_novo_no;
 
 } 
 
@@ -122,8 +139,17 @@ int remover_inicio_lista(No **ptr_ptr_no) {
 
 int remover_fim_lista(No **ptr_ptr_no) {
 
+    No *prt_atual = *ptr_ptr_no;
+    No *ptr_no_anterior = NULL;
+    
+    while (prt_atual->proximo != NULL) {
+         ptr_no_anterior = prt_atual; 
+         prt_atual = prt_atual->proximo;
+    }
+    ptr_no_anterior->proximo = NULL;
+
    //TODO
-    return 1;
+   return 1;
 
 } 
 
