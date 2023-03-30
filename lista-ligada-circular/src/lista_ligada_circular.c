@@ -25,7 +25,7 @@ void destruir_lista_ligada(No **ptr_ptr_no) {
 
   //  printf("%p \n", ptr_no_atual);
    
-     while (ptr_no_atual != ptr_no_ultimo) {
+    while (ptr_no_atual != ptr_no_ultimo) {
         ptr_no_auxiliar = ptr_no_atual;
         ptr_no_atual = ptr_no_atual->proximo; 
         free(ptr_no_auxiliar);
@@ -53,8 +53,12 @@ void imprimir_lista(No *ptr_no) {
          printf("%d -> ", ptr_no_atual->dados);   
       }
       printf("%d -> \n", ptr_no_atual->dados);  
-   } else 
+
+   } else { 
+
       printf("NULL\n");
+   
+   }
  
 }
 
