@@ -15,25 +15,25 @@ int main() {
 
    imprimir_lista(lista);
 
-  /* adicionar_inicio_lista(&lista, 33);
+   adicionar_inicio_lista(&lista, 33);
    imprimir_lista(lista);
 
    adicionar_inicio_lista(&lista, 99);
    imprimir_lista(lista);
 
-   adicionar_inicio_lista(&lista, 17);
+   adicionar_fim_lista(&lista, 17);
    imprimir_lista(lista);
 
-   remover_valor_lista(&lista, 99);
-   imprimir_lista(lista);
-   
-   //adicionar_fim_lista(&lista, 44);
-  // imprimir_lista(lista); */
-
-  // remover_fim_lista(&lista);
+  // remover_valor_lista(&lista, 99);
   // imprimir_lista(lista);
+   
+  adicionar_fim_lista(&lista, 44);
+  imprimir_lista(lista); 
 
-   destruir_lista_ligada(&lista);
+  remover_fim_lista(&lista);
+  imprimir_lista(lista);
+
+  destruir_lista_ligada(&lista);
    
    
    return 0;
