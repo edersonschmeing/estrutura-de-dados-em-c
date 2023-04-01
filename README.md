@@ -4,7 +4,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
 
 **Professor:** Ederson Schmeing
 
-  <!-- -- **Conceitos Básicos** -->
+Primeiro bimestre
+
   - [1 - Endereços de Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/endereco-de-variaveis)
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
   - [3 - Ponteiros e Funções](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-funcoes)
@@ -23,6 +24,10 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [14 - Fila como Lista Ligada]()
   - [16 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [17 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
+  
+ Segundo bimestre
+ 
+  - [18 - Árvore binária de busca]()
 
 
 ### Referências 
