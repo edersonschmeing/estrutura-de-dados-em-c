@@ -60,15 +60,57 @@ int tamanho_lista(Lista *ptr_lista) {
     return 0;
 }
 
-void imprimir_lista(Lista *ptr_lista) { 
+void imprimir_cabeca_lista(Lista *ptr_lista) { 
 
-    //TODO: Implemente esta função.
+    No *ptr_no_atual = ptr_lista->ptr_no_cabeca;
+     printf("Lista Cabeça -> ");
+     while (ptr_no_atual != NULL) {
+       printf("%d -> ", ptr_no_atual->dados);
+       ptr_no_atual = ptr_no_atual->ptr_no_proximo;
+    }
+    printf(" NULL \n"); 
+}
 
+void imprimir_cauda_lista(Lista *ptr_lista) { 
+
+    No *ptr_no_atual = ptr_lista->ptr_no_cauda;
+     printf("Lista Cauda -> ");
+     while (ptr_no_atual != NULL) {
+       printf("%d -> ", ptr_no_atual->dados);
+       ptr_no_atual = ptr_no_atual->ptr_no_anterior;
+    }
+    printf(" NULL \n"); 
 }
 
 void adicionar_cabeca_lista(Lista *ptr_lista, int valor) { 
 
-    //TODO: Implemente esta função.
+    No *ptr_no_novo = (No*) malloc(sizeof(No));
+    
+    if (ptr_no_novo == NULL) {
+       perror("malloc");
+       exit(EXIT_FAILURE);
+    }
+
+    ptr_no_novo->dados = valor;
+    ptr_no_novo->ptr_no_anterior = NULL;
+    ptr_no_novo->ptr_no_proximo = NULL;
+     
+    if (ptr_lista->ptr_no_cabeca == NULL) {
+
+        ptr_lista->ptr_no_cabeca = ptr_no_novo; 
+
+        ptr_lista->ptr_no_cauda = ptr_no_novo;
+
+    } else { 
+
+        ptr_no_novo->ptr_no_proximo = ptr_lista->ptr_no_cabeca;
+
+        ptr_lista->ptr_no_cabeca->ptr_no_anterior = ptr_no_novo;
+
+        ptr_lista->ptr_no_cabeca = ptr_no_novo;
+
+    }
+    ptr_lista->tamanho = ptr_lista->tamanho + 1; 
 
 }
 
@@ -90,7 +132,6 @@ bool remover_inicio_lista(Lista *ptr_lista) {
     return true;
 
 } 
-
 
 bool remover_fim_lista(Lista *ptr_lista) {
 

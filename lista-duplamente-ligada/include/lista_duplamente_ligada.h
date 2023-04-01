@@ -17,7 +17,8 @@ void destruir_lista(Lista **ptr_ptr_lista);
 
 int tamanho_lista(Lista *ptr_lista);
 
-void imprimir_lista(Lista *ptr_lista);
+void imprimir_cabeca_lista(Lista *ptr_lista);
+void imprimir_cauda_lista(Lista *ptr_lista);
 
 void adicionar_cabeca_lista(Lista *ptr_lista, int valor);
 void adicionar_cauda_lista(Lista *ptr_lista, int valor);
