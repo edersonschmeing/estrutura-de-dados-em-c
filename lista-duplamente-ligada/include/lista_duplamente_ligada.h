@@ -13,19 +13,19 @@ typedef struct no No;
 typedef struct lista Lista;
 
 Lista *criar_lista();
-void destruir_lista(Lista **lista);
+void destruir_lista(Lista **ptr_ptr_lista);
 
-int tamanho_lista(Lista *lista);
+int tamanho_lista(Lista *ptr_lista);
 
-void imprimir_lista(Lista *lista);
+void imprimir_lista(Lista *ptr_lista);
 
-void adicionar_inicio_lista(Lista *lista, int valor);
-void adicionar_fim_lista(Lista *lista, int valor);
-void adicionar_posicao_lista(Lista *lista, int posicao);
+void adicionar_cabeca_lista(Lista *ptr_lista, int valor);
+void adicionar_cauda_lista(Lista *ptr_lista, int valor);
+void adicionar_posicao_lista(Lista *ptr_lista, int posicao);
 
-bool remover_inicio_lista(Lista *lista); 
-bool remover_fim_lista(Lista *lista); 
-bool remover_valor_lista(Lista *lista, int valor); 
+bool remover_inicio_lista(Lista *ptr_lista); 
+bool remover_fim_lista(Lista *ptr_lista); 
+bool remover_valor_lista(Lista *ptr_lista, int valor); 
 
-int buscar_valor_lista(Lista *lista, int valor);
-int buscar_posicao_lista(Lista *lista, int posicao);
+int buscar_valor_lista(Lista *ptr_lista, int valor);
+int buscar_posicao_lista(Lista *ptr_lista, int posicao);
