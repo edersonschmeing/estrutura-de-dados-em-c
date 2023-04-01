@@ -22,64 +22,94 @@ Lista *criar_lista() {
    return lista;
 }
 
-
-void destruir_recursivo_lista() { 
-
-}
-
-void destruir_interativo_lista(Lista **lista) {
-
-    No *p = (*lista)->cabeca;
+void destruir_lista(Lista **lista) {
+ 
+    No *ptr_no_atual = (*lista)->cabeca;
     No *aux;    
-    while (p != NULL) {
-       aux = p;
-       p = p->proximo;
+    while (ptr_no_atual != NULL) {
+       aux = ptr_no_atual;
+       ptr_no_atual = ptr_no_atual->proximo;
        free(aux);          
     }
     free(*lista);
     *lista = NULL;
-        
-}
-
-void destruir_lista(Lista **lista) {
- 
-    destruir_interativo_lista(lista);
     
 }
 
-void imprimir_recursivo_lista(Lista *lista) { 
+int tamanho_lista(Lista *lista) {
+
+    return -1;
 
 }
-
-void imprimir_interativo_lista(Lista *lista) { 
-
-    printf("Lista { ");
-    No *p;
-    for (p = lista->cabeca; p != NULL; p = p->proximo)
-       printf("%d -> ", p->dados);
-    printf("NULL }\n\n");
-
-}   
 
 void imprimir_lista(Lista *lista) { 
 
-    //imprimir_recursivo_lista(lista);
+    printf("Lista { ");
+   // No *ptr_atual;
     
-    imprimir_interativo_lista(lista);    
+    for (No *ptr_no_atual = lista->cabeca; 
+         ptr_no_atual != NULL; 
+         ptr_no_atual = ptr_no_atual->proximo) {
+
+       printf("%d -> ", ptr_no_atual->dados);
+
+    }
+    printf("NULL }\n\n");
 
 }
 
-
 void adicionar_inicio_lista(Lista *lista, int valor) {
 
-    No *p = (No*) malloc(sizeof(No));
-    if (p == NULL) {
+    No *ptr_no_novo = (No*) malloc(sizeof(No));
+    
+    if (ptr_no_novo == NULL) {
        perror("malloc");
        exit(EXIT_FAILURE);
     }
 
-    p->dados = valor;
-    p->proximo = lista->cabeca;
-    lista->cabeca = p;   
+    ptr_no_novo->dados = valor;
+    ptr_no_novo->proximo = lista->cabeca;
+    lista->cabeca = ptr_no_novo;   
+
+    lista->tamanho = lista->tamanho + 1; 
     
 } 
+
+void adicionar_fim_lista(Lista *lista, int valor) {
+
+}
+
+bool remover_inicio_lista(Lista *lista) {
+
+    return true;
+
+} 
+
+bool remover_fim_lista(Lista *lista) {
+
+    return true;
+
+} 
+
+
+bool remover_valor_lista(Lista *lista, int valor) {
+
+    return true;
+
+} 
+
+
+int buscar_valor_lista(Lista *lista, int valor) {
+
+    return -1;
+
+}
+
+
+int buscar_posicao_lista(Lista *lista, int posicao) {
+
+    return -1;
+
+}
+
+

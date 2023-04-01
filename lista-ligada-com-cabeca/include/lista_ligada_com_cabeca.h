@@ -17,9 +17,9 @@ void imprimir_lista(Lista *lista);
 void adicionar_inicio_lista(Lista *lista, int valor);
 void adicionar_fim_lista(Lista *lista, int valor);
 
-void remover_inicio_lista(Lista *lista); 
-void remover_fim_lista(Lista *lista); 
-void remover_valor_lista(Lista *lista, int valor); 
+bool remover_inicio_lista(Lista *lista); 
+bool remover_fim_lista(Lista *lista); 
+bool remover_valor_lista(Lista *lista, int valor); 
 
 int buscar_valor_lista(Lista *lista, int valor);
 int buscar_posicao_lista(Lista *lista, int posicao);

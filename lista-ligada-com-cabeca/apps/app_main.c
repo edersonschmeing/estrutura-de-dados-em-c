@@ -17,6 +17,8 @@ int main() {
    
    imprimir_lista(lista);
 
+   printf("%d \n", tamanho_lista(lista));
+
    destruir_lista(&lista);
    
    return 0;
