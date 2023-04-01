@@ -92,7 +92,10 @@ bool remover_inicio_lista(Lista *lista) {
 
 bool remover_fim_lista(Lista *lista) {
 
+    
     //TODO: Implemente esta função.
+
+
     return true;
 
 } 
