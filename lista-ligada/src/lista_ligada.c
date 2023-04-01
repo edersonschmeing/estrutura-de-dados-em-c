@@ -88,38 +88,39 @@ int tamanho_lista(const No *ptr_no) {
 
 void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
 
-    No *ptr_novo_no = (No*) malloc(sizeof(No));
+    No *ptr_no_novo = (No*) malloc(sizeof(No));
 
-    if (ptr_novo_no == NULL) {
+    if (ptr_no_novo == NULL) {
        perror("malloc");
        exit(EXIT_FAILURE);
     }
 
-    ptr_novo_no->dados = valor;
-    ptr_novo_no->proximo = *ptr_ptr_no;
-    *ptr_ptr_no = ptr_novo_no;
+    ptr_no_novo->dados = valor;
+    ptr_no_novo->proximo = *ptr_ptr_no;
+    
+    *ptr_ptr_no = ptr_no_novo;
 } 
 
 void adicionar_fim_lista(No **ptr_ptr_no, int valor) { 
 
-    No *ptr_novo_no = (No*) malloc(sizeof(No));
+    No *ptr_no_novo = (No*) malloc(sizeof(No));
 
-    if (ptr_novo_no == NULL) {
+    if (ptr_no_novo == NULL) {
        perror("malloc");
        exit(EXIT_FAILURE);
     }
     
-    ptr_novo_no->dados = valor;
-    ptr_novo_no->proximo = NULL;
+    ptr_no_novo->dados = valor;
+    ptr_no_novo->proximo = NULL;
     
-    No *prt_atual = *ptr_ptr_no;
+    No *prt_no_atual = *ptr_ptr_no;
     
-    while (prt_atual->proximo != NULL) {
+    while (prt_no_atual->proximo != NULL) {
          
-         prt_atual = prt_atual->proximo;
+         prt_no_atual = prt_no_atual->proximo;
 
     }
-    prt_atual->proximo = ptr_novo_no;
+    prt_no_atual->proximo = ptr_no_novo;
 
 } 
 
@@ -139,12 +140,17 @@ bool remover_inicio_lista(No **ptr_ptr_no) {
 
 bool remover_fim_lista(No **ptr_ptr_no) {
 
-    No *prt_atual = *ptr_ptr_no;
+    
+    No *prt_no_atual = *ptr_ptr_no;
+
+    if (prt_no_atual == NULL) // lista vazia 
+       return false;
+
     No *ptr_no_anterior = NULL;
     
-    while (prt_atual->proximo != NULL) {
-         ptr_no_anterior = prt_atual; 
-         prt_atual = prt_atual->proximo;
+    while (prt_no_atual->proximo != NULL) {
+         ptr_no_anterior = prt_no_atual; 
+         prt_no_atual = prt_no_atual->proximo;
     }
     ptr_no_anterior->proximo = NULL;
 
@@ -152,7 +158,6 @@ bool remover_fim_lista(No **ptr_ptr_no) {
    return true;
 
 } 
-
 
 bool remover_valor_lista(No **ptr_ptr_no, int valor) { 
 
