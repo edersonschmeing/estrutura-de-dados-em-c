@@ -59,7 +59,7 @@ void empilhar_pilha(No **ptr_ptr_no, int valor) {  //&l
     *ptr_ptr_no = ptr_no_novo;
 } 
 
-bool desemplilhar_pilha(No **ptr_ptr_no) {
+bool desempilhar_pilha(No **ptr_ptr_no) {
  
      //TODO
      return true;

@@ -26,7 +26,7 @@ int main() {
    empilhar_pilha(&pilha, 44);
    imprimir_pilha(pilha);
 
-   desemplilhar_pilha(&pilha); //precisa implementar
+   desempilhar_pilha(&pilha); //precisa implementar
    imprimir_pilha(pilha);
 
 

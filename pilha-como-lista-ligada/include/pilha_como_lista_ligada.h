@@ -14,6 +14,6 @@ void imprimir_pilha(No *ptr_no);
 
 void empilhar_pilha(No **ptr_ptr_no, int valor); 
 
-bool desemplilhar_pilha(No **ptr_ptr_no); // 0 não removeu e 1 removeu
+bool desempilhar_pilha(No **ptr_ptr_no); // 0 não removeu e 1 removeu
 
 int buscar_valor_pilha(No *ptr_no, int valor);
