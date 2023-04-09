@@ -18,7 +18,7 @@ Primeiro bimestre
   - [10 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [11 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
   - [12 - Lista Duplamente Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-duplamente-ligada)
-  - [13 - Pilha como Vetor]()
+  - [13 - Pilha como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-vetor)
   - [14 - Pilha como Lista Ligada]()
   - [15 - Fila como Vetor]()
   - [14 - Fila como Lista Ligada]()
