@@ -1,7 +1,7 @@
 all: app_main
 
 app_main: app_main.o fila_como_lista_ligada.o  
-	gcc obj/app_main.o obj/lista_ligada_com_cabeca.o -o bin/app_main.out	
+	gcc obj/app_main.o obj/fila_como_lista_ligada.o -o bin/app_main.out	
 # para o windows comentar a linha acima e descomentar a linha abaixo
 #gcc obj/app_main.o obj/fila_como_lista_ligada.o -o bin/app_main.exe	
 
