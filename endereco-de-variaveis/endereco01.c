@@ -26,7 +26,10 @@ int main() {
 
     printf("&a = %p \n\n", &a);
     printf("&a = %p \n\n", &b);
-    
+
+    printf("&a = %p \n\n", refb);
+
+
     unsigned long tamanho_a = sizeof(a);
     unsigned long tamanho_b = sizeof(b);
 
