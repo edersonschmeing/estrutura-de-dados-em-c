@@ -22,3 +22,5 @@ bool remover_valor_lista(No **ptr_ptr_no, int valor);
 
 int buscar_valor_lista(No *ptr_no, int valor);
 int buscar_posicao_lista(No *ptr_no, int posicao);
+
+void juntar_lista(No **ptr_ptr_lista01, No **ptr_ptr_lista02 );

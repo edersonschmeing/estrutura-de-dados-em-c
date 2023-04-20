@@ -200,3 +200,26 @@ int buscar_posicao_lista(No *ptr_ptr_no, int posicao) { //retornar o valor da po
 
 }
 
+void juntar_lista(No **ptr_ptr_lista01, No **ptr_ptr_lista02 ) {
+
+    if (*ptr_ptr_lista01 == NULL && *ptr_ptr_lista02 != NULL) {
+
+        *ptr_ptr_lista01 = *ptr_ptr_lista02; 
+
+    } else if (*ptr_ptr_lista01 != NULL && *ptr_ptr_lista02 == NULL) {
+
+        *ptr_ptr_lista02 = *ptr_ptr_lista01; 
+
+    } else if (*ptr_ptr_lista01 != NULL && *ptr_ptr_lista02 != NULL) { 
+     
+        No *prt_aux = *ptr_ptr_lista02;
+        while (prt_aux->proximo != NULL) {
+            prt_aux = prt_aux->proximo;
+        }
+        prt_aux->proximo = *ptr_ptr_lista01;
+        *ptr_ptr_lista01 = *ptr_ptr_lista02; 
+    } 
+}
+
+
+
