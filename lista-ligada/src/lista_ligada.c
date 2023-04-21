@@ -210,7 +210,7 @@ void juntar_lista(No **ptr_ptr_lista01, No **ptr_ptr_lista02 ) {
 
         *ptr_ptr_lista02 = *ptr_ptr_lista01; 
 
-    } else if (*ptr_ptr_lista01 != NULL && *ptr_ptr_lista02 != NULL) { 
+    } else  if (*ptr_ptr_lista01 != NULL && *ptr_ptr_lista02 != NULL) {
      
         No *prt_aux = *ptr_ptr_lista02;
         while (prt_aux->proximo != NULL) {
@@ -220,6 +220,3 @@ void juntar_lista(No **ptr_ptr_lista01, No **ptr_ptr_lista02 ) {
         *ptr_ptr_lista01 = *ptr_ptr_lista02; 
     } 
 }
-
-
-
