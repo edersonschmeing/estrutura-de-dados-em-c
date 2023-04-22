@@ -34,7 +34,7 @@ Primeiro bimestre
  Trabalho do Segundo bimestre
   
   - [99 - Árvore B](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-B)
-  - [99 - Árvore Digital de Busca,](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
+  - [99 - Árvore Digital de Busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
   - [99 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
