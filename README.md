@@ -30,14 +30,14 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   
  ### Segundo bimestre
  
-  - [18 - Árvore binária de busca]()
+  - [18 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
   
   <!-- - Fila de Prioridade e Heap Binário -->
 
  Trabalho do segundo bimestre
   
-  - [99 - Árvore B](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-B)
-  - [99 - Árvore Digital de Busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
+  - [99 - Árvores B](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-B)
+  - [99 - Árvores Digitais de Busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
   - [99 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
