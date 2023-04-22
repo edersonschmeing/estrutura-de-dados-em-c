@@ -1,8 +1,0 @@
-#gera o arquivo compilado app_main.o na pasta obj
-gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
-
-#gera o arquivo compilado arvore_digital_de_busca.o na pasta obj
-gcc -I include -Wall -Werror -c src/arvore_digital_de_busca.c -o obj/arvore_digital_de_busca.o
-
-#Faz a linkagem gerando o arquivo executável 
-gcc obj/app_main.o obj/arvore_digital_de_busca.o -o bin/app_main.out
