@@ -46,13 +46,16 @@ void adicionar_tabela_hash(Tabela_Hash *ptr_tabela_hash, char *chave, int valor)
     
     int n = hashing(chave, ptr_tabela_hash->tamanho_vetor); 
     ptr_tabela_hash->vetor[n] = adicionar_lista_ligada( ptr_tabela_hash->vetor[n], chave, valor);
-
+    
+    printf("%s\n", chave);
 }
 
 void remover_tabela_hash(Tabela_Hash *ptr_tabela_hash, char *chave) { 
 
     int n = hashing(chave, ptr_tabela_hash->tamanho_vetor); 
     ptr_tabela_hash->vetor[n] = remover_lista_ligada( ptr_tabela_hash->vetor[n], chave);
+
+    printf("%s\n", chave);
 
 }
 
