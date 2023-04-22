@@ -4,7 +4,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
 
 **Professor:** Ederson Schmeing
 
-Primeiro bimestre
+### Primeiro bimestre
 
   - [1 - Endereços de Variáveis](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/endereco-de-variaveis)
   - [2 - Ponteiros](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros)
@@ -23,18 +23,18 @@ Primeiro bimestre
   - [15 - Fila como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
   - [14 - Fila como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
  
- Trabalho do Primeiro bimestre
+ Trabalho do primeiro bimestre
  
   - [16 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [17 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
   
- Segundo bimestre
+ ### Segundo bimestre
  
   - [18 - Árvore binária de busca]()
   
   <!-- - Fila de Prioridade e Heap Binário -->
 
- Trabalho do Segundo bimestre
+ Trabalho do segundo bimestre
   
   - [99 - Árvore B](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-B)
   - [99 - Árvore Digital de Busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
