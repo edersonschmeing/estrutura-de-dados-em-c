@@ -1,4 +1,4 @@
-## Árvore Digital de Busca, Tries e Patricia tries
+## Árvore Digital de Busca, Tries e Patricia Tries
 
 
 
