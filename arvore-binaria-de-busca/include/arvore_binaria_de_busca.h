@@ -3,3 +3,4 @@
 #include <stdbool.h> 
 
 
+typedef struct no No;

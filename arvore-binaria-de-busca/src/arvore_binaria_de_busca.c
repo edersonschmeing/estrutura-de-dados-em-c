@@ -2,3 +2,9 @@
 #include <stdio.h>
 
 
+struct no {
+	int dados;
+    No *esquerda;
+    No *direita;
+};
+
