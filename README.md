@@ -29,7 +29,7 @@ Primeiro bimestre
  
   - [18 - Árvore binária de busca]()
   
-  - [99 -Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [99 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
 
