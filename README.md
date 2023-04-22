@@ -37,8 +37,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
  Trabalho do segundo bimestre
   
   - [99 - Árvores B](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-B)
-  - [99 - Árvores Digitais de Busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
-  - [99 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [99 - Árvores digitais de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-digital-de-busca)
+  - [99 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
 
