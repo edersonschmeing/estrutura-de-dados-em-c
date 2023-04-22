@@ -5,9 +5,9 @@
 
 int main() { 
     
-   printf("\n--- Árvore Digital de Busca ---\n\n");
+   printf("\n--- Árvore Digital de Busca, Tries e Patricia Tries ---\n\n");
    
  
    return 0;
 
-}git 
+}
