@@ -22,14 +22,17 @@ Primeiro bimestre
   - [14 - Pilha como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-lista-ligada)
   - [15 - Fila como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
   - [14 - Fila como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
+ 
  Trabalho do Primeiro bimestre
+ 
   - [16 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [17 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
   
  Segundo bimestre
-  <!-- - [18 - Árvore binária de busca]()
+ 
+  - [18 - Árvore binária de busca]()
   
-  - Fila de Prioridade e Heap Binário -->
+  <!-- - Fila de Prioridade e Heap Binário -->
 
  Trabalho do Segundo bimestre
   
