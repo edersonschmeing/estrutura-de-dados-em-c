@@ -29,6 +29,8 @@ Primeiro bimestre
  
   - [18 - Árvore binária de busca]()
   
+  <!-- - Fila de Prioridade e Heap Binário -->
+  
   - [99 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
