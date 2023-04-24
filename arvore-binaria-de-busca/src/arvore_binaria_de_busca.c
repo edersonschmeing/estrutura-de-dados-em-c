@@ -8,9 +8,10 @@ struct no {
     No *ptr_direita;
 };
 
-ABB **criar_ABB() { 
 
-    ABB **ptr_raiz = (ABB**) malloc(sizeof(ABB*));
+No_Raiz *criar_ABB() { 
+
+    No_Raiz *ptr_raiz = (No_Raiz*) malloc(sizeof(No_Raiz));
     if (ptr_raiz != NULL) 
         *ptr_raiz = NULL; 
    
@@ -27,15 +28,16 @@ void destruir_no_ABB(No *ptr_no) {
     destruir_no_ABB(ptr_no->ptr_direita);
     free(ptr_no);
     ptr_no = NULL;
-
+        
 }
 
-void destruir_ABB(ABB **ptr_raiz) { 
 
-    if (ptr_raiz == NULL)
+void destruir_ABB(No_Raiz *ptr_ptr_no_raiz) { 
+
+    if (ptr_ptr_no_raiz == NULL)
         return;
 
-    destruir_no_ABB(*ptr_raiz);
-    free(ptr_raiz);
+    destruir_no_ABB(*ptr_ptr_no_raiz);
+    free(ptr_ptr_no_raiz);
 
 }

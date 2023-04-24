@@ -7,9 +7,9 @@ int main() {
     
    printf("\n--- Árvore Binária de Busca ---\n\n");
 
-   ABB **ptr_ptr_arvore = criar_ABB();  
+   No_Raiz *ptr_ptr_no_raiz = criar_ABB();  
 
-   destruir_ABB(ptr_ptr_arvore);
+   destruir_ABB(ptr_ptr_no_raiz);
    
  
    return 0;
