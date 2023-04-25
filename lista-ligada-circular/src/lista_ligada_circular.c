@@ -41,24 +41,7 @@ void destruir_lista_ligada(No **ptr_ptr_no) {
 
 void imprimir_lista(No *ptr_no) { 
    
-   No *ptr_no_ultimo = ptr_no;
-   No *ptr_no_atual;
-   
-   if (ptr_no != NULL) {
-
-      for (ptr_no_atual = ptr_no->proximo;
-           ptr_no_atual != ptr_no_ultimo;
-           ptr_no_atual = ptr_no_atual->proximo) {
-
-         printf("%d -> ", ptr_no_atual->dados);   
-      }
-      printf("%d -> \n", ptr_no_atual->dados);  
-
-   } else { 
-
-      printf("NULL\n");
-   
-   }
+    //TODO: Implemente esta função.
  
 }
 
@@ -69,123 +52,32 @@ int tamanho_lista(const No *ptr_no) {
 
 }
 
-/*
-
-**ptr_ptr_no é um ponteiro de ponteiro para a estrutura NO, ela 
-armazena o endereço de memória da váriavel do tipo ponteiro para NO que 
-esta na esta alocada na STACk e armazena o endereço de memoria do 
-último no/elemento da lista. 
-
-**ptr_ptr_no = &lista;
-
-*/
 
 void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
 
-    No *ptr_no_novo = (No*) malloc(sizeof(No));
-    ptr_no_novo->dados = valor;
-   
-    if (*ptr_ptr_no == NULL) { // lista vazia
-       *ptr_ptr_no = ptr_no_novo;
-       ptr_no_novo->proximo = ptr_no_novo; 
-       
-    } else {
-
-       ptr_no_novo->proximo = (*ptr_ptr_no)->proximo;
-       (*ptr_ptr_no)->proximo = ptr_no_novo;   
-
-    }
+    //TODO: Implemente esta função.
     
 } 
 
-/*
 
-**ptr_ptr_no é um ponteiro de ponteiro para a estrutura NO, ela 
-armazena o endereço de memória da váriavel do tipo ponteiro para NO que 
-esta na esta alocada na STACk e armazena o endereço de memoria do 
-último no/elemento da lista. 
-
-**ptr_ptr_no = &lista;
-
-*/
 void adicionar_fim_lista(No **ptr_ptr_no, int valor) { 
 
-    No *ptr_no_novo = (No*) malloc(sizeof(No));
-    ptr_no_novo->dados = valor;
-    
-    if (*ptr_ptr_no == NULL) { //lista vazia
-       *ptr_ptr_no = ptr_no_novo;
-       ptr_no_novo->proximo = ptr_no_novo; 
-    
-    } else {
-
-       ptr_no_novo->proximo = (*ptr_ptr_no)->proximo;
-       (*ptr_ptr_no)->proximo = ptr_no_novo;  
-       *ptr_ptr_no = ptr_no_novo;       
-   
-    }
-} 
-
-//pode deixar para implementar por último 
-void adicionar_ordenado_lista(No **ptr_ptr_no, int valor) {
-
-     //TODO: Implemente esta função.
+   //TODO: Implemente esta função.
 
 } 
 
-bool remover_inicio_lista(No **ptr_ptr_no) {
+
+void remover_inicio_lista(No **ptr_ptr_no) {
  
      //TODO: Implemente esta função.
-     return 1;
 
 } 
 
-bool remover_fim_lista(No **ptr_ptr_no) {
+void remover_fim_lista(No **ptr_ptr_no) {
     
-    if (*ptr_ptr_no == NULL) //lista vazia
-       return false;
-
-   No *prt_no_ultimo = *ptr_ptr_no;
-
-   if (prt_no_ultimo->proximo == *ptr_ptr_no) { // um no/elemento 
-      free(prt_no_ultimo);
-      *ptr_ptr_no = NULL;
-      return true;
-   } 
-
-   No *prt_no_atual = prt_no_ultimo;
-
-   while (prt_no_atual->proximo != prt_no_ultimo ) {
-      prt_no_atual =  prt_no_atual->proximo;  
-   }
-   prt_no_atual->proximo = prt_no_ultimo->proximo;
-   *ptr_ptr_no = prt_no_atual;
-
-   return true;
-
+     //TODO: Implemente esta função.
+    
 } 
-
-bool remover_valor_lista(No **ptr_ptr_no, int valor) { 
-
-   //TODO: Implemente esta função.
-   return true;   
-
-} 
-
-int buscar_valor_lista(No *ptr_ptr_no, int valor) {  // pode retornar a posição ou o próprio valor, caso o dado fosse um tipo composto retornariamos ele
-   
-   //TODO: Implemente esta função.
-   return -1;
-
-}
-
-int buscar_posicao_lista(No *ptr_ptr_no, int posicao) { //retornar o valor da posição
-   
-   //TODO: Implemente esta função.
-   return -1;
-
-}
-
 
 
 
