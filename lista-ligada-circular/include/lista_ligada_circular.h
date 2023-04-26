@@ -7,7 +7,9 @@ typedef struct no No;
 No* criar_lista();
 void destruir_lista_ligada(No **ptr_ptr_no) ;
 
-int tamanho_lista(const No *ptr_no);
+int quantidade_elemento_lista(const No *ptr_no);
+int primeiro_elemento_lista(const No *ptr_no);
+int ultimo_elemento_lista(const No *ptr_no);
 
 void imprimir_lista(No *ptr_no);
 

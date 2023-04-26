@@ -22,8 +22,6 @@ void destruir_lista_ligada(No **ptr_ptr_no) {
 
     No *ptr_no_atual = ptr_no_ultimo->proximo; //inicio da lista
     No *ptr_no_auxiliar;       
-
-  //  printf("%p \n", ptr_no_atual);
    
     while (ptr_no_atual != ptr_no_ultimo) {
         ptr_no_auxiliar = ptr_no_atual;
@@ -32,10 +30,7 @@ void destruir_lista_ligada(No **ptr_ptr_no) {
     }
 
     free(*ptr_ptr_no); 
-//    free(ptr_no_atual);
-    printf("%d \n", (*ptr_ptr_no)->dados);
     *ptr_ptr_no = NULL;
-    printf("%p \n", *ptr_ptr_no);
     
 }
 
@@ -45,13 +40,26 @@ void imprimir_lista(No *ptr_no) {
  
 }
 
-int tamanho_lista(const No *ptr_no) { 
+int quantidade_lista(const No *ptr_no) { 
     
     //TODO: Implemente esta função.
     return 0;
 
 }
 
+int primeiro_elemento_lista(const No *ptr_no) { 
+
+    //TODO: Implemente esta função.
+    return 0;
+
+}
+
+int ultimo_elemento_lista(const No *ptr_no) { 
+
+    //TODO: Implemente esta função.
+    return 0;
+
+}
 
 void adicionar_inicio_lista(No **ptr_ptr_no, int valor) {  //&l
 
