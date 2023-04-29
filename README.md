@@ -27,6 +27,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
  
   - [17 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [18 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
+  - [19 - Fila como Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada-circular)
+  
   
  ### Segundo bimestre
  
