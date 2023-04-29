@@ -32,7 +32,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   
  ### Segundo bimestre
  
-  - [20 - Árvore]()
+  - [20 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria)
   - [21 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
   
   <!-- - Fila de Prioridade e Heap Binário -->
