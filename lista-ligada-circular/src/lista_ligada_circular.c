@@ -142,7 +142,7 @@ bool remover_inicio_lista(No **ptr_ptr_no) {
 
 bool remover_fim_lista(No **ptr_ptr_no) {
     
-    if (*ptr_ptr_no == NULL) //lista vazia
+   if (*ptr_ptr_no == NULL) //lista vazia
        return false;
 
    No *prt_no_ultimo = *ptr_ptr_no;
