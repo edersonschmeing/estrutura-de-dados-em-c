@@ -2,7 +2,7 @@
 #include <stdlib.h> 
 
 struct no {
-	int dado;
+	 int dado;
     No *ptr_esquerda;
     No *ptr_direita;
 };
@@ -12,7 +12,7 @@ typedef struct no No;
 typedef struct no *No_Raiz;
 
 
-No_Raiz *criar_ABB() { 
+No_Raiz *criar_AB() { 
 
     No_Raiz *ptr_raiz = (No_Raiz*) malloc(sizeof(No_Raiz));
     if (ptr_raiz != NULL) 
@@ -22,24 +22,24 @@ No_Raiz *criar_ABB() {
 
 }
 
-void destruir_no_ABB(No *ptr_no) { 
+void destruir_no_AB(No *ptr_no) { 
 
     if (ptr_no == NULL)
         return; 
 
-    destruir_no_ABB(ptr_no->ptr_esquerda);
-    destruir_no_ABB(ptr_no->ptr_direita);
+    destruir_no_AB(ptr_no->ptr_esquerda);
+    destruir_no_AB(ptr_no->ptr_direita);
     free(ptr_no);
     ptr_no = NULL;
         
 }
 
-void destruir_ABB(No_Raiz *ptr_ptr_no_raiz) { 
+void destruir_AB(No_Raiz *ptr_ptr_no_raiz) { 
 
     if (ptr_ptr_no_raiz == NULL)
         return;
 
-    destruir_no_ABB(*ptr_ptr_no_raiz);
+    destruir_no_AB(*ptr_ptr_no_raiz);
     free(ptr_ptr_no_raiz);
 
 }
@@ -66,7 +66,7 @@ int verificar_altura_AB(No_Raiz *ptr_no_raiz) {
    
 }
 
-int consultar_quantidade_no_ABB(No_Raiz *ptr_no_raiz) { 
+int consultar_quantidade_no_AB(No_Raiz *ptr_no_raiz) { 
 
   
 }
