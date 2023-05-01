@@ -9,17 +9,19 @@ struct no {
 	int dado;
     No *ptr_esquerda;
     No *ptr_direita;
+    No *ptr_pai; // opicional 
+    
 };
 
-No *criar_no(int dado) { 
+No *criar_no(int dado, No *prt_esquerda, No *ptr_direita) { 
 
-    No *ptr_no = (No*) malloc(sizeof(No*));
+    No *ptr_no_novo = (No*) malloc(sizeof(No*));
    
-    ptr_no->dado = dado;
-    ptr_no->ptr_direita = NULL;
-    ptr_no->ptr_esquerda = NULL;
-       
-    return ptr_no;
+    ptr_no_novo->dado = dado;
+    ptr_no_novo->ptr_esquerda = prt_esquerda;
+    ptr_no_novo->ptr_direita = ptr_direita;
+ 
+    return ptr_no_novo;
 
 }
 
@@ -53,6 +55,7 @@ void destruir_AB(No_Raiz *ptr_ptr_no_raiz) {
         return;
 
     destruir_no_AB(*ptr_ptr_no_raiz);
+
     free(ptr_ptr_no_raiz);
 
 }
@@ -141,17 +144,42 @@ void recursivo_percurso_pos_ordem_AB(No_Raiz ptr_no_raiz) {
 
 }
 
+No *procurar_no_AB(No *ptr_raiz, int valor){
+    
+    if (ptr_raiz == NULL || ptr_raiz->dado == valor)
+        return ptr_raiz;
+    
+    No *ptr_esquerda = procurar_no_AB(ptr_raiz->ptr_esquerda, valor);
+    
+    if (ptr_esquerda != NULL) 
+        return ptr_esquerda;
+
+    return procurar_no_AB(ptr_raiz->ptr_direita, valor); 
+
+}
+
+int bucar_valor_AB(No_Raiz ptr_ptr_no_raiz, int valor) {
+  
+    No *ptr_no = procurar_no_AB(ptr_ptr_no_raiz, valor);
+
+    if (ptr_no == NULL)
+       return -1; 
+    else 
+       return ptr_no->dado; 
+}
+
 void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
     
-    No *ptr_no0 = criar_no(6);  // raiz 
-    No *ptr_no1 = criar_no(0);  // filho a esquerda
-    No *ptr_no2 = criar_no(2);  // filho a direita
-    No *ptr_no3 = criar_no(9);  // filho a esquerda do 0
-    No *ptr_no4 = criar_no(1);  // filho a direita do 0
-    No *ptr_no5 = criar_no(4);  // filho a esquerda do 2
-    No *ptr_no6 = criar_no(7);  // filho a direita do 2
-    No *ptr_no7 = criar_no(8);  // filho a direita do 4
-    No *ptr_no8 = criar_no(10); // filho a direita do 1
+    No *ptr_no0 = criar_no(6, NULL, NULL);  // raiz 
+    
+    No *ptr_no1 = criar_no(0, NULL, NULL);  // filho a esquerda do 6
+    No *ptr_no2 = criar_no(2, NULL, NULL);  // filho a direita do 6
+    No *ptr_no3 = criar_no(9, NULL, NULL);  // filho a esquerda do 0
+    No *ptr_no4 = criar_no(1, NULL, NULL);  // filho a direita do 0
+    No *ptr_no5 = criar_no(4, NULL, NULL);  // filho a esquerda do 2
+    No *ptr_no6 = criar_no(7, NULL, NULL);  // filho a direita do 2
+    No *ptr_no7 = criar_no(8, NULL, NULL);  // filho a direita do 4
+    No *ptr_no8 = criar_no(10, NULL, NULL); // filho a direita do 1
    
     *ptr_ptr_no_raiz = ptr_no0;
     
@@ -191,6 +219,11 @@ void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
 
     int altura_arvore_AB = verificar_altura_AB(ptr_ptr_no_raiz);
     printf("Altrua da Árvore Binária: %d", altura_arvore_AB);
+
+    printf("\n\n");
+
+    printf("valor procurado: %d \n",bucar_valor_AB(*ptr_ptr_no_raiz, 15));
+    printf("valor procurado: %d \n",bucar_valor_AB(*ptr_ptr_no_raiz, 4));
 
     printf("\n\n");
       
