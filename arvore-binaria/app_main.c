@@ -13,7 +13,7 @@ struct no {
     
 };
 
-No *criar_no(int dado, No *prt_esquerda, No *ptr_direita) { 
+No *criar_no_AB(int dado, No *prt_esquerda, No *ptr_direita) { 
 
     No *ptr_no_novo = (No*) malloc(sizeof(No*));
    
@@ -170,16 +170,16 @@ int bucar_valor_AB(No_Raiz ptr_ptr_no_raiz, int valor) {
 
 void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
     
-    No *ptr_no0 = criar_no(6, NULL, NULL);  // raiz 
+    No *ptr_no0 = criar_no_AB(6, NULL, NULL);  // raiz 
     
-    No *ptr_no1 = criar_no(0, NULL, NULL);  // filho a esquerda do 6
-    No *ptr_no2 = criar_no(2, NULL, NULL);  // filho a direita do 6
-    No *ptr_no3 = criar_no(9, NULL, NULL);  // filho a esquerda do 0
-    No *ptr_no4 = criar_no(1, NULL, NULL);  // filho a direita do 0
-    No *ptr_no5 = criar_no(4, NULL, NULL);  // filho a esquerda do 2
-    No *ptr_no6 = criar_no(7, NULL, NULL);  // filho a direita do 2
-    No *ptr_no7 = criar_no(8, NULL, NULL);  // filho a direita do 4
-    No *ptr_no8 = criar_no(10, NULL, NULL); // filho a direita do 1
+    No *ptr_no1 = criar_no_AB(0, NULL, NULL);  // filho a esquerda do 6
+    No *ptr_no2 = criar_no_AB(2, NULL, NULL);  // filho a direita do 6
+    No *ptr_no3 = criar_no_AB(9, NULL, NULL);  // filho a esquerda do 0
+    No *ptr_no4 = criar_no_AB(1, NULL, NULL);  // filho a direita do 0
+    No *ptr_no5 = criar_no_AB(4, NULL, NULL);  // filho a esquerda do 2
+    No *ptr_no6 = criar_no_AB(7, NULL, NULL);  // filho a direita do 2
+    No *ptr_no7 = criar_no_AB(8, NULL, NULL);  // filho a direita do 4
+    No *ptr_no8 = criar_no_AB(10, NULL, NULL); // filho a direita do 1
    
     *ptr_ptr_no_raiz = ptr_no0;
     
