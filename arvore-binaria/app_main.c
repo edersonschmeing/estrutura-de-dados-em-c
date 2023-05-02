@@ -68,7 +68,7 @@ int verificar_esta_vazia_AB(No_Raiz *ptr_no_raiz) {
 
 int verificar_altura_AB(No_Raiz *ptr_no_raiz) { 
 
-    if (ptr_no_raiz == NULL) // -1 considera o caminha, 0 considera os nós
+    if (ptr_no_raiz == NULL) // -1 considera o caminho, 0 considera os nós
         return -1;
    
     if (*ptr_no_raiz == NULL)
@@ -90,11 +90,11 @@ int consultar_quantidade_no_AB(No_Raiz *ptr_no_raiz) {
   
 }
 
-//N - No
+//V - Visita o No
 //L - Esqueda
 //R - Direita
 
-//Pre-order (NLR) formatado
+//Pre-order (VLR) formatado
 void recursivo_percurso_pre_ordem_AB(No_Raiz ptr_no_raiz) { 
     
     if (ptr_no_raiz == NULL)
@@ -106,7 +106,7 @@ void recursivo_percurso_pre_ordem_AB(No_Raiz ptr_no_raiz) {
 
 }
 
-//Pre-order (NLR)
+//Pre-order (VLR)
 void recursivo_percurso_pre_ordem_formatado_AB(No_Raiz ptr_no_raiz, int nivel) {
         
     if (ptr_no_raiz == NULL)
@@ -120,7 +120,7 @@ void recursivo_percurso_pre_ordem_formatado_AB(No_Raiz ptr_no_raiz, int nivel) {
     recursivo_percurso_pre_ordem_formatado_AB(ptr_no_raiz->ptr_direita, nivel + 1);
 }
 
-//In-order, (LNR)
+//In-order, (LVR)
 void recursivo_percurso_em_ordem_AB(No_Raiz ptr_no_raiz) { 
      
     if (ptr_no_raiz == NULL)
@@ -132,7 +132,7 @@ void recursivo_percurso_em_ordem_AB(No_Raiz ptr_no_raiz) {
 
 }
 
-//Post-order, (LRN)
+//Post-order, (LRV)
 void recursivo_percurso_pos_ordem_AB(No_Raiz ptr_no_raiz) {
     
     if (ptr_no_raiz == NULL)
