@@ -9,7 +9,7 @@ struct no {
 	int dado;
     No *ptr_esquerda;
     No *ptr_direita;
-    No *ptr_pai; // opicional 
+    No *ptr_pai; // opcional 
     
 };
 
