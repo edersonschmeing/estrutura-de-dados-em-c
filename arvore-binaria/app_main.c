@@ -68,11 +68,11 @@ int verificar_esta_vazia_AB(No_Raiz *ptr_no_raiz) {
 
 int verificar_altura_AB(No_Raiz *ptr_no_raiz) { 
 
-    if (ptr_no_raiz == NULL)
-        return 0;
+    if (ptr_no_raiz == NULL) // -1 considera o caminha, 0 considera os nós
+        return -1;
    
     if (*ptr_no_raiz == NULL)
-        return 0;
+        return -1;
 
     int altura_sub_arvore_esquerda = verificar_altura_AB(&(*ptr_no_raiz)->ptr_esquerda);
     int altura_sub_arvore_direita = verificar_altura_AB(&(*ptr_no_raiz)->ptr_direita);  
