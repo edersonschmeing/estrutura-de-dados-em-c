@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> 
+#include <locale.h>
 
 typedef struct no No;
 
@@ -61,21 +62,20 @@ void destruir_AB(No_Raiz *ptr_ptr_no_raiz) {
 }
 
 
-int verificar_esta_vazia_AB(No_Raiz *ptr_no_raiz) { 
+int verificar_esta_vazia_AB(No_Raiz ptr_no_raiz) { 
 
+    return ptr_no_raiz == NULL ? -1 : 0;
+         
 }
 
 
-int verificar_altura_AB(No_Raiz *ptr_no_raiz) { 
+int verificar_altura_AB(No_Raiz ptr_no_raiz) { 
 
-    if (ptr_no_raiz == NULL) // -1 considera o caminho, 0 considera os nós
-        return -1;
-   
-    if (*ptr_no_raiz == NULL)
+    if (ptr_no_raiz == NULL)
         return -1;
 
-    int altura_sub_arvore_esquerda = verificar_altura_AB(&(*ptr_no_raiz)->ptr_esquerda);
-    int altura_sub_arvore_direita = verificar_altura_AB(&(*ptr_no_raiz)->ptr_direita);  
+    int altura_sub_arvore_esquerda = verificar_altura_AB(ptr_no_raiz->ptr_esquerda);
+    int altura_sub_arvore_direita = verificar_altura_AB(ptr_no_raiz->ptr_direita);  
 
     if (altura_sub_arvore_esquerda > altura_sub_arvore_direita) 
         return altura_sub_arvore_esquerda + 1;     
@@ -85,8 +85,14 @@ int verificar_altura_AB(No_Raiz *ptr_no_raiz) {
 }
 
 
-int consultar_quantidade_no_AB(No_Raiz *ptr_no_raiz) { 
+int consultar_quantidade_no_AB(No_Raiz ptr_no_raiz) { 
+    
+    if  (ptr_no_raiz == NULL) 
+        return 0;
 
+    return consultar_quantidade_no_AB(ptr_no_raiz->ptr_esquerda) +
+           consultar_quantidade_no_AB(ptr_no_raiz->ptr_direita) +
+           1;    
   
 }
 
@@ -144,23 +150,43 @@ void recursivo_percurso_pos_ordem_AB(No_Raiz ptr_no_raiz) {
 
 }
 
-No *procurar_no_AB(No *ptr_raiz, int valor){
+void imprime_no_AB(int valor, int nivel) {
     
-    if (ptr_raiz == NULL || ptr_raiz->dado == valor)
-        return ptr_raiz;
+    for (int i = 0; i < nivel; i++)
+        printf("-");
+    printf("%2d\n", valor);
+}
+
+void imprime_AB(No_Raiz ptr_no_raiz, int nivel) {
     
-    No *ptr_esquerda = procurar_no_AB(ptr_raiz->ptr_esquerda, valor);
+    if (ptr_no_raiz == NULL) 
+        return;
+
+    imprime_AB(ptr_no_raiz->ptr_direita, nivel + 1);
+    imprime_no_AB(ptr_no_raiz->dado, nivel);
+    imprime_AB(ptr_no_raiz->ptr_esquerda, nivel + 1);
+    
+}
+
+
+No *procurar_no_AB(No *ptr_no_raiz, int valor){
+    
+    if (ptr_no_raiz == NULL || ptr_no_raiz->dado == valor)
+        return ptr_no_raiz;
+    
+    No *ptr_esquerda = procurar_no_AB(ptr_no_raiz->ptr_esquerda, valor);
     
     if (ptr_esquerda != NULL) 
         return ptr_esquerda;
 
-    return procurar_no_AB(ptr_raiz->ptr_direita, valor); 
+    return procurar_no_AB(ptr_no_raiz->ptr_direita, valor); 
 
 }
 
-int bucar_valor_AB(No_Raiz ptr_ptr_no_raiz, int valor) {
+
+int bucar_valor_AB(No_Raiz ptr_no_raiz, int valor) {
   
-    No *ptr_no = procurar_no_AB(ptr_ptr_no_raiz, valor);
+    No *ptr_no = procurar_no_AB(ptr_no_raiz, valor);
 
     if (ptr_no == NULL)
        return -1; 
@@ -168,25 +194,28 @@ int bucar_valor_AB(No_Raiz ptr_ptr_no_raiz, int valor) {
        return ptr_no->dado; 
 }
 
+
+
 void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
     
-    No *ptr_no0 = criar_no_AB(6, NULL, NULL);  // raiz 
+    No *ptr_no0 = criar_no_AB(4, NULL, NULL);  // raiz 
     
-    No *ptr_no1 = criar_no_AB(0, NULL, NULL);  // filho a esquerda do 6
-    No *ptr_no2 = criar_no_AB(2, NULL, NULL);  // filho a direita do 6
+    No *ptr_no1 = criar_no_AB(0, NULL, NULL);  // filho a esquerda do 4
+    No *ptr_no2 = criar_no_AB(2, NULL, NULL);  // filho a direita do 4
     No *ptr_no3 = criar_no_AB(9, NULL, NULL);  // filho a esquerda do 0
     No *ptr_no4 = criar_no_AB(1, NULL, NULL);  // filho a direita do 0
-    No *ptr_no5 = criar_no_AB(4, NULL, NULL);  // filho a esquerda do 2
+    No *ptr_no5 = criar_no_AB(6, NULL, NULL);  // filho a esquerda do 2
     No *ptr_no6 = criar_no_AB(7, NULL, NULL);  // filho a direita do 2
     No *ptr_no7 = criar_no_AB(8, NULL, NULL);  // filho a direita do 4
     No *ptr_no8 = criar_no_AB(10, NULL, NULL); // filho a direita do 1
-   
-    *ptr_ptr_no_raiz = ptr_no0;
-    
-    ptr_no0->ptr_esquerda = ptr_no1;
-    ptr_no0->ptr_direita = ptr_no2;
 
-    ptr_no1->ptr_esquerda = ptr_no3;
+                                          /*             4          */
+    *ptr_ptr_no_raiz = ptr_no0;           /*        /         \     */
+                                          /*       0           2   */
+    ptr_no0->ptr_esquerda = ptr_no1;      /*      / \         / \   */ 
+    ptr_no0->ptr_direita = ptr_no2;       /*     9   1       6   7  */
+                                          /*    /     \             */
+    ptr_no1->ptr_esquerda = ptr_no3;      /*   8      10            */
     ptr_no1->ptr_direita = ptr_no4;
 
     ptr_no2->ptr_esquerda = ptr_no5;
@@ -196,6 +225,10 @@ void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
 
     ptr_no4->ptr_direita = ptr_no8;
  
+    
+    imprime_AB(*ptr_ptr_no_raiz, 0);
+
+    printf("\n\n");
   
     printf("Formato de Árvore \n");
     recursivo_percurso_pre_ordem_formatado_AB(*ptr_ptr_no_raiz, 0);
@@ -217,15 +250,25 @@ void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
 
     printf("\n\n");
 
-    int altura_arvore_AB = verificar_altura_AB(ptr_ptr_no_raiz);
+    int altura_arvore_AB = verificar_altura_AB(*ptr_ptr_no_raiz);
     printf("Altrua da Árvore Binária: %d", altura_arvore_AB);
 
     printf("\n\n");
 
-    printf("valor procurado: %d \n",bucar_valor_AB(*ptr_ptr_no_raiz, 15));
-    printf("valor procurado: %d \n",bucar_valor_AB(*ptr_ptr_no_raiz, 4));
+    int quantidade_no_AB = consultar_quantidade_no_AB(*ptr_ptr_no_raiz);
+    printf("Quantidade de Nós: %d", quantidade_no_AB);
 
     printf("\n\n");
+
+    //printf("valor procurado: %d \n",bucar_valor_AB(*ptr_ptr_no_raiz, 15));
+    printf("valor procurado: %d \n", bucar_valor_AB(*ptr_ptr_no_raiz, 7));
+
+    printf("\n\n");
+
+    if (verificar_esta_vazia_AB(*ptr_ptr_no_raiz) == -1)  
+       printf("Árvore vazia");
+    else 
+       printf("Árvore não esta vazia");
       
 }
 
@@ -285,6 +328,9 @@ void criar_arvore_stack() {
 }
 
 int main() { 
+
+   setlocale (LC_ALL, ""); // importa as variáveis de ambiente, SO
+   setlocale (LC_CTYPE, "pt_BR.UTF-8"); // por via das dúvidas, set manual 
     
    printf("\n--- Árvore Binária com alocação na Heap ---\n\n");
 
