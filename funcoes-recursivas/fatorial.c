@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 int fatorial(int valor){
     
     if(valor == 1 ){
