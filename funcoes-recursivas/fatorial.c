@@ -2,15 +2,19 @@
 
 
 
-
 int fatorial(int valor){
-    if(valor <= 1 ){
+    
+    if(valor == 1 ){
         return 1;
     }
+
     printf("%d * ", valor);
-    return valor * fatorial(valor - 1);
+    int fat = fatorial(valor - 1); 
+    int resultado = valor * fat; 
+    return resultado;  
 }
 
+// 5 * 4 * 3 * 2 * 1 => 5! é : 120
 
 int main() {
     
@@ -19,9 +23,9 @@ int main() {
     //printf("Informe um valor: ");
     //scanf("%d", &valor);
     
-    int result = fatorial(valor);
+    int resultado = fatorial(valor);
     printf("1 => ");
-    printf("%d! é : %d\n", valor, result);
+    printf("%d! é : %d\n", valor, resultado);
     return 0;
     
 }
