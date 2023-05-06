@@ -12,6 +12,8 @@ app_main.o: apps/app_main.c include/arvore_binaria_de_busca.h
 
 run:
 	./bin/app_main.out
+valgrind:
+	valgrind --leak-check=yes ./bin/app_main.out	
 
 clean:
 	rm -f bin/app_main.out obj/*.o	
