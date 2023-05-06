@@ -16,7 +16,7 @@ int main() {
  
    No *ptr_no = *ptr_ptr_no_raiz;
 
-   if (buscar_ABB(ptr_no, 10) == NULL)
+   if (buscar_ABB(ptr_no, 15) == NULL)
       printf("\n--- Chave não encontrada na ABB ---\n\n");
 
    imprime_ABB(ptr_no, 0);

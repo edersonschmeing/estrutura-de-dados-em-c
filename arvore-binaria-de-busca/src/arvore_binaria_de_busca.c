@@ -72,15 +72,17 @@ void em_ordem_ABB(No *ptr_no) {
 No *buscar_ABB(No *ptr_no, int chave){
     
     if (ptr_no == NULL || ptr_no->chave == chave)
+    
         return ptr_no;
     
-    No *ptr_esquerda = buscar_ABB(ptr_no->ptr_esquerda, chave);
+    if (chave < ptr_no->chave)
     
-    if (ptr_esquerda != NULL) 
-        return ptr_esquerda;
-
-    return buscar_ABB(ptr_no->ptr_direita, chave); 
-
+       return buscar_ABB(ptr_no->ptr_esquerda, chave); 
+    
+    else 
+    
+       return buscar_ABB(ptr_no->ptr_direita, chave);
+  
 }
 
 void adicionar_ABB(No **ptr_no, int chave) { 
