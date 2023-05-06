@@ -15,15 +15,26 @@ int main() {
       adicionar_ABB(ptr_ptr_no_raiz, vetor[i]);
  
    No *ptr_no = *ptr_ptr_no_raiz;
-
-   if (buscar_ABB(ptr_no, 15) == NULL)
-      printf("\n--- Chave não encontrada na ABB ---\n\n");
-
+   
    imprime_ABB(ptr_no, 0);
    printf("\n");  
    em_ordem_ABB(ptr_no);   
-   printf("\n");
- 
+   printf("\n\n");
+   
+   
+   int chave_buscada = 0;
+   while (chave_buscada != -1) {
+      printf("-> ");
+      scanf("%d", &chave_buscada);
+      if (buscar_ABB(ptr_no, chave_buscada) == NULL)
+         printf("\n--- Chave não encontrada na ABB ---\n\n");
+      else 
+         printf("\n--- Chave encontrada na ABB ---\n\n");
+
+      imprime_ABB(ptr_no, 0);
+
+   }
+   
    //remover_ABB(ptr_ptr_no_raiz, 10);
       
    destruir_ABB(ptr_ptr_no_raiz);
