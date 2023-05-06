@@ -8,10 +8,8 @@
 
 typedef struct no No;
 
-typedef struct no *No_Raiz;
-
-No_Raiz *criar_ABB();
-void destruir_ABB(No_Raiz *ptr_ptr_no_raiz);
+No **criar_ABB();
+void destruir_ABB(No **ptr_ptr_no_raiz);
 
 void adicionar_ABB(No **ptr_no, int chave);
 void remover_ABB(No **ptr_no, int chave); 

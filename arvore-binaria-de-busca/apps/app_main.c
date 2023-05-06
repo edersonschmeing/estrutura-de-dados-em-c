@@ -7,7 +7,7 @@ int main() {
     
    printf("\n--- Árvore Binária de Busca ---\n\n");
 
-   No_Raiz *ptr_ptr_no_raiz = criar_ABB();  
+   No **ptr_ptr_no_raiz = criar_ABB();  
    
    int vetor[10] = {9, 4, 2, 8, 14, 11, 15, 13, 5, 6 }; 
 

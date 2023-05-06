@@ -1,17 +1,15 @@
 #include "arvore_binaria_de_busca.h" 
 #include <stdio.h>
 
-
 struct no {
 	int chave;
     No *ptr_esquerda;
     No *ptr_direita;
 };
 
+No **criar_ABB() { 
 
-No_Raiz *criar_ABB() { 
-
-    No_Raiz *ptr_raiz = (No_Raiz*) malloc(sizeof(No_Raiz));
+    No **ptr_raiz = (No**) malloc(sizeof(No*));
     if (ptr_raiz != NULL) 
         *ptr_raiz = NULL; 
    
@@ -31,7 +29,7 @@ void destruir_no_ABB(No *ptr_no) {
         
 }
 
-void destruir_ABB(No_Raiz *ptr_ptr_no_raiz) { 
+void destruir_ABB(No **ptr_ptr_no_raiz) { 
 
     if (ptr_ptr_no_raiz == NULL)
         return;
