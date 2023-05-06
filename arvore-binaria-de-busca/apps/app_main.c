@@ -15,12 +15,10 @@ int main() {
       adicionar_recursivo_ABB(ptr_ptr_no_raiz, vetor[i]);
       //adicionar_interativo_ABB(ptr_ptr_no_raiz, vetor[i]);
   
-
-   No *ptr_no = *ptr_ptr_no_raiz;
-   
-   imprime_ABB(ptr_no, 0);
+  
+   imprime_ABB(*ptr_ptr_no_raiz, 0);
    printf("\n");  
-   em_ordem_ABB(ptr_no);   
+   em_ordem_ABB(*ptr_ptr_no_raiz);   
    printf("\n");
    
    int chave_buscada = 0;
@@ -29,18 +27,23 @@ int main() {
       printf("\nbuscar chave: ");
       scanf("%d", &chave_buscada);
       
-      //if (buscar_recursivo_ABB(ptr_no, chave_buscada) != NULL)
-      if (buscar_interativo_ABB(ptr_no, chave_buscada) != NULL)
-   
+      /*
+      if (buscar_recursivo_ABB(ptr_no, chave_buscada) != NULL){     
          printf("\n--- Chave encontrada na ABB ---\n\n");
-         //remover_ABB(ptr_ptr_no_raiz, chave_buscada);
-      else
+         remover_recursivo_ABB(ptr_ptr_no_raiz, chave_buscada);
+      }else
+         printf("\n--- Chave não encontrada na ABB ---\n\n");
+      */
+
+      if (buscar_interativo_ABB(*ptr_ptr_no_raiz, chave_buscada) != NULL) {
+         printf("\n--- Chave encontrada na ABB ---\n\n");
+         remover_interativo_ABB(ptr_ptr_no_raiz, chave_buscada);
+      }else
          printf("\n--- Chave não encontrada na ABB ---\n\n");
 
-      imprime_ABB(ptr_no, 0);
+      imprime_ABB(*ptr_ptr_no_raiz, 0);
 
    }
-   
       
    destruir_ABB(ptr_ptr_no_raiz);
  
