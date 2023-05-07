@@ -329,8 +329,8 @@ void criar_arvore_stack() {
 
 int main() { 
 
-   setlocale (LC_ALL, ""); // importa as variáveis de ambiente, SO
-   setlocale (LC_CTYPE, "pt_BR.UTF-8"); // por via das dúvidas, set manual 
+   //setlocale (LC_ALL, ""); // importa as variáveis de ambiente, SO
+   //setlocale (LC_CTYPE, "pt_BR.UTF-8"); // por via das dúvidas, set manual 
     
    printf("\n--- Árvore Binária com alocação na Heap ---\n\n");
 
