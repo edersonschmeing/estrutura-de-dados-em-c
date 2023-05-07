@@ -176,7 +176,7 @@ No* maior_direita_da_sub_arvore_esquerda(No **ptr_no) {    //  Maior Direita da 
     if ((*ptr_no)->ptr_no_direita != NULL)
         return maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_direita);
     else {
-        No *aux = *ptr_no; //verificar
+        No *aux = *ptr_no; //se tiver filho a esquerda, move no lugar do maior a direta que será o sucessor do no.
         if( (*ptr_no)->ptr_no_esquerda != NULL)
             *ptr_no = (*ptr_no)->ptr_no_esquerda;
         else
@@ -191,8 +191,8 @@ No *menor_esquerda_da_sub_arvore_direita(No **ptr_no) { //  menorEsquerda da sub
     if ((*ptr_no)->ptr_no_esquerda != NULL)
         return menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_esquerda);
     else {
-        No *aux = *ptr_no;
-        if( (*ptr_no)->ptr_no_direita != NULL)
+        No *aux = *ptr_no; // //se tiver filho a diretia, move no lugar do menor a esquerada que será o sucessor do no.
+        if( (*ptr_no)->ptr_no_direita != NULL) 
             *ptr_no = (*ptr_no)->ptr_no_direita;
         else
             *ptr_no = NULL;
@@ -249,7 +249,7 @@ void remover_recursivo_ABB(No **ptr_no, int chave) {
                 ptr_no_auxiliar = menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_direita);
             }
 
-            ptr_no_auxiliar = maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_esquerda);
+            //ptr_no_auxiliar = maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_esquerda);
  
             ptr_no_auxiliar->ptr_no_esquerda = (*ptr_no)->ptr_no_esquerda;
             ptr_no_auxiliar->ptr_no_direita = (*ptr_no)->ptr_no_direita;
