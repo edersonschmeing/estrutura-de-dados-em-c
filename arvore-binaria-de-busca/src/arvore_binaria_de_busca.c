@@ -124,7 +124,7 @@ void adicionar_recursivo_ABB(No **ptr_no, int chave) {
 
         adicionar_recursivo_ABB( &(*ptr_no)->ptr_no_direita, chave);
     } 
-    //caso base else chave já existe. 
+    //else - chave já existe. 
 
 }
 
@@ -167,15 +167,103 @@ void adicionar_interativo_ABB(No **ptr_no, int chave) {
             ptr_no_anterior->ptr_no_direita = ptr_no_novo;
 
     }
-
 }
 
 
-void remover_recursivo_ABB(No **ptr_no, int chave) { 
+ //funcao utilizada para pegar o nó mais a direita da subarvore esquerda do nó que será removido
+No* maior_direita_da_sub_arvore_esquerda(No **ptr_no) {    //  Maior Direita da sub árvore esquerda, receber raiz->esquerda
+    
+    if ((*ptr_no)->ptr_no_direita != NULL)
+        return maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_direita);
+    else {
+        No *aux = *ptr_no; //verificar
+        if( (*ptr_no)->ptr_no_esquerda )
+            *ptr_no = (*ptr_no)->ptr_no_esquerda;
+        else
+            *ptr_no = NULL;
+        return (aux);    
+    } 
+}
+    
+ //funcao utilizada para pegar o nó mais a esquerda da subarvore direia do nó que será removido
+No *menor_esquerda_da_sub_arvore_direita(No **ptr_no) { //  menorEsquerda da sub árvore direita, receber raiz->direita
 
-   // ---
+    if ((*ptr_no)->ptr_no_esquerda != NULL)
+        return menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_esquerda);
+    else {
+        No *aux = *ptr_no;
+        if( (*ptr_no)->ptr_no_direita )
+            *ptr_no = (*ptr_no)->ptr_no_direita;
+        else
+            *ptr_no = NULL;
+        return (aux);    
+    } 
+}
 
-} 
+void remover_recursivo_ABB(No **ptr_no, int chave) {
+
+    if (*ptr_no == NULL) 
+        return;
+
+    if(chave < (*ptr_no)->chave)
+
+        remover_recursivo_ABB(&((*ptr_no)->ptr_no_esquerda), chave);
+
+    else if(chave > (*ptr_no)->chave)
+
+        remover_recursivo_ABB(&((*ptr_no)->ptr_no_direita), chave);
+
+    else { 
+        
+        No *ptr_no_auxiliar = (*ptr_no);
+        
+        if((*ptr_no)->ptr_no_esquerda == NULL && (*ptr_no)->ptr_no_direita == NULL) { //  se nao houver filhos...
+            
+            printf("removeu chave - sem filhos %d \n\n ", ptr_no_auxiliar->chave );
+
+            free(ptr_no_auxiliar);
+            *ptr_no = NULL; 
+        
+        } else if((*ptr_no)->ptr_no_esquerda == NULL) { //  so tem filho da direita
+            
+            printf("removeu chave - somente filho a direita %d \n\n ", ptr_no_auxiliar->chave );
+            
+            (*ptr_no) = (*ptr_no)->ptr_no_direita;
+            ptr_no_auxiliar->ptr_no_direita = NULL;
+            free(ptr_no_auxiliar);
+            ptr_no_auxiliar = NULL;
+        
+        }
+        else if(ptr_no_auxiliar->ptr_no_direita == NULL) {  //  so tem o filho da esquerda
+
+            printf("removeu chave somente filho a esquerda %d \n\n ", ptr_no_auxiliar->chave );
+            
+            (*ptr_no) = (*ptr_no)->ptr_no_esquerda;
+            ptr_no_auxiliar->ptr_no_esquerda = NULL;
+            free(ptr_no_auxiliar);                     
+            ptr_no_auxiliar = NULL;   
+        }
+        else {  //avaliar comportamento
+
+            if (1 == 2) {
+                ptr_no_auxiliar = menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_direita);
+            }
+
+            ptr_no_auxiliar = maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_esquerda);
+ 
+            ptr_no_auxiliar->ptr_no_esquerda = (*ptr_no)->ptr_no_esquerda;
+            ptr_no_auxiliar->ptr_no_direita = (*ptr_no)->ptr_no_direita;
+
+            (*ptr_no)->ptr_no_esquerda = NULL;
+            (*ptr_no)->ptr_no_direita = NULL;
+            free(*ptr_no);  
+            *ptr_no = ptr_no_auxiliar;
+            ptr_no_auxiliar = NULL;
+             
+        }
+    }
+
+}
 
 
 No *remove_no_atual(No *prt_no_atual) {
@@ -206,6 +294,8 @@ No *remove_no_atual(No *prt_no_atual) {
 
     return prt_no_aux2;
 }
+
+
 
 void remover_interativo_ABB(No **ptr_no, int chave) { 
    
@@ -240,8 +330,4 @@ void remover_interativo_ABB(No **ptr_no, int chave) {
             ptr_no_atual = ptr_no_atual->ptr_no_direita;
 
     }
-
-    
-
-}
-
+} 
