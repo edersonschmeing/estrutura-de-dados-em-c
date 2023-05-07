@@ -177,7 +177,7 @@ No* maior_direita_da_sub_arvore_esquerda(No **ptr_no) {    //  Maior Direita da 
         return maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_direita);
     else {
         No *aux = *ptr_no; //verificar
-        if( (*ptr_no)->ptr_no_esquerda )
+        if( (*ptr_no)->ptr_no_esquerda != NULL)
             *ptr_no = (*ptr_no)->ptr_no_esquerda;
         else
             *ptr_no = NULL;
@@ -192,7 +192,7 @@ No *menor_esquerda_da_sub_arvore_direita(No **ptr_no) { //  menorEsquerda da sub
         return menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_esquerda);
     else {
         No *aux = *ptr_no;
-        if( (*ptr_no)->ptr_no_direita )
+        if( (*ptr_no)->ptr_no_direita != NULL)
             *ptr_no = (*ptr_no)->ptr_no_direita;
         else
             *ptr_no = NULL;
