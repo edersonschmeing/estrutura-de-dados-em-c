@@ -58,6 +58,16 @@ void imprime_ABB(No *ptr_no, int nivel) {
     
 }
 
+void pre_ordem_ABB(No *ptr_no) { 
+     
+    if (ptr_no == NULL)
+       return;
+
+    printf("%d -> ", ptr_no->chave);
+    pre_ordem_ABB(ptr_no->ptr_no_esquerda);
+    pre_ordem_ABB(ptr_no->ptr_no_direita);
+}
+
 void em_ordem_ABB(No *ptr_no) { 
      
     if (ptr_no == NULL)
@@ -67,6 +77,17 @@ void em_ordem_ABB(No *ptr_no) {
     printf("%d -> ", ptr_no->chave);
     em_ordem_ABB(ptr_no->ptr_no_direita);
 }
+
+void pos_ordem_ABB(No *ptr_no) { 
+     
+    if (ptr_no == NULL)
+       return;
+
+    pos_ordem_ABB(ptr_no->ptr_no_esquerda);
+    pos_ordem_ABB(ptr_no->ptr_no_direita);
+    printf("%d -> ", ptr_no->chave);
+}
+
 
 No *buscar_recursivo_ABB(No *ptr_no, int chave){
     
@@ -81,7 +102,7 @@ No *buscar_recursivo_ABB(No *ptr_no, int chave){
   
 }
 
-No *buscar_interativo_ABB(No *ptr_no, int chave) {
+No *buscar_iterativo_ABB(No *ptr_no, int chave) {
 
     if (ptr_no == NULL) 
         return NULL;
@@ -128,7 +149,7 @@ void adicionar_recursivo_ABB(No **ptr_no, int chave) {
 
 }
 
-void adicionar_interativo_ABB(No **ptr_no, int chave) { 
+void adicionar_iterativo_ABB(No **ptr_no, int chave) { 
     
     if (ptr_no == NULL)
        return; 
@@ -243,13 +264,16 @@ void remover_recursivo_ABB(No **ptr_no, int chave) {
             free(ptr_no_auxiliar);                     
             ptr_no_auxiliar = NULL;   
         }
-        else {  //avaliar comportamento
+        else {  
 
-            if (1 == 2) {
+            int usar_sucessor_da_sub_arvore_direita = 0;
+            
+            if (usar_sucessor_da_sub_arvore_direita == 0) {
                 ptr_no_auxiliar = menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_direita);
-            }
+            } else {
 
-            //ptr_no_auxiliar = maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_esquerda);
+                ptr_no_auxiliar = maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_esquerda);
+            }
  
             ptr_no_auxiliar->ptr_no_esquerda = (*ptr_no)->ptr_no_esquerda;
             ptr_no_auxiliar->ptr_no_direita = (*ptr_no)->ptr_no_direita;
@@ -297,7 +321,7 @@ No *remove_no_atual(No *prt_no_atual) {
 
 
 
-void remover_interativo_ABB(No **ptr_no, int chave) { 
+void remover_iterativo_ABB(No **ptr_no, int chave) { 
    
     if (ptr_no == NULL)
        return; 

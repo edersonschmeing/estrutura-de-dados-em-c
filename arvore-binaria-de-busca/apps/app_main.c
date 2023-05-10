@@ -9,18 +9,30 @@ int main() {
 
    No **ptr_ptr_no_raiz = criar_ABB();  
    
-   int vetor[10] = {9, 4, 2, 8, 14, 11, 15, 13, 5, 6 }; 
+   int vetor[9] = {6, 2, 1, 4, 3, 5, 7, 9, 8 }; 
 
-   for (int i = 0; i < 10; i++)
+   for (int i = 0; i < 9; i++)
       adicionar_recursivo_ABB(ptr_ptr_no_raiz, vetor[i]);
       //adicionar_interativo_ABB(ptr_ptr_no_raiz, vetor[i]);
   
   
+   
    imprime_ABB(*ptr_ptr_no_raiz, 0);
    printf("\n");  
+
+   printf("Pré Ordem: ");
+   pre_ordem_ABB(*ptr_ptr_no_raiz);   
+   printf("\n"); 
+
+   printf("Em Ordem : ");
    em_ordem_ABB(*ptr_ptr_no_raiz);   
    printf("\n");
    
+   printf("Pós Ordem: ");
+   pos_ordem_ABB(*ptr_ptr_no_raiz);   
+   printf("\n");
+   
+
    int chave_buscada = 0;
    while (chave_buscada != -1) {
       
@@ -36,9 +48,9 @@ int main() {
       
       //remoção interatia
       if (1 == 2) {  
-         if (buscar_interativo_ABB(*ptr_ptr_no_raiz, chave_buscada) != NULL) {
+         if (buscar_iterativo_ABB(*ptr_ptr_no_raiz, chave_buscada) != NULL) {
             printf("\n--- Chave encontrada na ABB ---\n\n");
-            remover_interativo_ABB(ptr_ptr_no_raiz, chave_buscada);
+            remover_iterativo_ABB(ptr_ptr_no_raiz, chave_buscada);
          }else
             printf("\n--- Chave não encontrada na ABB ---\n\n");
          
