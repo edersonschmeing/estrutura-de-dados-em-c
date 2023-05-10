@@ -10,7 +10,7 @@ struct no {
 	int dado;
     No *ptr_esquerda;
     No *ptr_direita;
-    No *ptr_pai; // opcional 
+    //No *ptr_pai; // opcional 
     
 };
 
@@ -56,7 +56,7 @@ void destruir_AB(No_Raiz *ptr_ptr_no_raiz) {
         return;
 
     destruir_no_AB(*ptr_ptr_no_raiz);
-
+    *ptr_ptr_no_raiz = NULL;
     free(ptr_ptr_no_raiz);
 
 }
@@ -195,7 +195,6 @@ int bucar_valor_AB(No_Raiz ptr_no_raiz, int valor) {
 }
 
 
-
 void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
     
     No *ptr_no0 = criar_no_AB(4, NULL, NULL);  // raiz 
@@ -268,7 +267,8 @@ void criar_arvore_heap(No_Raiz *ptr_ptr_no_raiz) {
     if (verificar_esta_vazia_AB(*ptr_ptr_no_raiz) == -1)  
        printf("Árvore vazia");
     else 
-       printf("Árvore não esta vazia");
+       printf("Árvore não esta vazia \n\n");
+
       
 }
 
@@ -341,9 +341,9 @@ int main() {
    destruir_AB(ptr_ptr_no_raiz);
 
 
-   printf("\n\n--- Árvore Binária com alocação na Stack ---\n\n");
+   //printf("\n\n--- Árvore Binária com alocação na Stack ---\n\n");
 
-   criar_arvore_stack();
+   //criar_arvore_stack();
 
    return 0;
 
