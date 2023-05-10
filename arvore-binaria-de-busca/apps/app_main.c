@@ -9,11 +9,11 @@ int main() {
 
    No **ptr_ptr_no_raiz = criar_ABB();  
    
-   int vetor[9] = {6, 2, 1, 4, 3, 5, 7, 9, 8 }; 
+   int vetor[11] = {6, 2, 1, 5, 3, 4, 5, 8, 7, 10, 9 }; 
 
-   for (int i = 0; i < 9; i++)
+   for (int i = 0; i < 11; i++)
       adicionar_recursivo_ABB(ptr_ptr_no_raiz, vetor[i]);
-      //adicionar_interativo_ABB(ptr_ptr_no_raiz, vetor[i]);
+      //adicionar_iterativo_ABB(ptr_ptr_no_raiz, vetor[i]);
   
   
    
