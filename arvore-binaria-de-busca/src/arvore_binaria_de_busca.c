@@ -216,7 +216,7 @@ No *menor_esquerda_da_sub_arvore_direita(No **ptr_no) { //  menorEsquerda da sub
         if( (*ptr_no)->ptr_no_direita != NULL) 
             *ptr_no = (*ptr_no)->ptr_no_direita;
         else
-            *ptr_no = NULL;  
+            *ptr_no = NULL;
        
         return (aux);    
     } 
