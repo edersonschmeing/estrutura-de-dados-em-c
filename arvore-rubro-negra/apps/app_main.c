@@ -10,9 +10,7 @@ int main() {
 
    No **ptr_ptr_no_raiz = criar_ARN();  
 
-   No *novo_no = criar_no_ARN(10);
-
-   *ptr_ptr_no_raiz = novo_no;
+   adicionar_iterativo_ARN(ptr_ptr_no_raiz, 10);
    
    imprime_ARN(*ptr_ptr_no_raiz, 0);
        

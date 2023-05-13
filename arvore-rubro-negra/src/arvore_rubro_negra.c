@@ -17,16 +17,13 @@ No *criar_no_ARN(int chave) {
     No *ptr_no = (No*) malloc(sizeof(No));
     
     ptr_no->ptr_no_esquerda = NULL;
-    ptr_no->ptr_no_esquerda = NULL;
+    ptr_no->ptr_no_direita = NULL;
     ptr_no->chave = chave;    
     ptr_no->cor = VERMELHO;
-
 
     return ptr_no;
 
 }
-
-
 
 No **criar_ARN() { 
 
@@ -60,8 +57,6 @@ void destruir_ARN(No **ptr_ptr_no_raiz) {
 
 }
 
-
-
 void imprime_no_ARN(int valor, int nivel) {
     
     for (int i = 0; i < nivel; i++)
@@ -81,6 +76,14 @@ void imprime_ARN(No *ptr_no, int nivel) {
 }
 
 
+void adicionar_iterativo_ARN(No **ptr_no, int chave) { 
+
+    if (*ptr_no == NULL) { 
+        No *no_novo = criar_no_ARN(chave);
+        *ptr_no = no_novo;
+    }    
+
+}
 
 /*
 void pre_ordem_ABB(No *ptr_no) { 
