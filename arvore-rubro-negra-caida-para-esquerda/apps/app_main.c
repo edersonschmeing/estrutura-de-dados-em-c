@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h> 
 
-#include "arvore_rubro_negra.h"
+#include "arvore_rubro_negra_caida_para_esquerda.h"
 
 
 int main() { 
