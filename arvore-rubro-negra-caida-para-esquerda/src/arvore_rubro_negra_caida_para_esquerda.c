@@ -57,26 +57,106 @@ void destruir_LLRB(No **ptr_ptr_no_raiz) {
 
 }
 
-void adicionar_LLRB(No **ptr_no, int chave) { 
-
-    if (*ptr_no == NULL) { 
-        
-        No *no_novo = criar_no_LLRB(chave);
-        *ptr_no = no_novo;
-
-    } else if (chave < (*ptr_no)->chave) {
-        
-        adicionar_LLRB( &(*ptr_no)->ptr_no_esquerda, chave);
+int cor(No *ptr_no) { 
     
-    } else if (chave > (*ptr_no)->chave) {
+    if (ptr_no == NULL) 
+        return PRETO;
+    else 
+        return ptr_no->cor;
+} 
 
-        adicionar_LLRB( &(*ptr_no)->ptr_no_direita, chave);
-    } else {
+void troca_cor(No *ptr_no){
+    
+    ptr_no->cor = !ptr_no->cor;
+    
+    if(ptr_no->ptr_no_esquerda != NULL)
+       ptr_no->ptr_no_esquerda->cor = !ptr_no->ptr_no_esquerda->cor;
 
-        //corrigir a árvore 
+    if(ptr_no->ptr_no_direita != NULL)
+       ptr_no->ptr_no_direita->cor = !ptr_no->ptr_no_direita->cor;
 
-    } 
 }
+
+No *rotaciona_para_esquerda(No *ptr_no){
+
+    No *ptr_no_auxiliar = ptr_no->ptr_no_direita;
+
+    ptr_no->ptr_no_direita = ptr_no_auxiliar->ptr_no_esquerda;
+    ptr_no_auxiliar->ptr_no_esquerda = ptr_no;
+    ptr_no_auxiliar->cor = ptr_no->cor;
+    ptr_no->cor = VERMELHO;
+
+    return ptr_no_auxiliar;
+}
+
+No *rotaciona_para_direita(No *ptr_no){
+
+    No *ptr_no_auxiliar = ptr_no->ptr_no_esquerda;
+    
+    ptr_no->ptr_no_esquerda = ptr_no_auxiliar->ptr_no_direita;
+    ptr_no_auxiliar->ptr_no_direita = ptr_no;
+    ptr_no_auxiliar->cor = ptr_no->cor;
+    ptr_no->cor = VERMELHO;
+
+    return ptr_no_auxiliar;
+}
+
+
+No* adicionar_no_LLRB(No *ptr_no, int chave) { 
+
+    if (ptr_no == NULL) { 
+        
+       No *novo_no = criar_no_LLRB(chave);
+       ptr_no = novo_no;
+       return novo_no;
+    }  
+    
+    if (chave < (ptr_no)->chave)
+       ptr_no->ptr_no_esquerda = adicionar_no_LLRB(ptr_no->ptr_no_esquerda, chave);
+    
+    else if (chave > (ptr_no)->chave)
+       ptr_no->ptr_no_direita = adicionar_no_LLRB(ptr_no->ptr_no_direita, chave);
+   
+
+    if (cor(ptr_no->ptr_no_direita) == VERMELHO && cor(ptr_no->ptr_no_esquerda) == PRETO) 
+       ptr_no = rotaciona_para_esquerda(ptr_no);
+    
+    if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == VERMELHO) 
+       ptr_no = rotaciona_para_direita(ptr_no);
+    
+    if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_direita) == VERMELHO) 
+       troca_cor(ptr_no);
+
+    return ptr_no;
+     
+}
+
+void adicionar_LLRB(No **ptr_no, int chave) {
+
+    *ptr_no = adicionar_no_LLRB(*ptr_no, chave);
+    (*ptr_no)->cor = PRETO;    
+
+}
+
+
+No* balancear_LLRB(No *ptr_no) { 
+    
+    if (cor(ptr_no->ptr_no_direita) == VERMELHO)
+       ptr_no = rotaciona_para_esquerda(ptr_no);
+    
+    if (ptr_no->ptr_no_esquerda != NULL && cor(ptr_no->ptr_no_esquerda) == VERMELHO && 
+        cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == VERMELHO) 
+
+       ptr_no = rotaciona_para_direita(ptr_no);
+    
+    if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_direita) == VERMELHO) 
+       troca_cor(ptr_no);
+
+    return ptr_no;
+
+} 
+
+
 
 void imprime_no_LLRB(int valor, int nivel, int cor) {
     
@@ -97,16 +177,6 @@ void imprime_LLRB(No *ptr_no, int nivel) {
 }
 
 
-void pre_ordem_LLRB(No *ptr_no) { 
-     
-    if (ptr_no == NULL)
-       return;
-
-    printf("%d -> ", ptr_no->chave);
-    pre_ordem_LLRB(ptr_no->ptr_no_esquerda);
-    pre_ordem_LLRB(ptr_no->ptr_no_direita);
-}
-
 void em_ordem_LLRB(No *ptr_no) { 
      
     if (ptr_no == NULL)
@@ -115,16 +185,6 @@ void em_ordem_LLRB(No *ptr_no) {
     em_ordem_LLRB(ptr_no->ptr_no_esquerda);
     printf("%d -> ", ptr_no->chave);
     em_ordem_LLRB(ptr_no->ptr_no_direita);
-}
-
-void pos_ordem_LLRB(No *ptr_no) { 
-     
-    if (ptr_no == NULL)
-       return;
-
-    pos_ordem_LLRB(ptr_no->ptr_no_esquerda);
-    pos_ordem_LLRB(ptr_no->ptr_no_direita);
-    printf("%d -> ", ptr_no->chave);
 }
 
 

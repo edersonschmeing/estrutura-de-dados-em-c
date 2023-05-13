@@ -3,8 +3,6 @@
 // Left-Leaning Red–Black Tree (LLRB)
 // Árvore Rubro Negra Caída Para Esquerda
 
-//https://github.com/patrickaraujo/AED2-ARN/blob/master/TRB.c
-
 // Red-Black Tree
 // Arvore Rubro-Negra
 
@@ -16,6 +14,7 @@ No **criar_LLRB();
 void destruir_LLRB(No **ptr_ptr_no_raiz);
 
 void adicionar_LLRB(No **ptr_no, int chave);
+
 void remover_LLRB(No **ptr_no, int chave);
 
 //caso encontre retorna o endereço de memória do No, caso contrário retorna NULL. 
