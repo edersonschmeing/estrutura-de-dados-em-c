@@ -65,7 +65,7 @@ int cor(No *ptr_no) {
         return ptr_no->cor;
 } 
 
-void troca_cor(No *ptr_no){
+void trocar_cor(No *ptr_no){
     
     ptr_no->cor = !ptr_no->cor;
     
@@ -77,7 +77,7 @@ void troca_cor(No *ptr_no){
 
 }
 
-No *rotaciona_para_esquerda(No *ptr_no){
+No *rotacionar_para_esquerda(No *ptr_no){
 
     No *ptr_no_auxiliar = ptr_no->ptr_no_direita;
 
@@ -89,7 +89,7 @@ No *rotaciona_para_esquerda(No *ptr_no){
     return ptr_no_auxiliar;
 }
 
-No *rotaciona_para_direita(No *ptr_no){
+No *rotacionar_para_direita(No *ptr_no){
 
     No *ptr_no_auxiliar = ptr_no->ptr_no_esquerda;
     
@@ -111,21 +111,21 @@ No* adicionar_no_LLRB(No *ptr_no, int chave) {
        return novo_no;
     }  
     
-    if (chave < (ptr_no)->chave)
+    if (chave < ptr_no->chave)
        ptr_no->ptr_no_esquerda = adicionar_no_LLRB(ptr_no->ptr_no_esquerda, chave);
     
-    else if (chave > (ptr_no)->chave)
+    else if (chave > ptr_no->chave)
        ptr_no->ptr_no_direita = adicionar_no_LLRB(ptr_no->ptr_no_direita, chave);
    
 
     if (cor(ptr_no->ptr_no_direita) == VERMELHO && cor(ptr_no->ptr_no_esquerda) == PRETO) 
-       ptr_no = rotaciona_para_esquerda(ptr_no);
+       ptr_no = rotacionar_para_esquerda(ptr_no);
     
     if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == VERMELHO) 
-       ptr_no = rotaciona_para_direita(ptr_no);
+       ptr_no = rotacionar_para_direita(ptr_no);
     
     if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_direita) == VERMELHO) 
-       troca_cor(ptr_no);
+       trocar_cor(ptr_no);
 
     return ptr_no;
      
@@ -142,33 +142,169 @@ void adicionar_LLRB(No **ptr_no, int chave) {
 No* balancear_LLRB(No *ptr_no) { 
     
     if (cor(ptr_no->ptr_no_direita) == VERMELHO)
-       ptr_no = rotaciona_para_esquerda(ptr_no);
+       ptr_no = rotacionar_para_esquerda(ptr_no);
     
     if (ptr_no->ptr_no_esquerda != NULL && cor(ptr_no->ptr_no_esquerda) == VERMELHO && 
         cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == VERMELHO) 
 
-       ptr_no = rotaciona_para_direita(ptr_no);
+       ptr_no = rotacionar_para_direita(ptr_no);
     
     if (cor(ptr_no->ptr_no_esquerda) == VERMELHO && cor(ptr_no->ptr_no_direita) == VERMELHO) 
-       troca_cor(ptr_no);
+       trocar_cor(ptr_no);
 
     return ptr_no;
 
 } 
 
+No* mover_vermelho_para_esquerda_LLRB(No *ptr_no){ 
+    
+    trocar_cor(ptr_no);
+    
+    if (cor(ptr_no->ptr_no_direita->ptr_no_esquerda) == VERMELHO) {
+
+        ptr_no->ptr_no_direita = rotacionar_para_direita(ptr_no->ptr_no_direita);
+        ptr_no = rotacionar_para_esquerda(ptr_no);
+        trocar_cor(ptr_no);
+    }
+
+    return ptr_no;
+
+}
+
+No* remover_menor_LLRB(No *ptr_no){
+    
+    if(ptr_no->ptr_no_esquerda == NULL) {
+       free(ptr_no);
+       return NULL;
+    }
+
+    if( (cor(ptr_no->ptr_no_esquerda) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == PRETO) )
+        ptr_no = mover_vermelho_para_esquerda_LLRB(ptr_no);
+
+    ptr_no->ptr_no_esquerda = remover_menor_LLRB(ptr_no->ptr_no_esquerda);
+
+    return balancear_LLRB(ptr_no);
+
+}
+
+No* procurar_menor_LLRB(No *ptr_no) { // menor da esquerda da sub árvore direita
+   
+   No *ptr_no_auxiliar1 = ptr_no;
+   No *ptr_no_auxiliar2 = ptr_no->ptr_no_esquerda;
+
+   while (ptr_no_auxiliar2 != NULL ) {
+      ptr_no_auxiliar1 = ptr_no_auxiliar2;
+      ptr_no_auxiliar2 = ptr_no_auxiliar2->ptr_no_esquerda;  
+
+   }
+
+   return ptr_no_auxiliar1;
+
+}
+
+
+No* mover_vermelho_para_direita_LLRB(No *ptr_no){ 
+    
+    trocar_cor(ptr_no);
+    
+    if (cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == VERMELHO) {
+
+        ptr_no = rotacionar_para_direita(ptr_no);
+        trocar_cor(ptr_no);
+    }
+
+    return ptr_no;
+}
+
+No* remover_maior_LLRB(No *ptr_no){
+    
+    if(ptr_no->ptr_no_direita == NULL) {
+       free(ptr_no);
+       return NULL;
+    }
+
+    if( (cor(ptr_no->ptr_no_direita) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_direita) == PRETO) )
+        ptr_no = mover_vermelho_para_direita_LLRB(ptr_no);
+
+    ptr_no->ptr_no_direita = remover_maior_LLRB(ptr_no->ptr_no_direita);
+
+    return balancear_LLRB(ptr_no);
+
+}
+
+No* procurar_maior_LLRB(No *ptr_no) { // maior da direita da sub árvore esquerda
+   
+   No *ptr_no_auxiliar1 = ptr_no;
+   No *ptr_no_auxiliar2 = ptr_no->ptr_no_direita;
+
+   while (ptr_no_auxiliar2 != NULL ) {
+      ptr_no_auxiliar1 = ptr_no_auxiliar2;
+      ptr_no_auxiliar2 = ptr_no_auxiliar2->ptr_no_direita;  
+
+   }
+   return ptr_no_auxiliar1;
+
+}
+
+
+No* remover_no_LLRB(No *ptr_no, int chave) {
+
+    if(chave < ptr_no->chave){
+        if( (cor(ptr_no->ptr_no_esquerda) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == PRETO) )
+            ptr_no = mover_vermelho_para_esquerda_LLRB(ptr_no);
+
+        ptr_no->ptr_no_esquerda = remover_no_LLRB(ptr_no->ptr_no_esquerda, chave);
+   
+    } else { 
+        
+        if (cor(ptr_no->ptr_no_esquerda) == VERMELHO)
+            ptr_no = rotacionar_para_direita(ptr_no);
+
+        if (chave == ptr_no->chave && ptr_no->ptr_no_direita == NULL) {
+            free(ptr_no);
+            return NULL;
+        }
+
+        if( (cor(ptr_no->ptr_no_direita) == PRETO) && (cor(ptr_no->ptr_no_direita->ptr_no_esquerda) == PRETO) )
+            ptr_no = mover_vermelho_para_direita_LLRB(ptr_no);
+
+        if(chave == ptr_no->chave) {
+            No *ptr_no_auxiliar = procurar_menor_LLRB(ptr_no->ptr_no_direita);
+            ptr_no->chave = ptr_no_auxiliar->chave;
+            ptr_no->ptr_no_direita = remover_menor_LLRB(ptr_no->ptr_no_direita);
+        }
+        else
+            ptr_no->ptr_no_direita = remover_no_LLRB(ptr_no->ptr_no_direita, chave);
+    }
+
+    return balancear_LLRB(ptr_no);
+}
+
+
+void remover_LLRB(No **ptr_no, int chave) {
+
+    if (buscar_LLRB(*ptr_no, chave) != NULL) { 
+
+       No *ptr_no_auxiliar = *ptr_no;
+       *ptr_no = remover_no_LLRB(ptr_no_auxiliar, chave);
+     
+       if (*ptr_no != NULL)
+           (*ptr_no)->cor = PRETO; 
+    }
+}
 
 
 void imprime_no_LLRB(int valor, int nivel, int cor) {
     
     for (int i = 0; i < nivel; i++)
-        printf("-");
+       printf("-");
     printf("%2d (%d)\n", valor, cor);
 }
 
 void imprime_LLRB(No *ptr_no, int nivel) {
     
     if (ptr_no == NULL) 
-        return;
+       return;
 
     imprime_LLRB(ptr_no->ptr_no_direita, nivel + 1);
     imprime_no_LLRB(ptr_no->chave, nivel, ptr_no->cor);
@@ -188,20 +324,7 @@ void em_ordem_LLRB(No *ptr_no) {
 }
 
 
-No *buscar_recursivo_LLRB(No *ptr_no, int chave){
-    
-    if (ptr_no == NULL || ptr_no->chave == chave)
-        return ptr_no;
-    
-    if (chave < ptr_no->chave)
-       return buscar_recursivo_LLRB(ptr_no->ptr_no_esquerda, chave); 
-    
-    else 
-       return buscar_recursivo_LLRB(ptr_no->ptr_no_direita, chave);
-  
-}
-
-No *buscar_iterativo_LLRB(No *ptr_no, int chave) {
+No *buscar_LLRB(No *ptr_no, int chave) {
 
     if (ptr_no == NULL) 
         return NULL;
@@ -224,41 +347,20 @@ No *buscar_iterativo_LLRB(No *ptr_no, int chave) {
 
 }
 
-
-
- //funcao utilizada para pegar o nó mais a direita da subarvore esquerda do nó que será removido
-No* maior_direita_da_sub_arvore_esquerda(No **ptr_no) {    //  Maior Direita da sub árvore esquerda, receber raiz->esquerda
+No *buscar_recursivo_LLRB(No *ptr_no, int chave){
     
-    if ((*ptr_no)->ptr_no_direita != NULL)
-        return maior_direita_da_sub_arvore_esquerda(&(*ptr_no)->ptr_no_direita);
-    else {
-        No *aux = *ptr_no; //se tiver filho a esquerda, move no lugar do maior a direta que será o sucessor do no.
-        if( (*ptr_no)->ptr_no_esquerda != NULL)
-            *ptr_no = (*ptr_no)->ptr_no_esquerda;
-        else
-            *ptr_no = NULL;
-        return (aux);    
-    } 
-}
+    if (ptr_no == NULL || ptr_no->chave == chave)
+        return ptr_no;
     
- //funcao utilizada para pegar o nó mais a esquerda da subarvore direia do nó que será removido
-No *menor_esquerda_da_sub_arvore_direita(No **ptr_no) { //  menorEsquerda da sub árvore direita, receber raiz->direita
-
-    if ((*ptr_no)->ptr_no_esquerda != NULL)
-        return menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_esquerda);
-    else {
-        No *aux = *ptr_no; // //se tiver filho a diretia, move no lugar do menor a esquerada que será o sucessor do no.
-        if( (*ptr_no)->ptr_no_direita != NULL) 
-            *ptr_no = (*ptr_no)->ptr_no_direita;
-        else
-            *ptr_no = NULL;
-       
-        return (aux);    
-    } 
+    if (chave < ptr_no->chave)
+       return buscar_recursivo_LLRB(ptr_no->ptr_no_esquerda, chave); 
+    
+    else 
+       return buscar_recursivo_LLRB(ptr_no->ptr_no_direita, chave);
+  
 }
 
-void remover_LLRB(No **ptr_no, int chave) {
 
-}
+
 
     
