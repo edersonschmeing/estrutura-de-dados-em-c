@@ -15,5 +15,8 @@ Uma árvore rubro-negra é uma árvore de busca binária que satisfaz as seguint
 4. Se um nó é vermelho, então ambos os seus filhos são pretos, ou seja, não existem nós vermelhos consecutivos.
 5. Para cada nó, todos os caminhos simples do nó ao descendente as folhas contêm o mesmo número de nós pretos.
 
+
+![](caminho até a imagem)
+
 ---
 
