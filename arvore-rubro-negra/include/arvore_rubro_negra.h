@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+// Left-Leaning Red–Black Tree (LLRB)
+// Árvore Rubro Negra Caída Para Esquerda
+
+//https://github.com/patrickaraujo/AED2-ARN/blob/master/TRB.c
+
 // Red-Black Tree
 // Arvore Rubro-Negra
 
@@ -7,23 +12,18 @@ typedef struct no No;
 typedef enum cor_do_no Cor;
 
 
-No **criar_ARN();
-void destruir_ARN(No **ptr_ptr_no_raiz);
+No **criar_LLRB();
+void destruir_LLRB(No **ptr_ptr_no_raiz);
 
-
-void imprime_ARN(No *ptr_no, int nivel); 
-
-void adicionar_recursivo_ARN(No **ptr_no, int chave);
-void adicionar_iterativo_ARN(No **ptr_no, int chave);
-
-void remover_recursivo_ARN(No **ptr_no, int chave);
-void remover_iterativo_ARN(No **ptr_no, int chave); 
+void adicionar_LLRB(No **ptr_no, int chave);
+void remover_LLRB(No **ptr_no, int chave);
 
 //caso encontre retorna o endereço de memória do No, caso contrário retorna NULL. 
-No *buscar_recursivo_ABB(No *ptr_no, int chave); 
-No *buscar_iterativo_ABB(No *ptr_no, int chave); 
+No *buscar_LLRB(No *ptr_no, int chave); 
 
-void pre_ordem_ABB(No *ptr_no);
-void em_ordem_ABB(No *ptr_no);
-void pos_ordem_ABB(No *ptr_no);
+void imprime_LLRB(No *ptr_no, int nivel); 
+
+void pre_ordem_LLRB(No *ptr_no);
+void em_ordem_LLRB(No *ptr_no);
+void pos_ordem_LLRB(No *ptr_no);
 

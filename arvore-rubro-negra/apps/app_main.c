@@ -8,13 +8,13 @@ int main() {
     
    printf("\n--- Árvore Rubro Negra ---\n\n");
 
-   No **ptr_ptr_no_raiz = criar_ARN();  
+   No **ptr_ptr_no_raiz = criar_LLRB();  
 
-   adicionar_iterativo_ARN(ptr_ptr_no_raiz, 10);
+   adicionar_LLRB(ptr_ptr_no_raiz, 10);
    
-   imprime_ARN(*ptr_ptr_no_raiz, 0);
+   imprime_LLRB(*ptr_ptr_no_raiz, 0);
        
-   destruir_ARN(ptr_ptr_no_raiz);
+   destruir_LLRB(ptr_ptr_no_raiz);
    
 
    /*
