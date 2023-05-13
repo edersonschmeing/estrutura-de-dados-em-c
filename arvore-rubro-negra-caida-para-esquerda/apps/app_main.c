@@ -6,7 +6,7 @@
 
 int main() { 
     
-   printf("\n--- Árvore Rubro Negra ---\n\n");
+   printf("\n--- Árvore Rubro Negra Caída Para Esquerda ---\n\n");
 
    No **ptr_ptr_no_raiz = criar_LLRB();  
 
