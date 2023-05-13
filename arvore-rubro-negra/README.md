@@ -15,8 +15,16 @@ Uma árvore rubro-negra é uma árvore de busca binária que satisfaz as seguint
 4. Se um nó é vermelho, então ambos os seus filhos são pretos, ou seja, não existem nós vermelhos consecutivos.
 5. Para cada nó, todos os caminhos simples do nó ao descendente as folhas contêm o mesmo número de nós pretos.
 
+Denominamos o número de nós pretos em qualquer caminho simples de um nó, sem incluir esse nó, até uma folha, por altura preta do nó.
+Pela propriedade 5, a noção de altura preta é bem definida, já que todos os caminhos simples descendentes que partem do nó têm o mesmo número de nós pretos.
+Definimos a altura preta de uma árvore vermelho-preto como a altura preta de sua raiz.
 
-![](caminho até a imagem)
+Um exemplo de uma Árvore Rubro-Negra é mostrado na figura abaixo.
+
+![](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/blob/main/arvore-rubro-negra/imagens/arvore-rubro-negra.png)
+
+
+### Rotações
+
 
 ---
-
