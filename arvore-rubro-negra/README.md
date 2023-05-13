@@ -26,5 +26,7 @@ Um exemplo de uma Árvore Rubro-Negra é mostrado na figura abaixo.
 
 ### Rotações
 
+As operações de INSERÇÃO e REMOÇÃO de uma árvores binária de busca, executadas em uma árvore rubro-negra modificam a árvore, violando assima as suas propriedades
+Para restabelecer essas propriedades, devemos mudar as cores de alguns nós na árvore e também mudar a estrutura de ponteiros. 
 
 ---
