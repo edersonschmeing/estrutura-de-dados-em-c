@@ -13,7 +13,7 @@ typedef enum cor_do_no Cor;
 No **criar_LLRB();
 void destruir_LLRB(No **ptr_ptr_no_raiz);
 
-void adicionar_LLRB(No **ptr_no, int chave);
+void inserir_LLRB(No **ptr_no, int chave);
 
 void remover_LLRB(No **ptr_no, int chave);
 

@@ -102,7 +102,7 @@ No *rotacionar_para_direita(No *ptr_no){
 }
 
 
-No* adicionar_no_LLRB(No *ptr_no, int chave) { 
+No* inserir_no_LLRB(No *ptr_no, int chave) { 
 
     if (ptr_no == NULL) { 
         
@@ -114,10 +114,10 @@ No* adicionar_no_LLRB(No *ptr_no, int chave) {
     if (!(chave == ptr_no->chave)) {  
 
         if (chave < ptr_no->chave)
-           ptr_no->ptr_no_esquerda = adicionar_no_LLRB(ptr_no->ptr_no_esquerda, chave);
+           ptr_no->ptr_no_esquerda = inserir_no_LLRB(ptr_no->ptr_no_esquerda, chave);
         
         else if (chave > ptr_no->chave)
-           ptr_no->ptr_no_direita = adicionar_no_LLRB(ptr_no->ptr_no_direita, chave);
+           ptr_no->ptr_no_direita = inserir_no_LLRB(ptr_no->ptr_no_direita, chave);
 
     }
 
@@ -134,9 +134,9 @@ No* adicionar_no_LLRB(No *ptr_no, int chave) {
      
 }
 
-void adicionar_LLRB(No **ptr_no, int chave) {
+void inserir_LLRB(No **ptr_no, int chave) {
 
-    *ptr_no = adicionar_no_LLRB(*ptr_no, chave);
+    *ptr_no = inserir_no_LLRB(*ptr_no, chave);
     (*ptr_no)->cor = PRETO;    
 
 }

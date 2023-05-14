@@ -12,11 +12,12 @@ void menu(No **ptr_ptr_no_raiz) {
    while (operacao < 10 && operacao > 0) {
       
       printf("---------------------------------------\n");
-      printf("        TAD DA ÁRVORE LLRB                       \n");
+      printf("        USANDO TAD DA ÁRVORE LLRB                       \n");
       printf("---------------------------------------\n");
-      printf("1 - Adicionar \n");
+      printf("1 - Inserir \n");
       printf("2 - Remover \n");
       printf("3 - Imprimir \n");
+      printf("4 - Destruir \n");
       printf("10 - Sair \n");
       printf("---------------------------------------\n");
       printf("Escolha uma operação:  ");
@@ -30,14 +31,14 @@ void menu(No **ptr_ptr_no_raiz) {
       switch (operacao) {
          case 1:
            
-            printf("\nadicionar a chave: ");         
+            printf("\nInserir a chave: ");         
             scanf("%d", &chave);
-            adicionar_LLRB(ptr_ptr_no_raiz, chave);
             printf("\n"); 
+            inserir_LLRB(ptr_ptr_no_raiz, chave);
+            printf("LLRB Formatada \n"); 
             imprime_LLRB(*ptr_ptr_no_raiz, 0);
-            printf("\n"); 
+            printf("\nEm Ordem\n"); 
             em_ordem_LLRB(*ptr_ptr_no_raiz);
-         
             break;
          case 2:
             printf("\nremover a chave: ");         
@@ -53,6 +54,11 @@ void menu(No **ptr_ptr_no_raiz) {
             printf("\n"); 
             em_ordem_LLRB(*ptr_ptr_no_raiz);
             break;
+         case 4:
+            destruir_LLRB(ptr_ptr_no_raiz);
+            ptr_ptr_no_raiz = criar_LLRB();
+            imprime_LLRB(*ptr_ptr_no_raiz, 0);
+            break;   
          case 10:
             break;   
          default:
