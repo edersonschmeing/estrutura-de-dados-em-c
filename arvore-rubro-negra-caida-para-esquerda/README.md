@@ -26,8 +26,12 @@ Um exemplo de uma Árvore Rubro-Negra é mostrado na figura abaixo.
 
 ## Árvore Rubro-Negra Caída Para Esquerda (Left-Leaning Red–Black Tree - LLRB) 
 
+Desenvolvida por Robert Sedgewick em 2008, a árvore rubro-negra caída para a esquerda é uma variante da árvore rubro negra. 
+Além de satisfazer todas as propriedades da árvore rubro-negra, ela possui uma propriedade extra que dever ser respeitada.
 
-<!-
+1. Se um nó é vermelho, ele é o filho esquerdo.
+
+<!--
 ### Rotações
 
 As operações de INSERÇÃO e REMOÇÃO de uma árvores binária de busca, executadas em uma árvore rubro-negra modificam a árvore, violando assima as suas propriedades
