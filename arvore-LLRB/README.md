@@ -21,7 +21,7 @@ Definimos a altura preta de uma árvore vermelho-preto como a altura preta de su
 
 Um exemplo de uma Árvore Rubro-Negra é mostrado na figura abaixo.
 
-![](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/blob/main/arvore-rubro-negra-caida-para-esquerda/imagens/rbt-cormen.png)
+![](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/blob/main/arvore-LLRB/imagens/rbt-cormen.png)
 
 
 ## Árvore Rubro-Negra Caída Para a Esquerda (Left-Leaning Red–Black Tree - LLRB) 
