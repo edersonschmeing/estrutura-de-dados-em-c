@@ -17,7 +17,6 @@ void adicionar_LLRB(No **ptr_no, int chave);
 
 void remover_LLRB(No **ptr_no, int chave);
 
-//caso encontre retorna o endereço de memória do No, caso contrário retorna NULL. 
 No *buscar_LLRB(No *ptr_no, int chave); 
 
 void imprime_LLRB(No *ptr_no, int nivel); 

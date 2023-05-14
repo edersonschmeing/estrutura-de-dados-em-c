@@ -110,13 +110,16 @@ No* adicionar_no_LLRB(No *ptr_no, int chave) {
        ptr_no = novo_no;
        return novo_no;
     }  
-    
-    if (chave < ptr_no->chave)
-       ptr_no->ptr_no_esquerda = adicionar_no_LLRB(ptr_no->ptr_no_esquerda, chave);
-    
-    else if (chave > ptr_no->chave)
-       ptr_no->ptr_no_direita = adicionar_no_LLRB(ptr_no->ptr_no_direita, chave);
-   
+
+    if (!(chave == ptr_no->chave)) {  
+
+        if (chave < ptr_no->chave)
+           ptr_no->ptr_no_esquerda = adicionar_no_LLRB(ptr_no->ptr_no_esquerda, chave);
+        
+        else if (chave > ptr_no->chave)
+           ptr_no->ptr_no_direita = adicionar_no_LLRB(ptr_no->ptr_no_direita, chave);
+
+    }
 
     if (cor(ptr_no->ptr_no_direita) == VERMELHO && cor(ptr_no->ptr_no_esquerda) == PRETO) 
        ptr_no = rotacionar_para_esquerda(ptr_no);
@@ -269,9 +272,15 @@ No* remover_no_LLRB(No *ptr_no, int chave) {
             ptr_no = mover_vermelho_para_direita_LLRB(ptr_no);
 
         if(chave == ptr_no->chave) {
+
             No *ptr_no_auxiliar = procurar_menor_LLRB(ptr_no->ptr_no_direita);
             ptr_no->chave = ptr_no_auxiliar->chave;
             ptr_no->ptr_no_direita = remover_menor_LLRB(ptr_no->ptr_no_direita);
+            
+            //No *ptr_no_auxiliar = procurar_maior_LLRB(ptr_no->ptr_no_esquerda);
+            //ptr_no->chave = ptr_no_auxiliar->chave;
+            //ptr_no->ptr_no_esquerda = remover_maior_LLRB(ptr_no->ptr_no_esquerda);
+ 
         }
         else
             ptr_no->ptr_no_direita = remover_no_LLRB(ptr_no->ptr_no_direita, chave);
