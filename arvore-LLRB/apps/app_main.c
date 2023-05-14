@@ -12,7 +12,7 @@ void menu(No **ptr_ptr_no_raiz) {
    while (operacao < 10 && operacao > 0) {
       
       printf("---------------------------------------\n");
-      printf("        TAD LLRB                       \n");
+      printf("        TAD DA ÁRVORE LLRB                       \n");
       printf("---------------------------------------\n");
       printf("1 - Adicionar \n");
       printf("2 - Remover \n");
@@ -66,7 +66,7 @@ void menu(No **ptr_ptr_no_raiz) {
 
 int main() { 
     
-   printf("\n--- Árvore Rubro Negra Caída Para Esquerda ---\n\n");
+   printf("\n--- Árvore Rubro Negra Caída Para a Esquerda ---\n\n");
 
    No **ptr_ptr_no_raiz = criar_LLRB();  
    
