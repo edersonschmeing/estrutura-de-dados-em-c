@@ -190,7 +190,7 @@ No* remover_menor_LLRB(No *ptr_no){
 
 }
 
-No* procurar_menor_LLRB(No *ptr_no) { // menor da esquerda da sub árvore direita
+No* procurar_menor_LLRB(No *ptr_no) { 
    
    No *ptr_no_auxiliar1 = ptr_no;
    No *ptr_no_auxiliar2 = ptr_no->ptr_no_esquerda;
@@ -235,7 +235,7 @@ No* remover_maior_LLRB(No *ptr_no){
 
 }
 
-No* procurar_maior_LLRB(No *ptr_no) { // maior da direita da sub árvore esquerda
+No* procurar_maior_LLRB(No *ptr_no) { 
    
    No *ptr_no_auxiliar1 = ptr_no;
    No *ptr_no_auxiliar2 = ptr_no->ptr_no_direita;
