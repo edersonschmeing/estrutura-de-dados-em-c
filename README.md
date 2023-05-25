@@ -35,7 +35,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [20 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria)
   - [21 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
   - [22 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB)
-  - [23 - Grafos]()
+  - [23 - Grafos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
+  - [24 - Heap Binário] 
   
   <!-- - Fila de Prioridade e Heap Binário -->
 
