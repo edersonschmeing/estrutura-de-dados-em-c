@@ -13,7 +13,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [5 - Ponteiros e Arrays ](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/ponteiros-e-arrays)
   - [6 - Alocação Dinâmica de Memória](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/alocacao-dinamica-de-memoria)
   - [7 - Funções Recursivas](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-recursivas)
-  - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
+  - [8 - TAD e Vetores Dinâmicos, bucas sequencial e bin](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
   - [9 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada)
   - [10 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [11 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
