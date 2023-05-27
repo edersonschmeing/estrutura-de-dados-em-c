@@ -25,7 +25,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [17 - Fila com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
   - [18 - Fila com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
   - [19 - Fila com Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada-circular) 
-  - [20 - Fila de prioridade com vetor]()   
+  - [20 - Fila de prioridade com Vetor]()   
   - [21 - Deque com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [22 - Deque com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
   
