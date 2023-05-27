@@ -35,18 +35,19 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
  
   - [20 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria)
   - [21 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
-  - [22 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB)
-  - [23 - Grafos-01](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
-  - [23 - Grafos-02](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-02)
-  - [24 - Heap Binário]() 
-  - [25 - Algoritmos de Ordenação]() 
+  - [22 - Árvore AVL]()   
+  - [24 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB) 
+  - [25 - Grafos-01](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
+  - [26 - Grafos-02](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-02)
+  - [23 - Heap Binário]()  
+  - [8.2 - Algoritmos de Ordenação]() 
  
 
  Trabalho do segundo bimestre
   
-  - [26 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
-  - [27 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)
-  - [28 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [27 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
+  - [28 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)
+  - [29 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
 
