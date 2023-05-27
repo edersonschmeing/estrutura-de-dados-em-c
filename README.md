@@ -14,7 +14,7 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [6 - Alocação Dinâmica de Memória](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/alocacao-dinamica-de-memoria)
   - [7 - Funções Recursivas](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-recursivas)
   - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
-  - [8.1  - Buscas sequencial e Buscas Binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)  
+  - [8.1  - Buscas Sequencial e Buscas Binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)  
   - [9 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada)
   - [10 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [11 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
@@ -36,27 +36,21 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [20 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria)
   - [21 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
   - [22 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB)
-  - [23 - Grafos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
+  - [23 - Grafos-01](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
+  - [23 - Grafos-02](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-02)
   - [24 - Heap Binário]() 
   - [25 - Algoritmos de Ordenação]() 
-  
-  
-  <!-- - Fila de Prioridade e Heap Binário -->
+ 
 
  Trabalho do segundo bimestre
   
-  - [99 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
-  - [99 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)
-  - [99 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [26 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
+  - [27 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)
+  - [28 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
 
 BACKES, A. Estrutura de dados descomplicada em linguagem C. Rio de Janeiro: Elsevier, 2016.
 
 CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
-  
-  
-  <!-- - 
-https://github.com/WoMakersCode/git-e-github
--->
 
