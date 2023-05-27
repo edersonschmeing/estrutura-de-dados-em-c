@@ -38,9 +38,9 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [26 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB) 
   - [27 - Heap Binário]()  
   - [28 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)  
-  - [29 - Grafos com array](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-com-array)
-  - [30 - Grafos com lista ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-com-lista-ligada)
-  - [31 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [29 - Grafos com Array](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-com-array)
+  - [30 - Grafos com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-com-lista-ligada)
+  - [31 - Tabela Hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
   - [32 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
   
 
