@@ -14,7 +14,8 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [6 - Alocação Dinâmica de Memória](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/alocacao-dinamica-de-memoria)
   - [7 - Funções Recursivas](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/funcoes-recursivas)
   - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)
-  - [8.1  - Buscas Sequencial e Buscas Binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)  
+  - [8.1 - Algoritmos de Ordenação]() 
+  - [8.2  - Buscas Sequencial e Buscas Binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tad-e-vetor-dinamico)  
   - [9 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada)
   - [10 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [11 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
@@ -23,31 +24,24 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [14 - Pilha como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-lista-ligada)
   - [15 - Fila como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
   - [16 - Fila como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
- 
- Trabalho do primeiro bimestre
- 
   - [17 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
   - [18 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
   - [19 - Fila como Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada-circular)
-  
+ 
   
  ### Segundo bimestre
  
   - [20 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria)
   - [21 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-binaria-de-busca)
   - [22 - Árvore AVL]()   
-  - [24 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB) 
-  - [25 - Grafos-01](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
-  - [26 - Grafos-02](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-02)
-  - [23 - Heap Binário]()  
-  - [8.2 - Algoritmos de Ordenação]() 
- 
-
- Trabalho do segundo bimestre
+  - [23 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-LLRB) 
+  - [24 - Heap Binário]()  
+  - [25 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)  
+  - [26 - Grafos-01](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-01)
+  - [27 - Grafos-02](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/grafos-02)
+  - [28 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
+  - [29 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
   
-  - [27 - Árvores B, B* e B+](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-b%2B)
-  - [28 - Árvores digitais de busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/arvore-patricia-trie)
-  - [29 - Tabela hash](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/tabela-hash)
 
 ### Referências 
 
