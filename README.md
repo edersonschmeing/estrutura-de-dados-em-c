@@ -20,14 +20,14 @@ Este material apresenta os códigos fontes da disciplina Estrutura de Dados.
   - [12 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-circular)
   - [13 - Lista Ligada com Cabeça](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-ligada-com-cabeca)
   - [14 - Lista Duplamente Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/lista-duplamente-ligada)
-  - [15 - Pilha como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-vetor)
-  - [16 - Pilha como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-lista-ligada)
-  - [17 - Fila como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
-  - [18 - Fila como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
-  - [19 - Fila como Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada-circular) 
+  - [15 - Pilha com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-vetor)
+  - [16 - Pilha com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/pilha-como-lista-ligada)
+  - [17 - Fila com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-vetor)
+  - [18 - Fila com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada)
+  - [19 - Fila com Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/fila-como-lista-ligada-circular) 
   - [20 - Fila de prioridade com vetor]()   
-  - [21 - Deque como Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
-  - [22 - Deque como Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
+  - [21 - Deque com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-vetor)
+  - [22 - Deque com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/deque-como-lista-ligada)
   
   
  ### Segundo bimestre
