@@ -154,11 +154,21 @@ void menorCaminho_Grafo(Grafo *gr, int ini, int *ant, float *dist){
         for(i=0; i<gr->grau[vert]; i++){
             ind = gr->arestas[vert][i];
             if(dist[ind] < 0){
-               dist[ind] = dist[vert] + 1;//ou peso da aresta
+               
+               if (gr->eh_ponderado == 0) 
+                  dist[ind] = dist[vert] + 1;//ou peso da aresta
+               else 
+                  dist[ind] = dist[vert] + gr->pesos[vert][i];
+
                ant[ind] = vert;
             }else{
                 if(dist[ind] > dist[vert] + 1){
-                    dist[ind] = dist[vert] + 1;//ou peso da aresta
+                    
+                    if (gr->eh_ponderado == 0)                
+                        dist[ind] = dist[vert] + 1;//ou peso da aresta
+                    else 
+                        dist[ind] = dist[vert] + gr->pesos[vert][i];                          
+                    
                     ant[ind] = vert;
                 }
             }

@@ -4,15 +4,15 @@
 
 int main(){
     int eh_digrafo = 1;
-    Grafo* gr = cria_Grafo(5, 5, 0);
+    Grafo* gr = cria_Grafo(5, 5, 1);
 
-    insereAresta(gr, 0, 1, eh_digrafo, 0);
-    insereAresta(gr, 1, 3, eh_digrafo, 0);
+    insereAresta(gr, 0, 1, eh_digrafo, 3);
+    insereAresta(gr, 1, 3, eh_digrafo, 4);
     insereAresta(gr, 1, 2, eh_digrafo, 0);
-    insereAresta(gr, 2, 4, eh_digrafo, 0);
-    insereAresta(gr, 3, 0, eh_digrafo, 0);
-    insereAresta(gr, 3, 4, eh_digrafo, 0);
-    insereAresta(gr, 4, 1, eh_digrafo, 0);
+    insereAresta(gr, 2, 4, eh_digrafo, 6);
+    insereAresta(gr, 3, 0, eh_digrafo, 2);
+    insereAresta(gr, 3, 4, eh_digrafo, 5);
+    insereAresta(gr, 4, 1, eh_digrafo, 8);
 
     printf("Grafo \n");
     
