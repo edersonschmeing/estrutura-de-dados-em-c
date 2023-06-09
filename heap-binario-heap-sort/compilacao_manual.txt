@@ -1,8 +1,8 @@
 #gera o arquivo compilado app_main.o na pasta obj
 gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
 
-#gera o arquivo compilado fila_prioridade_heap.o na pasta obj
-gcc -I include -Wall -Werror -c src/fila_prioridade_heap.c -o obj/fila_prioridade_heap.o
+#gera o arquivo compilado heap_binario_heap_sort.o na pasta obj
+gcc -I include -Wall -Werror -c src/heap_binario_heap_sort.c -o obj/heap_binario_heap_sort.o
 
 #Faz a linkagem gerando o arquivo executável 
-gcc obj/app_main.o obj/fila_prioridade_heap.o -o bin/app_main.out
+gcc obj/app_main.o obj/heap_binario_heap_sort.o -o bin/app_main.out

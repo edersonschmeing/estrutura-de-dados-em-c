@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-void printfVet(int *V  , int N);
+void printf_vetor(int *vetor  , int n);
 
-void printfHeap(int *V);
+void printf_heap(int *vetor);
 
-void heapSort(int *vet, int N);
+void heap_sort(int *vet, int n);
