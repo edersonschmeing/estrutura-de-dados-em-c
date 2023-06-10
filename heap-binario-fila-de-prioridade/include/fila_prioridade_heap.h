@@ -1,5 +1,5 @@
 
-//Arquivo FilaPrioridadeHeap.h
+
 #define MAX 100
 
 typedef struct fila_prioridade FilaPrio;
