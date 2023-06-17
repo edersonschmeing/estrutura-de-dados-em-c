@@ -180,8 +180,8 @@ No* remover_menor_LLRB(No *ptr_no){
        free(ptr_no);
        return NULL;
     }
-
-    if( (cor(ptr_no->ptr_no_esquerda) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == PRETO) )
+    
+   if( (cor(ptr_no->ptr_no_esquerda) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_esquerda) == PRETO) )
         ptr_no = mover_vermelho_para_esquerda_LLRB(ptr_no);
 
     ptr_no->ptr_no_esquerda = remover_menor_LLRB(ptr_no->ptr_no_esquerda);
@@ -219,37 +219,6 @@ No* mover_vermelho_para_direita_LLRB(No *ptr_no){
     return ptr_no;
 }
 
-No* remover_maior_LLRB(No *ptr_no){
-    
-    if(ptr_no->ptr_no_direita == NULL) {
-       free(ptr_no);
-       return NULL;
-    }
-
-    if( (cor(ptr_no->ptr_no_direita) == PRETO) && (cor(ptr_no->ptr_no_esquerda->ptr_no_direita) == PRETO) )
-        ptr_no = mover_vermelho_para_direita_LLRB(ptr_no);
-
-    ptr_no->ptr_no_direita = remover_maior_LLRB(ptr_no->ptr_no_direita);
-
-    return balancear_LLRB(ptr_no);
-
-}
-
-No* procurar_maior_LLRB(No *ptr_no) { 
-   
-   No *ptr_no_auxiliar1 = ptr_no;
-   No *ptr_no_auxiliar2 = ptr_no->ptr_no_direita;
-
-   while (ptr_no_auxiliar2 != NULL ) {
-      ptr_no_auxiliar1 = ptr_no_auxiliar2;
-      ptr_no_auxiliar2 = ptr_no_auxiliar2->ptr_no_direita;  
-
-   }
-   return ptr_no_auxiliar1;
-
-}
-
-
 No* remover_no_LLRB(No *ptr_no, int chave) {
 
     if(chave < ptr_no->chave){
@@ -271,15 +240,12 @@ No* remover_no_LLRB(No *ptr_no, int chave) {
         if( (cor(ptr_no->ptr_no_direita) == PRETO) && (cor(ptr_no->ptr_no_direita->ptr_no_esquerda) == PRETO) )
             ptr_no = mover_vermelho_para_direita_LLRB(ptr_no);
 
+        
         if(chave == ptr_no->chave) {
 
             No *ptr_no_auxiliar = procurar_menor_LLRB(ptr_no->ptr_no_direita);
             ptr_no->chave = ptr_no_auxiliar->chave;
             ptr_no->ptr_no_direita = remover_menor_LLRB(ptr_no->ptr_no_direita);
-            
-            //No *ptr_no_auxiliar = procurar_maior_LLRB(ptr_no->ptr_no_esquerda);
-            //ptr_no->chave = ptr_no_auxiliar->chave;
-            //ptr_no->ptr_no_esquerda = remover_maior_LLRB(ptr_no->ptr_no_esquerda);
  
         }
         else
