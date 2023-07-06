@@ -267,7 +267,7 @@ void remover_recursivo_ABB(No **ptr_no, int chave) {
         }
         else {  
 
-            int usar_sucessor_da_sub_arvore_direita = 0;
+            int usar_sucessor_da_sub_arvore_direita = 1;
             
             if (usar_sucessor_da_sub_arvore_direita == 0) {
                 ptr_no_auxiliar = menor_esquerda_da_sub_arvore_direita(&(*ptr_no)->ptr_no_direita);

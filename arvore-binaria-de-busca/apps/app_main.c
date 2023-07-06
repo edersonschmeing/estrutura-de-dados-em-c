@@ -9,14 +9,15 @@ int main() {
 
    No **ptr_ptr_no_raiz = criar_ABB();  
    
-   int vetor[11] = {6, 2, 1, 5, 3, 4, 5, 8, 7, 10, 9 }; 
+   //int vetor[11] = {6, 2, 1, 5, 3, 4, 5, 8, 7, 10, 9 }; 
 
-   for (int i = 0; i < 11; i++)
+   int vetor[10] = {8, 10, 3, 1, 6, 11, 14, 2, 7, 13 }; 
+
+
+   for (int i = 0; i < 10; i++)
       adicionar_recursivo_ABB(ptr_ptr_no_raiz, vetor[i]);
       //adicionar_iterativo_ABB(ptr_ptr_no_raiz, vetor[i]);
-  
-  
-   
+     
    imprime_ABB(*ptr_ptr_no_raiz, 0);
    printf("\n");  
 
@@ -31,6 +32,8 @@ int main() {
    printf("Pós Ordem: ");
    pos_ordem_ABB(*ptr_ptr_no_raiz);   
    printf("\n");
+   
+
    
 
    int chave_buscada = 0;
