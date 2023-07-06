@@ -3,8 +3,6 @@
 
 #include "arvore_LLRB.h"
 
-
-
 void menu(No **ptr_ptr_no_raiz) { 
    
    int operacao = 1;
