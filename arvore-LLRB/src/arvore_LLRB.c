@@ -3,6 +3,32 @@
 
 #include "arvore_LLRB.h" 
 
+/* para colocar cor no console. 
+   #include <conio.h> usar no windows 
+    
+    \e[1;31m
+    \033[1;31m
+    \033[1;0m 
+
+    Black: 30
+    Red: 31
+    Green: 32
+    Yellow: 33
+    Blue: 34
+    Magenta: 35
+    Cyan: 36
+    White: 37
+    Reset: 0
+
+
+   char cor_vermelha[10]= "\033[1;31m";
+   char cor_azul[10] = "\033[1;34m";
+   char cor_verde[10] = "\033[1;32m";
+   char reset_cor[10] = "\033[1;0m";
+   printf("%s1 - Operação 1 %s \n", cor_verde, cor_verde);
+
+*/
+
 enum cor_do_no { PRETO, VERMELHO }; // 0 = PRETO 1 = VERMELHO 
 
 struct no {
