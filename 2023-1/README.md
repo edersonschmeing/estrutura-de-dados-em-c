@@ -14,7 +14,7 @@ Este material apresenta os códigos  fontes utilizados como exemplos na discipli
   - [6 - Alocação Dinâmica de Memória](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/alocacao-dinamica-de-memoria)
   - [7 - Funções Recursivas](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/funcoes-recursivas)
   - [8 - TAD e Vetores Dinâmicos](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/tad-e-vetor-dinamico)
-  - [9 - Algoritmos de Ordenação]() 
+  - [9 - Algoritmos de Ordenação](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/ordenacao) 
   - [10  - Buscas Sequencial e Buscas Binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/tad-e-vetor-dinamico)  
   - [11 - Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/lista-ligada)
   - [12 - Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/lista-ligada-circular)
