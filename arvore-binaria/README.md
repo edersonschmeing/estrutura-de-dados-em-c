@@ -1,4 +1,0 @@
-## Árvore Binária 
-
----
-

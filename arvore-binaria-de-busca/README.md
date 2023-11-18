@@ -1,6 +1,0 @@
-## Árvore Binária de Busca
-
-
-
----
-

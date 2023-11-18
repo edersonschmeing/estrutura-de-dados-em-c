@@ -1,5 +1,0 @@
-## Tabela Hash
-
-
----
-

@@ -1,8 +1,0 @@
-#gera o arquivo compilado app_main.o na pasta obj
-gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
-
-#gera o arquivo compilado lista_ligada.o na pasta obj
-gcc -I include -Wall -Werror -c src/pilha_como_lista_ligada.c -o obj/pilha_como_lista_ligada.o
-
-#Faz a linkagem gerando o arquivo executável 
-gcc obj/app_main.o obj/pilha_como_lista_ligada.o -o bin/app_main.out
