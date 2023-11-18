@@ -1,0 +1,8 @@
+#gera o arquivo compilado app_main.o na pasta obj
+gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
+
+#gera o arquivo compilado lista_ligada_com_cabeca.o na pasta obj
+gcc -I include -Wall -Werror -c src/lista_ligada_com_cabeca.c -o obj/lista_ligada_com_cabeca.o
+
+#Faz a linkagem gerando o arquivo executável 
+gcc obj/app_main.o obj/lista_ligada_com_cabeca.o -o bin/app_main.out
