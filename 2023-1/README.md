@@ -22,21 +22,21 @@ Este material apresenta os códigos  fontes utilizados como exemplos na discipli
   - [14 - Lista Duplamente Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/lista-duplamente-ligada)
   - [15 - Pilha com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/pilha-como-vetor)
   - [16 - Pilha com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/pilha-como-lista-ligada)
-  - [17 - Fila com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/2023/fila-como-vetor)
+  - [17 - Fila com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/2023-1/fila-como-vetor)
   - [18 - Fila com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/fila-como-lista-ligada)
   - [19 - Fila com Lista Ligada Circular](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/fila-como-lista-ligada-circular) 
   - [20 - Fila de Prioridade com Vetor]()   
   - [21 - Deque com Vetor](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/deque-como-vetor)
   - [22 - Deque com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/deque-como-lista-ligada)
   
-  
+ 
  ### Segundo bimestre
  
   - [23 - Árvore binária](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/arvore-binaria)
   - [24 - Árvore binária de busca](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/arvore-binaria-de-busca)
   - [25 - Árvore AVL]()   
   - [26 - Árvore LLRB](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/arvore-LLRB) 
-  - [27 - Heap Binário]()  
+  - [27 - Heap Binário- Fila de Prioridade](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/heap-binario-fila-de-prioridade) 
   - [28 - Árvores Digitais de Busca, Trie, Patricia Trie](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/tree/main/2023-1/arvore-patricia-trie)  
   - [29 - Grafos com Array](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/grafos-com-array)
   - [30 - Grafos com Lista Ligada](https://github.com/edersonschmeing/estrutura-de-dados-em-c/tree/main/2023-1/grafos-com-lista-ligada)
